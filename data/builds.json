@@ -1,0 +1,6011 @@
+{
+ "note": "챔피언 스킬·증강 설명·통계 등급을 보고 만든 분석 데이터(통계 아님). 빌드 = 서로 시너지가 나는 증강 묶음 + 아이템, 첫 빌드가 주력.",
+ "augments_extra": {
+  "apex_inventor": {
+   "ko": "최첨단 발명가",
+   "rarity": "gold",
+   "summary": "아이템 가속이 100 증가합니다. (50%의 아이템 재사용 대기시간 감소 효과와 동일) 아이템 가속은 모든 아이템 스킬의 재사용 대기시간을 감소시킵니다."
+  },
+  "big_brain": {
+   "ko": "전술적 대비",
+   "rarity": "gold",
+   "summary": "?의 보호막을 얻습니다. 사망 시 또는 만료 70초 후 초기화됩니다."
+  },
+  "bread_and_jam": {
+   "ko": "빵과 잼",
+   "rarity": "gold",
+   "summary": "선택한 스킬 스킬 가속을 100 얻습니다."
+  },
+  "earthwake": {
+   "ko": "대지의 각성",
+   "rarity": "prismatic",
+   "summary": "돌진, 도약, 점멸, 순간이동 스킬이 1초 후에 폭발하는 흔적을 남기고 ?의 물리 피해를 입힙니다. 입힌 피해량: 총 ?"
+  },
+  "en_passant": {
+   "ko": "앙파상",
+   "rarity": "prismatic",
+   "summary": "주기적으로 적 챔피언의 급소를 파악합니다. 급소를 기본 공격 또는 스킬로 타격하면 추가로 최대 체력의 6%+중첩당 1.5%에 해당하는 고정 피해를 입히고, ?+잃은 체력의 5%만큼 체력을 회복하며, 이동 속도가 ?+중첩당 5%만큼 증가합니다. 이동 속도는 2초에 걸쳐 원래대로 돌아옵니다. 연속으로 타격한 최대 급소 수: ?"
+  },
+  "firebrand": {
+   "ko": "화염 낙인",
+   "rarity": "gold",
+   "summary": "기본 공격 시 적에게 화상 효과를 적용해 5초 동안 초당 최대 체력의 0.4%에 해당하는 마법 피해를 입힙니다. 화상 효과는 무한히 중첩됩니다."
+  },
+  "flashbang": {
+   "ko": "점멸탄",
+   "rarity": "silver",
+   "summary": "점멸 시 폭발을 일으켜 ?의 피해를 입히고 둔화시킵니다. (사망 시 초기화)"
+  },
+  "flashy": {
+   "ko": "점멸 난사",
+   "rarity": "gold",
+   "summary": "점멸 사용 가능 횟수가 3번이 됩니다. 120초 후 횟수가 모두 충전됩니다."
+  },
+  "hellbent": {
+   "ko": "열의",
+   "rarity": "prismatic",
+   "summary": "기본 공격 또는 스킬로 적 챔피언을 타격하면 6초 동안 부활 극대화 중첩을 얻습니다. 최대 10회 중첩되며, 최대 중첩 시 열의 상태가 됩니다. 열의: 사망 시 4초에 걸쳐 ?의 최대 체력으로 부활합니다. 이후 15초 동안 적응형 능력치를 ? 얻고 적 챔피언을 향해 이동 시 이동 속도가 ? 증가하며 모든 피해 흡혈을 ? 얻습니다. 90초의 재사용 대기시간이 적용됩니다."
+  },
+  "impassable": {
+   "ko": "넘을 수 없는 벽",
+   "rarity": "gold",
+   "summary": "여진과 빙결 강화 핵심 룬을 얻습니다. 여진: 적 챔피언을 이동 불가 상태로 만들면 방어력/마법 저항력이 증가하고 잠시 후 주변에 큰 마법 피해를 입힙니다.빙결 강화: 적 챔피언을 이동 불가 상태로 만들면 3줄기의 빙결 광선이 뻗어 나와 근처 적들을 둔화하고 아군에게 입히는 피해를 감소시킵니다."
+  },
+  "its_critical": {
+   "ko": "치명적인 공격",
+   "rarity": "gold",
+   "summary": "치명타 확률이 50% 증가합니다."
+  },
+  "mountainsoul": {
+   "ko": "대지의 영혼",
+   "rarity": "silver",
+   "summary": "전투에서 벗어나면 잠시 동안 보호막을 획득하는 대지의 영혼을 얻습니다. 생성한 총 보호막: ?"
+  },
+  "ok_boomerang": {
+   "ko": "부메랑 투척",
+   "rarity": "gold",
+   "summary": "7초마다 근처 적에게 부메랑을 자동 사용하여 적중한 적에게 ?의 적응형 피해를 입힙니다."
+  },
+  "omni_soul": {
+   "ko": "전능의 영혼",
+   "rarity": "prismatic",
+   "summary": "무작위 드래곤 영혼 3개를 획득합니다."
+  },
+  "pandorasbox": {
+   "ko": "판도라의 상자",
+   "rarity": "prismatic",
+   "summary": "모든 증강을 무작위 프리즘증강으로 전환합니다."
+  },
+  "quickstep": {
+   "ko": "날쌘걸음",
+   "rarity": "gold",
+   "summary": "선택한 스킬 사용 시 커서 방향으로 돌진합니다."
+  },
+  "rejuvenation": {
+   "ko": "원기 회복",
+   "rarity": "gold",
+   "summary": "선택한 스킬 사용 시 ?의 체력을 회복합니다. 체력 회복량: 총 ? ?만큼 체력을 회복하며 스킬 재사용 대기시간이 길수록 50%까지 증가합니다."
+  },
+  "searing_dawn": {
+   "ko": "타오르는 새벽",
+   "rarity": "gold",
+   "summary": "스킬이 적에게 표식을 남깁니다. 적은 아군의 다음 기본 공격 또는 스킬로부터 추가로 ?의 마법 피해를 입습니다. 입힌 피해량: 총 ?"
+  },
+  "shrink_ray": {
+   "ko": "감쇠 광선",
+   "rarity": "gold",
+   "summary": "기본 공격 시 3초 동안 적의 피해량이 15% 감소합니다. 감소한 피해량: ?"
+  },
+  "spirit_bomb": {
+   "ko": "영혼 폭탄",
+   "rarity": "prismatic",
+   "summary": "체력을 회복시키거나 보호막을 씌우면 영혼 폭탄이 중첩됩니다. 최대 중첩 시 체력이 가장 낮은 아군에게 영혼 폭탄을 던집니다. 폭탄이 대상에게 도달하면 주변 아군 체력을 잃은 체력의 ?만큼 회복시키고 2초 동안 던진 영혼 폭탄: ? 체력 회복량: ? 보호막 흡수량: ?"
+  },
+  "stats!": {
+   "ko": "능력치!",
+   "rarity": "silver",
+   "summary": "능력치 모루를 2개 획득합니다."
+  },
+  "stats_on_stats!": {
+   "ko": "능력치 더하기 능력치!",
+   "rarity": "gold",
+   "summary": "능력치 모루 3개를 획득합니다. 골드 및 프리즘 모루를 획득할 확률이 더 높습니다!"
+  },
+  "stats_on_stats_on_stats!": {
+   "ko": "능력치 더하기 능력치 더하기 능력치!",
+   "rarity": "prismatic",
+   "summary": "능력치 모루 4개를 획득합니다. 골드 및 프리즘 모루를 획득할 확률이 더 높습니다! 다음 증강 선택 시 슬롯마다 새로고침 1회를 추가로 얻습니다."
+  },
+  "terror": {
+   "ko": "공포",
+   "rarity": "gold",
+   "summary": "선택한 스킬 스킬을 사용할 때마다 1.75초 동안 주변 적을 공포에 빠뜨립니다."
+  },
+  "thread_the_needle": {
+   "ko": "바늘에 실 끼우기",
+   "rarity": "gold",
+   "summary": "방어구 관통력 및 마법 관통력 18%를 얻습니다."
+  },
+  "transmute_gold": {
+   "ko": "전환: 골드",
+   "rarity": "silver",
+   "summary": "무작위 골드 증강을 획득합니다."
+  },
+  "brass_blast": {
+   "ko": "트럼펫 폭발",
+   "rarity": "gold",
+   "summary": "소환사 주문이 트럼펫 폭발로 변경됩니다. 충전 시작: 최대 1.5초 동안 거대한 트럼펫에 힘을 모읍니다. 발사: 트럼펫을 불어 적을 뒤로 밀어내고 충전 시간에 비례해 ?~?의 마법 피해를 입힙니다. 최소 충전 시간: 0.25초"
+  },
+  "endless_decimation": {
+   "ko": "끝없는 학살",
+   "rarity": "gold",
+   "summary": "전투 중 8초마다 자동 사용으로 도끼를 원형으로 휘둘러 물리 피해를 입힙니다. 바깥쪽 칼날에 적 적중 시 증가한 피해(?)를 입히고 잃은 체력의 18%만큼 체력을 회복합니다. 바깥쪽 칼날에 적중한 적 하나당 이 스킬의 재사용 대기시간이 10% 감소합니다. (최소 3초)"
+  },
+  "shark_bait": {
+   "ko": "상어 미끼",
+   "rarity": "gold",
+   "summary": "사망 시 상어 미끼 상태가 됩니다. 이동 외에 다른 행동은 할 수 없으며 주변 적을 40% 둔화시킵니다. 몇 초 후 상어가 나타나 주변 모든 적을 공중에 띄우고 물어뜯어, ?+잃은 체력의 ?에 해당하는 마법 피해를 입힙니다. 상어가 적 챔피언을 삼킨 횟수: ?"
+  },
+  "flash_2": {
+   "ko": "점멸 2",
+   "rarity": "silver",
+   "summary": "두 번째 점멸 소환사 주문을 얻고 소환사 주문 가속이 70 증가합니다."
+  },
+  "forged_by_the_master": {
+   "ko": "장인의 솜씨",
+   "rarity": "silver",
+   "summary": "아이템 및 증강으로 입히는 피해량이 ? 증가합니다. 추가 피해량: ?"
+  },
+  "gift_of_the_drowned": {
+   "ko": "가라앉은 자의 축복",
+   "rarity": "silver",
+   "summary": "추가 체력이 물리 관통력으로 전환됩니다. (?의 체력이 ?의 물리 관통력으로 전환) 물리 관통력을 ? 얻습니다. 추가 물리 관통력: ?"
+  },
+  "go_h_pentakill_aug_e": {
+   "ko": "스래시",
+   "rarity": "gold",
+   "summary": "강화 선택한 스킬 스킬은 스킬 가속이 20, 피해량이 10%, 체력 회복량 및 보호막 흡수량이 10% 증가합니다."
+  },
+  "go_h_pentakill_aug_q": {
+   "ko": "헤비",
+   "rarity": "gold",
+   "summary": "강화 선택한 스킬 스킬은 스킬 가속이 20, 피해량이 10%, 체력 회복량 및 보호막 흡수량이 10% 증가합니다."
+  },
+  "go_h_pentakill_aug_r": {
+   "ko": "둠",
+   "rarity": "gold",
+   "summary": "강화 선택한 스킬 스킬은 스킬 가속이 20, 피해량이 10%, 체력 회복량 및 보호막 흡수량이 10% 증가합니다."
+  },
+  "go_h_pentakill_aug_w": {
+   "ko": "파워",
+   "rarity": "gold",
+   "summary": "강화 선택한 스킬 스킬은 스킬 가속이 20, 피해량이 10%, 체력 회복량 및 보호막 흡수량이 10% 증가합니다."
+  },
+  "holy_snowball": {
+   "ko": "신성한 눈덩이",
+   "rarity": "prismatic",
+   "summary": "눈덩이의 스킬 가속이 100만큼 증가합니다. 눈덩이로 돌진하면 1.5초 동안 무적 상태가 됩니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다."
+  },
+  "goldrend": {
+   "ko": "골드 강탈",
+   "rarity": "prismatic",
+   "summary": "기본 공격이나 스킬로 챔피언에게 피해를 입히면 추가로 ?의 마법 피해를 입히고 ?골드를 획득하며 1.5초 동안 25%의 이동 속도를 얻습니다. (챔피언별 재사용 대기시간 30초) 획득한 골드: ?"
+  },
+  "hand_of_baron": {
+   "ko": "남작의 도움",
+   "rarity": "prismatic",
+   "summary": "적응형 능력치를 25% 얻습니다. 주변 아군 미니언이 대폭 강화됩니다."
+  },
+  "hands_off_the_talent": {
+   "ko": "아티스트 보호",
+   "rarity": "silver",
+   "summary": "최대 공격 사거리의 ? 초과 거리에서 기본 공격 적중 시 추가로 ?의 물리 피해를 입힙니다. 장거리 기본 공격 횟수: ?"
+  },
+  "heavy_is_the_crown": {
+   "ko": "왕관의 무게",
+   "rarity": "gold",
+   "summary": "공격력을 10, 주문력을 25 얻고 추가 공격력, 추가 주문력, 총공격 속도가 10% 증가합니다. 전투 중 전체 이동 속도가 @InitialMSDecrease*-100@% 감소합니다. 처치 관여 시 부담 중첩을 얻어 추가 공격력, 추가 주문력, 총공격 속도가 5% 증가하고 중첩당 이동 속도가 @MSDecreasePerTakedown*-100@% 감소합니다. (최소 50%) 사망 시 중첩의 50%를 잃습니다. 능력치 증가 퍼센트: ?% ..입니다"
+  },
+  "keep_going": {
+   "ko": "재장전",
+   "rarity": "gold",
+   "summary": "선택한 스킬 지속시간 동안 기본 공격 적중 시 재사용 대기시간이 ?초 감소합니다. 절약한 시간: ?"
+  },
+  "kill_secured": {
+   "ko": "확보된 킬",
+   "rarity": "silver",
+   "summary": "체력이 40% 아래인 적에게 접근 시 이동 속도가 60% 증가합니다."
+  },
+  "king_me": {
+   "ko": "나는 왕이다",
+   "rarity": "prismatic",
+   "summary": "전설급 아이템을 소지하고 처음으로 적 이동 수단을 사용하면 왕이 되어 아이템이 업그레이드되며, 무작위 프리즘 증강을 얻습니다."
+  },
+  "mighty_shield": {
+   "ko": "강력한 방패",
+   "rarity": "silver",
+   "summary": "보호막을 얻으면 3초 동안 ?의 적응형 능력치를 얻습니다. (재사용 대기시간 5초)"
+  },
+  "nature_is_healing": {
+   "ko": "자연의 회복",
+   "rarity": "gold",
+   "summary": "수풀에 들어가면 ?+잃은 체력의 ?만큼 체력을 회복합니다. 수풀마다 20초의 재사용 대기시간이 적용됩니다. 체력 회복량: 총 ?"
+  },
+  "one_hit_wonder": {
+   "ko": "원 히트 원더",
+   "rarity": "gold",
+   "summary": "선택한 스킬 피해량이 스킬 가속?당 ?% 증가하지만, 더 이상 스킬 가속효과를 받지 않습니다. 추가 피해량: ?%"
+  },
+  "overextender": {
+   "ko": "무리한 진입",
+   "rarity": "gold",
+   "summary": "대포 발사기의 사거리, 이동 속도, 피해량이 대폭 증가했습니다. 귀환하여 대포 발사기에 탑승하세요. 이동한 유닛: ?"
+  },
+  "pat_on_the_back": {
+   "ko": "격려하기",
+   "rarity": "gold",
+   "summary": "아군 근처를 지나갈 때 아군이 격려하며 3초 동안 ?의 보호막과 ?의 이동 속도를 부여합니다. 이 효과는 중첩될 수 있습니다. 아군마다 다시 격려할 때까지 ?초의 재사용 대기시간이 적용됩니다. 받은 격려: ?"
+  },
+  "poltergeist": {
+   "ko": "폴터가이스트",
+   "rarity": "silver",
+   "summary": "폴터가이스트 소환사 주문을 얻습니다. 폴터가이스트는 방어막과 유체화를 동시에 사용합니다."
+  },
+  "prom_queen": {
+   "ko": "퀸카",
+   "rarity": "prismatic",
+   "summary": "35초마다 반짝이는 티아라를 자동 사용해 자신에게 내려오게 합니다. 티아라를 쓰면 라칸의 궁극기를 얻어 닿는 적을 매혹합니다."
+  },
+  "quest_sneakerhead": {
+   "ko": "신발 수집가",
+   "rarity": "prismatic",
+   "summary": "다음 퀘스트를 완료하고 초강력 보상을 얻으세요. 퀘스트 1: 광전사의 군화를 착용하고 기본 공격 ?/25회 퀘스트 2: 신속의 장화를 착용하고 내딛은 걸음 ?/300회 퀘스트 3: 명석함의 아이오니아 장화를 착용하고 스킬 사용 ?/20회 퀘스트 4: 헤르메스의 발걸음을 착용하고 당한 군중 제어 효과 ?/5회 퀘스트 5: 판금 장화를 착용하고 감소시킨 기본 공격 피해 ?/200 퀘스트 6: 마법사의 신발을 착용하고 입힌 스킬 피해 ?/1500"
+  },
+  "rise": {
+   "ko": "RISE",
+   "rarity": "prismatic",
+   "summary": "선택한 스킬 스킬로 적 챔피언을 처치하면 ?초 안에 해당 스킬을 한 번 재사용할 수 있습니다. 이후 재사용할 때마다 추가 피해를 입힙니다. 최대 2회 추가로 재사용할 수 있으며, 각각 이전보다 ? 증가한 피해를 입힙니다. 모두가 기억하게 만드세요."
+  },
+  "salvation": {
+   "ko": "구원",
+   "rarity": "gold",
+   "summary": "체력이 ?% 아래로 떨어질 만큼 피해를 입으면 충격파를 방출해 주변 적에게 ?의 마법 피해를 입히고 뒤로 밀어내며, 적중한 모든 아군 챔피언의 체력을 ? 회복시킵니다."
+  },
+  "shark_tempest": {
+   "ko": "상어 폭풍",
+   "rarity": "gold",
+   "summary": "상어가 눈덩이 주위를 돌며 통과하는 적을 둔화시키고 ?의 마법 피해를 입힙니다. 눈덩이가 챔피언에게 적중하면 상어가 대상에게 고정되어 상어 폭풍을 일으킵니다. 상어 폭풍은 매초 ?의 마법 피해를 입히고 주변 적을 3초 동안 40% 둔화시킵니다."
+  },
+  "snap_back": {
+   "ko": "원상복구",
+   "rarity": "gold",
+   "summary": "선택한 스킬 재사용 시 폭발하여 ?의 마법 피해를 입히고 원래 위치로 돌아갑니다."
+  },
+  "snowblast": {
+   "ko": "눈 폭발",
+   "rarity": "gold",
+   "summary": "눈덩이 스킬 가속이 100 증가합니다. 스킬을 다시 사용하면 ? 증가한 피해를 입히고 대상을 공중에 띄우며, 주변 적들을 뒤로 밀어냅니다. 뒤로 밀려난 유닛: ?"
+  },
+  "pursuit_of_power": {
+   "ko": "위력 추구",
+   "rarity": "gold",
+   "summary": ""
+  },
+  "squishy_slappy_grab": {
+   "ko": "말랑 찰싹 손",
+   "rarity": "prismatic",
+   "summary": "때때로 주변 모든 적 챔피언에게 말랑 찰싹 손을 내보내 4초 동안 연결합니다. 연결된 상태에서 다음 기본 공격 시 연결된 적을 끌어당기고 ?의 마법 피해를 입히며 0.25초 동안 기절시킵니다. 끌어당긴 적 1명당 2.5초 동안 ?의 보호막을 얻습니다. 30초의 재사용 대기시간이 적용됩니다. 끌어당긴 적: ? 보호막 흡수량: ?"
+  },
+  "surge_field": {
+   "ko": "방출 역장",
+   "rarity": "prismatic",
+   "summary": "궁극기 사용 시, 주변에 영역을 생성합니다. 안에 있는 동안 스킬 가속이 50, 이동 속도가 40% 증가하고 투사체를 발사해 적에게 입힌 피해량의 20%만큼 피해를 입힙니다. 영역은 처음 밖으로 나가면 따라오지만, 두 번째로 나가면 잠시 후 사라집니다. 투사체 피해량: ?"
+  },
+  "tickle_monster": {
+   "ko": "간지럼 괴물",
+   "rarity": "gold",
+   "summary": "공격력이 공격 속도로 전환됩니다. (?의 공격력이 ?의 공격 속도로 전환) 기본 공격 적중 시?의 추가 마법 피해를 입힙니다. 추가 공격 속도: ?%"
+  },
+  "totentanz": {
+   "ko": "죽음의 춤",
+   "rarity": "prismatic",
+   "summary": "소환사 주문이 죽음과 함께하는 춤으로 변경됩니다. 죽음과 함께하는 춤: ?초 동안 불사 상태가 되고 전방으로 순간적으로 이동합니다. 지속시간이 끝나기 전에 처치 관여를 달성하면 ?의 체력을 회복하고 원래 위치로 돌아가며, 이 소환사 주문의 재사용 대기시간이 ?초 감소합니다. 그러지 못할 경우 사망합니다. 극복한 죽음: ? 헌납한 목숨: ? \"어차피 죽을 목숨, 내가 끝내주지.\" - 죽음을 노래하는 자 카서스"
+  },
+  "upgrade_ravenous": {
+   "ko": "굶주린 히드라 업그레이드",
+   "rarity": "gold",
+   "summary": "적에게 스킬 적중 시 쪼개기 효과가 발동됩니다. 굶주린 히드라의 생명력 흡수가 ? 수치로 증가합니다. ?골드를 획득합니다."
+  },
+  "upgrade_sundered_sky": {
+   "ko": "갈라진 하늘 업그레이드",
+   "rarity": "gold",
+   "summary": "갈라진 하늘의 대상별 재사용 대기시간이 ?초로 감소하고 잃은 체력의 ?만큼 체력을 회복합니다. ?골드를 획득합니다."
+  },
+  "upgrade_sword_of_blossom": {
+   "ko": "꽃피는 새벽의 검 업그레이드",
+   "rarity": "prismatic",
+   "summary": "공격 속도를 ?% 획득합니다. 적 챔피언 공격 시 꽃피는 새벽의 검 체력 회복량이 ?%로 증가합니다."
+  },
+  "veil_of_warding": {
+   "ko": "감시의 장막",
+   "rarity": "silver",
+   "summary": "30초마다 적의 다음 스킬을 막아 주는 주문 방어막을 생성합니다."
+  },
+  "spin_me_right_round": {
+   "ko": "빙글빙글",
+   "rarity": "silver",
+   "summary": "소환사 주문이 영웅의 비상으로 변경됩니다. 영웅의 비상을 사용하면 갈고리총을 발사해 지형에 고정시키며, 이후 스킬을 재사용하면 갈고리에 매달려 이동합니다. 매달려 이동하는 동안 주변 적을 자동 공격합니다. 적 챔피언에게 부딪히거나 스킬을 재사용하면 영웅의 비상이 끝납니다."
+  }
+ },
+ "items_extra": {
+  "archangels_staff": {
+   "ko": "대천사의 지팡이"
+  },
+  "frozen_heart": {
+   "ko": "얼어붙은 심장"
+  },
+  "immortal_shieldbow": {
+   "ko": "불멸의 철갑궁"
+  },
+  "randuins_omen": {
+   "ko": "란두인의 예언"
+  },
+  "staff_of_flowing_water": {
+   "ko": "흐르는 물의 지팡이"
+  },
+  "steraks_gage": {
+   "ko": "스테락의 도전"
+  }
+ },
+ "sets": [
+  {
+   "id": "archmage",
+   "ko": "대마법사",
+   "augs": [
+    "juiced",
+    "mind_to_matter",
+    "ocean_soul",
+    "overflow"
+   ]
+  },
+  {
+   "id": "dive_bomb_set",
+   "ko": "다이브 폭격 세트",
+   "augs": [
+    "dive_bomber",
+    "clown_college"
+   ]
+  },
+  {
+   "id": "firecracker_set",
+   "ko": "폭죽 세트",
+   "augs": [
+    "typhoon",
+    "light_em_up",
+    "twin_fire",
+    "magic_missile"
+   ]
+  },
+  {
+   "id": "fully_automated",
+   "ko": "완전 자동화",
+   "augs": [
+    "firefox",
+    "ok_boomerang",
+    "sonata",
+    "divine_intervention",
+    "prom_queen"
+   ]
+  },
+  {
+   "id": "high_roller",
+   "ko": "하이 롤러",
+   "augs": [
+    "transmute_prismatic",
+    "transmute_chaos",
+    "pandorasbox",
+    "stats!",
+    "stats_on_stats!",
+    "stats_on_stats_on_stats!"
+   ]
+  },
+  {
+   "id": "make_it_rain",
+   "ko": "메이크 잇 레인",
+   "augs": [
+    "upgrade_immolate",
+    "upgrade_collector",
+    "from_beginning_to_end",
+    "donation",
+    "goldrend"
+   ]
+  },
+  {
+   "id": "snowday",
+   "ko": "스노우데이",
+   "augs": [
+    "pinball",
+    "biggest_snowball",
+    "holy_snowball"
+   ]
+  },
+  {
+   "id": "stackosaurus_rex",
+   "ko": "스택소어러스 렉스",
+   "augs": [
+    "steel_your_heart",
+    "soul_eater",
+    "phenomenal_evil",
+    "master_of_duality",
+    "tap_dancer",
+    "infinite_recursion"
+   ]
+  },
+  {
+   "id": "wee_woo_wee_woo",
+   "ko": "위우 위우",
+   "augs": [
+    "first_aid_kit",
+    "all_for_you",
+    "critical_healing",
+    "sonata",
+    "windspeakers_blessing"
+   ]
+  }
+ ],
+ "champions": {
+  "Ashe": [
+   {
+    "name": "온힛 서리 원딜",
+    "why": "서리 화살 평타 둔화를 온힛·공속으로 굴림, 치명타는 딜 없음",
+    "augs": [
+     "dual_wield",
+     "mystic_punch",
+     "tap_dancer",
+     "shrink_engine",
+     "firebrand",
+     "weapon_of_destiny",
+     "deft",
+     "flow_of_spirit",
+     "typhoon",
+     "homeguard"
+    ],
+    "items": [
+     "botrk",
+     "kraken",
+     "guinsoo",
+     "runaan",
+     "terminus"
+    ]
+   },
+   {
+    "name": "W 난사 스킬 애쉬",
+    "why": "일제 사격 쿨을 가속·분열로 줄이고 수정화살로 한타 개시",
+    "augs": [
+     "archmage",
+     "spellsplit",
+     "infinite_recursion",
+     "mad_scientist",
+     "shrink_engine",
+     "recursion",
+     "magic_missile",
+     "bees",
+     "ultimate_recursion",
+     "purist_caster",
+     "twin_fire"
+    ],
+    "items": [
+     "essence_reaver",
+     "serylda",
+     "shojin",
+     "axiom_arc",
+     "hubris"
+    ]
+   }
+  ],
+  "MissFortune": [
+   {
+    "name": "AP 궁 난사",
+    "why": "총알은 비를 타고 장판 화상·저격과 쌍권총 난사 광역 마법 딜",
+    "augs": [
+     "archmage",
+     "quest_wooglets",
+     "infernal_conduit",
+     "eureka",
+     "infinite_recursion",
+     "skilled_sniper",
+     "magic_missile",
+     "shrink_engine",
+     "recursion",
+     "purist_caster",
+     "twin_fire",
+     "ice_cold",
+     "erosion"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rabadon",
+     "zhonya",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Teemo": [
+   {
+    "name": "독 버섯 AP 티모",
+    "why": "유독성 함정 버섯과 실명 다트 쿨을 줄여 도트 견제",
+    "augs": [
+     "archmage",
+     "eureka",
+     "infernal_conduit",
+     "infinite_recursion",
+     "tripleshot",
+     "shrink_engine",
+     "recursion",
+     "ethereal_weapon",
+     "magic_missile",
+     "bees",
+     "purist_caster",
+     "ultimate_recursion",
+     "adapt"
+    ],
+    "items": [
+     "liandry",
+     "malignance",
+     "shadowflame",
+     "blackfire",
+     "rabadon"
+    ]
+   },
+   {
+    "name": "온힛 평타 티모",
+    "why": "맹독 다트가 평타 적중마다 들어가 온힛·공속 증강과 시너지",
+    "augs": [
+     "mystic_punch",
+     "dual_wield",
+     "master_of_duality",
+     "ethereal_weapon",
+     "marksmage",
+     "firebrand",
+     "deft",
+     "zealot",
+     "adapt"
+    ],
+    "items": [
+     "nashor",
+     "guinsoo",
+     "liandry",
+     "rabadon",
+     "shadowflame"
+    ]
+   }
+  ],
+  "TahmKench": [
+   {
+    "name": "체력 탱커",
+    "why": "절대 미각이 총 체력 비례라 체력 뻥튀기, 삼키기로 아군 보호",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "mad_scientist",
+     "protein_shake",
+     "tank_engine",
+     "steel_your_heart",
+     "celestial_body",
+     "heavy_hitter",
+     "lich_brain",
+     "adapt",
+     "escape_plan",
+     "leg_day"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "unending_despair",
+     "spirit_visage",
+     "thornmail"
+    ]
+   }
+  ],
+  "Kaisa": [
+   {
+    "name": "하이브리드 온힛",
+    "why": "두 번째 피부 플라즈마를 평타·스킬 온힛으로 빠르게 터뜨림",
+    "augs": [
+     "master_of_duality",
+     "mystic_punch",
+     "eureka",
+     "dual_wield",
+     "ethereal_weapon",
+     "marksmage",
+     "skilled_sniper",
+     "bees",
+     "shrink_engine",
+     "zealot",
+     "witchful_thinking",
+     "twin_fire",
+     "deft"
+    ],
+    "items": [
+     "statikk",
+     "guinsoo",
+     "kraken",
+     "dusk_dawn",
+     "nashor"
+    ]
+   },
+   {
+    "name": "AP 스킬 카이사",
+    "why": "이케시아 폭우·공허추적자를 주문력과 가속으로 강화",
+    "augs": [
+     "quest_wooglets",
+     "eureka",
+     "back_to_basics",
+     "infinite_recursion",
+     "ethereal_weapon",
+     "skilled_sniper",
+     "shrink_engine",
+     "recursion",
+     "adapt",
+     "witchful_thinking",
+     "purist_caster",
+     "no_mana"
+    ],
+    "items": [
+     "nashor",
+     "rabadon",
+     "zhonya",
+     "shadowflame",
+     "void_staff"
+    ]
+   }
+  ],
+  "Lucian": [
+   {
+    "name": "치명 스킬 원딜",
+    "why": "꿰뚫는 빛·빛의 심판이 치명타로 들어가고 빛의 사수 2연발",
+    "augs": [
+     "jeweled_gauntlet",
+     "big_shot",
+     "giant_slayer",
+     "jeweled_bracelet",
+     "vulnerability",
+     "upgrade_ie",
+     "soul_siphon",
+     "arcane_axiom",
+     "blunt_force",
+     "upgrade_collector",
+     "goredrink",
+     "tank_it"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "navori",
+     "ldr",
+     "essence_reaver"
+    ]
+   },
+   {
+    "name": "E 돌진 평타",
+    "why": "빛의 사수 평타로 쿨 줄이고 끈질긴 추격을 계속 굴림",
+    "augs": [
+     "mystic_punch",
+     "dashing",
+     "dual_wield",
+     "recursion",
+     "soul_siphon",
+     "upgrade_ie",
+     "shadow_runner",
+     "blunt_force",
+     "goredrink"
+    ],
+    "items": [
+     "navori",
+     "collector",
+     "infinity_edge",
+     "essence_reaver",
+     "ldr"
+    ]
+   }
+  ],
+  "Caitlyn": [
+   {
+    "name": "사거리 치명 원딜",
+    "why": "조준경으로 사거리 늘려 헤드샷 치명타를 멀리서 꽂음",
+    "augs": [
+     "big_shot",
+     "scopiest_weapons",
+     "dual_wield",
+     "jeweled_gauntlet",
+     "giant_slayer",
+     "upgrade_ie",
+     "scopier_weapons",
+     "jeweled_bracelet",
+     "critical_rhythm",
+     "soul_siphon",
+     "scoped_weapons",
+     "blunt_force",
+     "upgrade_collector",
+     "deft"
+    ],
+    "items": [
+     "infinity_edge",
+     "collector",
+     "rfc",
+     "ldr",
+     "botrk"
+    ]
+   },
+   {
+    "name": "근접 전환 캐틀",
+    "why": "검을 뽑아라로 근접 전환, 헤드샷 치명타를 생존력으로 버팀",
+    "augs": [
+     "draw_your_sword",
+     "big_shot",
+     "giant_slayer",
+     "upgrade_ie",
+     "soul_siphon",
+     "critical_rhythm",
+     "blunt_force",
+     "tank_it",
+     "escapade"
+    ],
+    "items": [
+     "infinity_edge",
+     "collector",
+     "ldr",
+     "bloodthirster",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Karthus": [
+   {
+    "name": "진혼곡 궁 메이지",
+    "why": "진혼곡 궁 쿨을 돌리고 죽음 극복 상태로 다이브 폭격 세트",
+    "augs": [
+     "ultimate_revolution",
+     "clown_college",
+     "eureka",
+     "infinite_recursion",
+     "jeweled_gauntlet",
+     "arcane_axiom",
+     "its_killing_time",
+     "phenomenal_evil",
+     "weapon_of_destiny",
+     "dive_bomber",
+     "ultimate_recursion",
+     "adapt",
+     "no_mana",
+     "witchful_thinking"
+    ],
+    "items": [
+     "malignance",
+     "liandry",
+     "shadowflame",
+     "rabadon",
+     "blackfire"
+    ]
+   }
+  ],
+  "Jhin": [
+   {
+    "name": "치명 커튼콜 원딜",
+    "why": "4번째 탄과 커튼 콜 치명타, 스킬·궁 치명 증강으로 저격",
+    "augs": [
+     "giant_slayer",
+     "jeweled_gauntlet",
+     "tripleshot",
+     "mad_scientist",
+     "upgrade_ie",
+     "jeweled_bracelet",
+     "soul_siphon",
+     "boom_bass",
+     "weapon_of_destiny",
+     "blunt_force",
+     "zealot",
+     "dont_blink",
+     "homeguard"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "rfc",
+     "hubris"
+    ]
+   },
+   {
+    "name": "궁 봉인 스킬 진",
+    "why": "커튼 콜 대신 춤추는 유탄·살상연희 피해와 가속을 키움",
+    "augs": [
+     "back_to_basics",
+     "jeweled_gauntlet",
+     "giant_slayer",
+     "upgrade_ie",
+     "soul_siphon",
+     "recursion",
+     "blunt_force",
+     "homeguard",
+     "leg_day"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "hubris",
+     "rfc"
+    ]
+   }
+  ],
+  "Ezreal": [
+   {
+    "name": "Q 견제 스킬 원딜",
+    "why": "신비한 화살 적중마다 쿨 감소, 광휘·스킬 치명으로 견제",
+    "augs": [
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "back_to_basics",
+     "mad_scientist",
+     "upgrade_sheen",
+     "ethereal_weapon",
+     "bees",
+     "recursion",
+     "shrink_engine",
+     "boom_bass",
+     "blunt_force",
+     "twin_fire",
+     "purist_caster",
+     "juiced"
+    ],
+    "items": [
+     "trinity",
+     "shojin",
+     "serylda",
+     "collector",
+     "botrk"
+    ]
+   },
+   {
+    "name": "근접 평타 이즈",
+    "why": "검을 뽑아라로 근접 전환, 정수의 흐름 표식을 평타로 터뜨림",
+    "augs": [
+     "draw_your_sword",
+     "dual_wield",
+     "tap_dancer",
+     "giant_slayer",
+     "upgrade_sheen",
+     "ethereal_weapon",
+     "bees",
+     "deft",
+     "blunt_force",
+     "goredrink"
+    ],
+    "items": [
+     "trinity",
+     "botrk",
+     "kraken",
+     "guinsoo",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Brand": [
+   {
+    "name": "화상 광역 메이지",
+    "why": "불길 도트·화염 기둥 장판에 화상·폭죽 세트를 얹어 광역 딜",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "magic_missile",
+     "phenomenal_evil",
+     "shrink_engine",
+     "recursion",
+     "vulnerability",
+     "ice_cold",
+     "twin_fire",
+     "erosion",
+     "homeguard"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "TwistedFate": [
+   {
+    "name": "AP 카드 견제",
+    "why": "와일드 카드 장거리 견제를 메아리·저격으로, 골드 카드로 기절",
+    "augs": [
+     "echo_cast",
+     "quest_wooglets",
+     "back_to_basics",
+     "eureka",
+     "jeweled_gauntlet",
+     "skilled_sniper",
+     "magic_missile",
+     "recoil",
+     "bees",
+     "shrink_engine",
+     "adapt",
+     "homeguard",
+     "twin_fire",
+     "purist_caster"
+    ],
+    "items": [
+     "ludens",
+     "lich_bane",
+     "rabadon",
+     "zhonya",
+     "shadowflame"
+    ]
+   }
+  ],
+  "AurelionSol": [
+   {
+    "name": "별가루 스택 메이지",
+    "why": "빛의 숨결 채널링 화상과 별가루 영구 중첩을 증강으로 가속",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "infinite_recursion",
+     "jeweled_gauntlet",
+     "mad_scientist",
+     "phenomenal_evil",
+     "warlock_juicebox",
+     "bread_and_cheese",
+     "shrink_engine",
+     "recursion",
+     "stackosaurus",
+     "dont_change_channel",
+     "ice_cold",
+     "siphon"
+    ],
+    "items": [
+     "rylai",
+     "liandry",
+     "roa",
+     "blackfire",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Yasuo": [
+   {
+    "name": "치명 회오리 브루저",
+    "why": "강철 폭풍이 평타 판정이라 쿨감·치명 흡혈, 질풍검 돌진 보호막",
+    "augs": [
+     "mystic_punch",
+     "bouncing_bees",
+     "soul_siphon",
+     "still_here",
+     "upgrade_ie",
+     "boom_bass",
+     "critical_rhythm",
+     "swift_and_safe",
+     "upgrade_deaths_dance",
+     "tank_it",
+     "siphon",
+     "shadow_runner",
+     "deft"
+    ],
+    "items": [
+     "botrk",
+     "infinity_edge",
+     "deaths_dance",
+     "yuntal",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Graves": [
+   {
+    "name": "근접 치명 산탄",
+    "why": "산탄 평타 치명타와 무고한 희생자 궁 치명, 빨리 뽑기로 진입",
+    "augs": [
+     "draw_your_sword",
+     "big_shot",
+     "jeweled_gauntlet",
+     "clown_college",
+     "upgrade_ie",
+     "jeweled_bracelet",
+     "soul_siphon",
+     "still_here",
+     "blunt_force",
+     "upgrade_collector",
+     "goredrink",
+     "tank_it",
+     "escape_plan"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "hubris",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Ryze": [
+   {
+    "name": "마나 탱 메이지",
+    "why": "비전 연마로 마나·체력이 딜, 과부하 초기화와 대마법사 세트",
+    "augs": [
+     "back_to_basics",
+     "goliath",
+     "overloaded",
+     "quest_wooglets",
+     "mad_scientist",
+     "overflow",
+     "double_time",
+     "warlock_juicebox",
+     "phenomenal_evil",
+     "mind_to_matter",
+     "adapt",
+     "blue_barrier",
+     "lich_brain",
+     "ocean_soul"
+    ],
+    "items": [
+     "roa",
+     "archangels_staff",
+     "rabadon",
+     "riftmaker",
+     "zhonya"
+    ]
+   }
+  ],
+  "Smolder": [
+   {
+    "name": "Q 스택 치명 원딜",
+    "why": "초강력 화염 숨결 중첩을 다단 중첩으로 빨리 쌓고 스킬 치명",
+    "augs": [
+     "jeweled_gauntlet",
+     "scopiest_weapons",
+     "back_to_basics",
+     "infinite_recursion",
+     "upgrade_ie",
+     "vulnerability",
+     "scopier_weapons",
+     "weapon_of_destiny",
+     "shrink_engine",
+     "stackosaurus",
+     "siphon",
+     "scoped_weapons",
+     "twin_fire",
+     "blunt_force"
+    ],
+    "items": [
+     "infinity_edge",
+     "essence_reaver",
+     "shojin",
+     "ldr",
+     "rfc"
+    ]
+   }
+  ],
+  "MasterYi": [
+   {
+    "name": "Q 쿨감 온힛 캐리",
+    "why": "평타로 일격 필살 쿨을 깎고 돌진 가속으로 Q를 계속 굴림",
+    "augs": [
+     "mystic_punch",
+     "dashing",
+     "dual_wield",
+     "ultimate_awakening",
+     "bread_and_butter",
+     "recursion",
+     "pursuit_of_haste",
+     "still_here",
+     "lil_extra_help",
+     "deft",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "zealot"
+    ],
+    "items": [
+     "botrk",
+     "guinsoo",
+     "kraken",
+     "deaths_dance",
+     "terminus"
+    ]
+   },
+   {
+    "name": "치명 2연속 공격",
+    "why": "2연속 공격·일격 필살 치명타에 적중 효과 두 번 적용",
+    "augs": [
+     "double_tap",
+     "upgrade_ie",
+     "soul_siphon",
+     "weapon_of_destiny",
+     "critical_rhythm",
+     "upgrade_collector",
+     "blunt_force",
+     "tank_it",
+     "zealot"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "navori",
+     "deaths_dance",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Malphite": [
+   {
+    "name": "AP 궁 원콤",
+    "why": "멈출 수 없는 힘 광역 에어본 궁 쿨을 돌려 한타마다 원콤",
+    "augs": [
+     "ultimate_revolution",
+     "eureka",
+     "clown_college",
+     "infinite_recursion",
+     "arcane_axiom",
+     "bees",
+     "transmute_prismatic",
+     "dive_bomber",
+     "ultimate_recursion",
+     "witchful_thinking"
+    ],
+    "items": [
+     "malignance",
+     "shadowflame",
+     "rabadon",
+     "stormsurge",
+     "void_staff"
+    ]
+   },
+   {
+    "name": "방어력 탱커",
+    "why": "지면 강타가 방어력 비례, 천둥소리 평타에 장갑 충격 얹기",
+    "augs": [
+     "goliath",
+     "biggest_snowball",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "stay_resolute",
+     "heavy_hitter",
+     "upgrade_immolate",
+     "escape_plan"
+    ],
+    "items": [
+     "sunfire",
+     "heartsteel",
+     "thornmail",
+     "frozen_heart",
+     "randuins_omen"
+    ]
+   }
+  ],
+  "Sett": [
+   {
+    "name": "체력 강펀치 브루저",
+    "why": "강펀치 투지·보호막과 체력 성장, 안면 강타 기절로 스택",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "mad_scientist",
+     "back_to_basics",
+     "clown_college",
+     "tank_engine",
+     "steel_your_heart",
+     "celestial_body",
+     "armored_impact",
+     "still_here",
+     "heavy_hitter",
+     "double_defense",
+     "blunt_force",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "overlords",
+     "warmogs",
+     "steraks_gage",
+     "axiom_arc"
+    ]
+   }
+  ],
+  "Morgana": [
+   {
+    "name": "도트 속박 메이지",
+    "why": "W 고통의 그림자 지속 피해와 Q 어둠의 속박 장거리 적중을 화상·가속으로 키움",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "spellsplit",
+     "archmage",
+     "skilled_sniper",
+     "shrink_engine",
+     "recursion",
+     "bees",
+     "warlock_juicebox",
+     "ice_cold",
+     "upgrade_zhonyas",
+     "slap_around",
+     "purist_caster"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "zhonya",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Varus": [
+   {
+    "name": "역병 평타 원딜",
+    "why": "W 역병 화살 평타 중첩을 추가 화살·공속으로 빠르게 쌓고 Q로 터뜨림",
+    "augs": [
+     "dual_wield",
+     "draw_your_sword",
+     "giant_slayer",
+     "mad_scientist",
+     "bees",
+     "still_here",
+     "weapon_of_destiny",
+     "deft",
+     "zealot",
+     "blunt_force",
+     "twin_fire"
+    ],
+    "items": [
+     "botrk",
+     "guinsoo",
+     "runaan",
+     "collector",
+     "terminus"
+    ]
+   },
+   {
+    "name": "치명 Q 견제",
+    "why": "Q 꿰뚫는 화살 장거리 저격을 스킬 가속·중첩으로 연타하는 물관 견제",
+    "augs": [
+     "infinite_recursion",
+     "back_to_basics",
+     "ethereal_weapon",
+     "phenomenal_evil",
+     "shrink_engine",
+     "skilled_sniper",
+     "recursion",
+     "bread_and_butter",
+     "blunt_force",
+     "twin_fire",
+     "escape_plan"
+    ],
+    "items": [
+     "collector",
+     "hubris",
+     "serylda",
+     "axiom_arc",
+     "eclipse"
+    ]
+   }
+  ],
+  "Hecarim": [
+   {
+    "name": "Q 연타 돌진",
+    "why": "Q 회오리 베기 연타를 평타·궁 쿨감으로 돌리고 E·R 돌진으로 진입",
+    "augs": [
+     "mystic_punch",
+     "ultimate_awakening",
+     "triggered_inferno",
+     "infinite_recursion",
+     "ethereal_weapon",
+     "bread_and_butter",
+     "take_em_down",
+     "boom_bass",
+     "recursion",
+     "spin_to_win",
+     "upgrade_deaths_dance",
+     "stay_resolute",
+     "goredrink",
+     "blunt_force"
+    ],
+    "items": [
+     "shojin",
+     "deaths_dance",
+     "hubris",
+     "spirit_visage",
+     "black_cleaver"
+    ]
+   }
+  ],
+  "Jayce": [
+   {
+    "name": "캐논 견제 물관",
+    "why": "캐논 Q+E 전격 폭발 장거리 적중에 저격·가속·스킬 치명타를 더함",
+    "augs": [
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "mad_scientist",
+     "skilled_sniper",
+     "recursion",
+     "shrink_engine",
+     "bread_and_butter",
+     "bees",
+     "blunt_force",
+     "purist_caster",
+     "upgrade_collector",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "serylda",
+     "eclipse",
+     "shojin"
+    ]
+   }
+  ],
+  "Shaco": [
+   {
+    "name": "AD 기습 암살자",
+    "why": "Q 속임수 은신 후 뒤치기 치명타 한 방, 광대 대학·폭격기로 진입",
+    "augs": [
+     "clown_college",
+     "big_shot",
+     "infinite_recursion",
+     "mad_scientist",
+     "shrink_engine",
+     "recursion",
+     "boom_bass",
+     "shadow_runner",
+     "dive_bomber",
+     "dont_blink",
+     "twin_fire",
+     "escape_plan"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "hubris",
+     "ldr"
+    ]
+   },
+   {
+    "name": "AP 상자 샤코",
+    "why": "W 깜짝 상자와 R 환각 분신을 펫 강화·W 가속으로 깔아 둠",
+    "augs": [
+     "clown_college",
+     "eureka",
+     "infernal_conduit",
+     "infinite_recursion",
+     "minionmancer",
+     "bread_and_jam",
+     "recursion",
+     "shrink_engine",
+     "witchful_thinking",
+     "purist_caster",
+     "dive_bomber",
+     "shadow_runner"
+    ],
+    "items": [
+     "shadowflame",
+     "rabadon",
+     "void_staff",
+     "zhonya",
+     "stormsurge"
+    ]
+   }
+  ],
+  "XinZhao": [
+   {
+    "name": "하이브리드 평타",
+    "why": "Q 삼조격 평타와 스킬을 번갈아 결투의 대가 AD·AP 중첩",
+    "augs": [
+     "master_of_duality",
+     "mystic_punch",
+     "dual_wield",
+     "goliath",
+     "tap_dancer",
+     "still_here",
+     "ethereal_weapon",
+     "boom_bass",
+     "upgrade_sheen",
+     "take_em_down",
+     "zealot",
+     "flow_of_spirit",
+     "deft",
+     "lonely_warrior"
+    ],
+    "items": [
+     "dusk_dawn",
+     "statikk",
+     "deaths_dance",
+     "spirit_visage",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Yone": [
+   {
+    "name": "치명 평타 브루저",
+    "why": "패시브 치명타 2배와 Q 필멸의 검 평타 연계, W 보호막·흡혈로 버팀",
+    "augs": [
+     "mystic_punch",
+     "symphony_of_war",
+     "jeweled_gauntlet",
+     "final_form",
+     "soul_siphon",
+     "upgrade_ie",
+     "still_here",
+     "critical_rhythm",
+     "critical_healing",
+     "upgrade_deaths_dance",
+     "deft",
+     "tank_it",
+     "blunt_force",
+     "zealot"
+    ],
+    "items": [
+     "botrk",
+     "infinity_edge",
+     "yuntal",
+     "deaths_dance",
+     "immortal_shieldbow"
+    ]
+   }
+  ],
+  "Jinx": [
+   {
+    "name": "치명 평타 원딜",
+    "why": "Q 미니건/로켓 평타 딜러, 추가 화살·사거리·치명타로 뒤에서 쏨",
+    "augs": [
+     "dual_wield",
+     "scopiest_weapons",
+     "tap_dancer",
+     "symphony_of_war",
+     "upgrade_ie",
+     "critical_rhythm",
+     "scopier_weapons",
+     "soul_siphon",
+     "still_here",
+     "deft",
+     "upgrade_collector",
+     "blunt_force",
+     "zealot",
+     "tank_it"
+    ],
+    "items": [
+     "runaan",
+     "infinity_edge",
+     "collector",
+     "ldr",
+     "botrk"
+    ]
+   }
+  ],
+  "Trundle": [
+   {
+    "name": "평타 진압 브루저",
+    "why": "Q 깨물기 강화 평타와 E 얼음 기둥 지형 피해, R 진압으로 버팀",
+    "augs": [
+     "mystic_punch",
+     "goliath",
+     "ultimate_awakening",
+     "terraind",
+     "still_here",
+     "bonk",
+     "ravenous_bind",
+     "boom_bass",
+     "flow_of_spirit",
+     "siphon",
+     "deft",
+     "heavy_hitter",
+     "upgrade_deaths_dance"
+    ],
+    "items": [
+     "botrk",
+     "heartsteel",
+     "spirit_visage",
+     "titanic",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Senna": [
+   {
+    "name": "사거리 성장 원딜",
+    "why": "패시브 면죄 영혼 중첩을 다단 중첩으로 키우고 사거리·추가 화살로 견제",
+    "augs": [
+     "dual_wield",
+     "scopiest_weapons",
+     "tap_dancer",
+     "mystic_punch",
+     "scopier_weapons",
+     "weapon_of_destiny",
+     "boom_bass",
+     "mercys_strike",
+     "stackosaurus",
+     "blunt_force",
+     "typhoon",
+     "first_aid_kit"
+    ],
+    "items": [
+     "infinity_edge",
+     "collector",
+     "rfc",
+     "statikk",
+     "botrk"
+    ]
+   }
+  ],
+  "Vayne": [
+   {
+    "name": "은화살 평타 캐리",
+    "why": "W 은화살 3타 고정 피해를 추가 화살·공속으로 빠르게, Q 구르기 강화",
+    "augs": [
+     "dual_wield",
+     "double_tap",
+     "scopiest_weapons",
+     "tap_dancer",
+     "giant_slayer",
+     "bonk",
+     "still_here",
+     "scopier_weapons",
+     "weapon_of_destiny",
+     "boom_bass",
+     "deft",
+     "flow_of_spirit",
+     "shadow_runner",
+     "blunt_force"
+    ],
+    "items": [
+     "botrk",
+     "guinsoo",
+     "kraken",
+     "terminus",
+     "wits_end"
+    ]
+   }
+  ],
+  "JarvanIV": [
+   {
+    "name": "다이브 이니시",
+    "why": "E+Q 깃발 돌진과 R 대격변으로 뛰어들고 체력 증강·폭격기로 버팀",
+    "augs": [
+     "clown_college",
+     "goliath",
+     "final_form",
+     "infinite_recursion",
+     "tank_engine",
+     "steel_your_heart",
+     "get_jinxed",
+     "still_here",
+     "weapon_of_destiny",
+     "dive_bomber",
+     "blunt_force",
+     "heavy_hitter",
+     "upgrade_deaths_dance"
+    ],
+    "items": [
+     "hubris",
+     "heartsteel",
+     "axiom_arc",
+     "warmogs",
+     "collector"
+    ]
+   }
+  ],
+  "Zed": [
+   {
+    "name": "그림자 물관 암살",
+    "why": "그림자 Q 예리한 표창 연타를 스킬 치명타·가속으로, R 표식 폭딜",
+    "augs": [
+     "jeweled_gauntlet",
+     "clown_college",
+     "final_form",
+     "infinite_recursion",
+     "from_beginning_to_end",
+     "ethereal_weapon",
+     "recursion",
+     "weapon_of_destiny",
+     "bread_and_butter",
+     "blunt_force",
+     "upgrade_collector",
+     "dive_bomber",
+     "goredrink",
+     "upgrade_deaths_dance"
+    ],
+    "items": [
+     "hubris",
+     "axiom_arc",
+     "collector",
+     "serylda",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Gangplank": [
+   {
+    "name": "치명 화약통",
+    "why": "E 화약통 연쇄 폭발 치명타가 주력, 궁 대신 스킬 피해·가속을 키움",
+    "augs": [
+     "big_shot",
+     "back_to_basics",
+     "infinite_recursion",
+     "upgrade_ie",
+     "vulnerability",
+     "bread_and_cheese",
+     "recursion",
+     "weapon_of_destiny",
+     "blunt_force",
+     "upgrade_collector",
+     "dont_blink",
+     "twin_fire",
+     "tank_it"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "essence_reaver",
+     "ldr",
+     "hubris"
+    ]
+   }
+  ],
+  "Fizz": [
+   {
+    "name": "AP 돌진 암살자",
+    "why": "Q 성게 찌르기 돌진 가속과 W 적중 효과 평타, R 상어로 폭딜",
+    "augs": [
+     "dashing",
+     "eureka",
+     "infernal_conduit",
+     "infinite_recursion",
+     "recursion",
+     "upgrade_stormsurge",
+     "bread_and_cheese",
+     "marksmage",
+     "warlock_juicebox",
+     "shadow_runner",
+     "witchful_thinking",
+     "dont_blink",
+     "ice_cold"
+    ],
+    "items": [
+     "stormsurge",
+     "lich_bane",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Swain": [
+   {
+    "name": "탱커 궁 흡수",
+    "why": "R 악의 승천 흡수 회복을 피해로 바꾸고 E 속박으로 중첩·보호막",
+    "augs": [
+     "circle_of_death",
+     "goliath",
+     "cruelty",
+     "titans_resolve",
+     "infernal_conduit",
+     "tank_engine",
+     "steel_your_heart",
+     "ravenous_bind",
+     "phenomenal_evil",
+     "slap_around",
+     "lich_brain",
+     "stackosaurus"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "spirit_visage",
+     "riftmaker",
+     "rylai"
+    ]
+   }
+  ],
+  "DrMundo": [
+   {
+    "name": "체력 재생 탱커",
+    "why": "패시브·R 최대 투여량 대량 회복을 죽음의 순환 피해로, E 체력 비례",
+    "augs": [
+     "goliath",
+     "circle_of_death",
+     "titans_resolve",
+     "mad_scientist",
+     "tank_engine",
+     "steel_your_heart",
+     "celestial_body",
+     "armored_impact",
+     "dawnbringers_resolve",
+     "heavy_hitter",
+     "siphon",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "spirit_visage",
+     "unending_despair",
+     "overlords"
+    ]
+   }
+  ],
+  "Ekko": [
+   {
+    "name": "AP 3타 암살자",
+    "why": "패시브 Z 드라이브 3타를 스킬 적중 효과로 빨리 터뜨리고 E 돌진 가속",
+    "augs": [
+     "eureka",
+     "blade_waltz",
+     "dashing",
+     "spellsplit",
+     "infinite_recursion",
+     "ethereal_weapon",
+     "marksmage",
+     "boom_bass",
+     "warlock_juicebox",
+     "bees",
+     "adapt",
+     "shadow_runner",
+     "witchful_thinking"
+    ],
+    "items": [
+     "dusk_dawn",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Lillia": [
+   {
+    "name": "도트 회전 브루저",
+    "why": "패시브 도트와 Q 뾰로롱 강타 회전 피해를 화상·Q 가속으로 연타",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "giant_slayer",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "shrink_engine",
+     "bread_and_butter",
+     "phenomenal_evil",
+     "recursion",
+     "spin_to_win",
+     "dont_blink",
+     "leg_day",
+     "goredrink"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "riftmaker",
+     "rabadon"
+    ]
+   }
+  ],
+  "Twitch": [
+   {
+    "name": "독 평타 원딜",
+    "why": "패시브 맹독 평타와 R 무차별 난사 관통 사격을 공속·치명타로 키움",
+    "augs": [
+     "dual_wield",
+     "fey_magic",
+     "scopiest_weapons",
+     "pin_cushion",
+     "upgrade_ie",
+     "lil_extra_help",
+     "vulnerability",
+     "critical_rhythm",
+     "scopier_weapons",
+     "deft",
+     "ultimate_recursion",
+     "upgrade_collector",
+     "blunt_force",
+     "zealot"
+    ],
+    "items": [
+     "runaan",
+     "infinity_edge",
+     "collector",
+     "botrk",
+     "ldr"
+    ]
+   }
+  ],
+  "Sylas": [
+   {
+    "name": "AP 돌진 브루저",
+    "why": "W 국왕시해자·E 도주 돌진에 스킬 가속, 패시브 강화 평타로 마무리",
+    "augs": [
+     "dashing",
+     "eureka",
+     "warlock_juicebox",
+     "marksmage",
+     "adapt",
+     "infinite_recursion",
+     "boom_bass",
+     "goredrink",
+     "back_to_basics",
+     "take_em_down",
+     "shadow_runner",
+     "swift_and_safe",
+     "quest_wooglets",
+     "escape_plan"
+    ],
+    "items": [
+     "riftmaker",
+     "roa",
+     "shadowflame",
+     "rabadon",
+     "zhonya"
+    ]
+   },
+   {
+    "name": "체력 AP 탱커",
+    "why": "체력을 쌓아 주문력으로 바꾸고 W 회복으로 버티는 탱키 사일러스",
+    "augs": [
+     "goliath",
+     "dashing",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "take_em_down",
+     "weapon_of_destiny",
+     "lich_brain",
+     "goredrink",
+     "escape_plan",
+     "adapt"
+    ],
+    "items": [
+     "riftmaker",
+     "heartsteel",
+     "roa",
+     "spirit_visage",
+     "rabadon"
+    ]
+   }
+  ],
+  "Chogath": [
+   {
+    "name": "포식 무한 성장 탱커",
+    "why": "R 포식 체력 스택과 체력 증강을 겹치고 E 가시 평타로 체력 비례 피해",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "heavy_hitter",
+     "ultimate_revolution",
+     "steel_your_heart",
+     "stackosaurus",
+     "titans_resolve",
+     "armored_impact",
+     "lich_brain",
+     "mad_scientist",
+     "celestial_body",
+     "slap_around",
+     "infinite_recursion",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "unending_despair",
+     "thornmail",
+     "kaenic"
+    ]
+   }
+  ],
+  "Katarina": [
+   {
+    "name": "적중 효과 카타리나",
+    "why": "R 죽음의 연꽃이 적중 효과를 실어 회전, E 순보로 진입해 평타 섞기",
+    "augs": [
+     "ethereal_weapon",
+     "fey_magic",
+     "ultimate_unstoppable",
+     "mystic_punch",
+     "spin_to_win",
+     "master_of_duality",
+     "deft",
+     "still_here",
+     "take_em_down",
+     "final_form",
+     "goredrink",
+     "cant_touch_this",
+     "blunt_force",
+     "its_killing_time"
+    ],
+    "items": [
+     "botrk",
+     "kraken",
+     "terminus",
+     "guinsoo",
+     "titanic"
+    ]
+   },
+   {
+    "name": "AP 치명 스킬 암살",
+    "why": "Q 단검·R 연꽃이 치명타로 터지고 아이템 피해도 치명타로 들어감",
+    "augs": [
+     "jeweled_gauntlet",
+     "vulnerability",
+     "fey_magic",
+     "spin_to_win",
+     "ultimate_unstoppable",
+     "its_killing_time",
+     "cant_touch_this",
+     "take_em_down",
+     "witchful_thinking",
+     "upgrade_stormsurge",
+     "warlock_juicebox",
+     "goredrink"
+    ],
+    "items": [
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "void_staff",
+     "zhonya"
+    ]
+   }
+  ],
+  "Maokai": [
+   {
+    "name": "속박 회복 탱커",
+    "why": "W·R 속박으로 CC 증강을 쌓고 패시브 회복을 죽음의 순환 피해로 전환",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "circle_of_death",
+     "slap_around",
+     "courage_colossus",
+     "armored_impact",
+     "purist_caster",
+     "steel_your_heart",
+     "heavy_hitter",
+     "cruelty",
+     "recursion",
+     "lich_brain",
+     "eureka",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "spirit_visage",
+     "warmogs",
+     "thornmail"
+    ]
+   }
+  ],
+  "Yunara": [
+   {
+    "name": "공속 치명 원딜",
+    "why": "Q 영혼 단련 공속·확산 평타에 추가 화살과 치명타, 패시브 치명 마법 피해",
+    "augs": [
+     "dual_wield",
+     "upgrade_ie",
+     "deft",
+     "tap_dancer",
+     "soul_siphon",
+     "zealot",
+     "scopiest_weapons",
+     "lil_extra_help",
+     "blunt_force",
+     "master_of_duality",
+     "still_here",
+     "scopier_weapons",
+     "light_em_up",
+     "tank_it"
+    ],
+    "items": [
+     "yuntal",
+     "infinity_edge",
+     "runaan",
+     "botrk",
+     "collector"
+    ]
+   }
+  ],
+  "Rumble": [
+   {
+    "name": "화상 근접 메이지",
+    "why": "Q 화염방사기·R 불길 장판의 지속 피해로 화상 중첩·쿨 감소",
+    "augs": [
+     "infernal_conduit",
+     "warlock_juicebox",
+     "upgrade_zhonyas",
+     "jeweled_gauntlet",
+     "vulnerability",
+     "eureka",
+     "goredrink",
+     "bees",
+     "witchful_thinking",
+     "quest_wooglets",
+     "recursion",
+     "erosion",
+     "take_em_down",
+     "infinite_recursion"
+    ],
+    "items": [
+     "liandry",
+     "malignance",
+     "shadowflame",
+     "zhonya",
+     "rabadon"
+    ]
+   }
+  ],
+  "Darius": [
+   {
+    "name": "체력 출혈 브루저",
+    "why": "Q 학살 회전 강화와 체력 스택, 평타 출혈 5중첩 후 R 단두대",
+    "augs": [
+     "goliath",
+     "spin_to_win",
+     "tank_engine",
+     "steel_your_heart",
+     "armored_impact",
+     "heavy_hitter",
+     "titans_resolve",
+     "stay_resolute",
+     "final_form",
+     "upgrade_deaths_dance",
+     "mad_scientist",
+     "leg_day",
+     "boom_bass",
+     "blunt_force"
+    ],
+    "items": [
+     "stridebreaker",
+     "heartsteel",
+     "sundered_sky",
+     "deaths_dance",
+     "spirit_visage"
+    ]
+   }
+  ],
+  "Nidalee": [
+   {
+    "name": "창 투척 저격 메이지",
+    "why": "인간 Q 창 투척을 갈라지게 하고 장거리 적중으로 쿨을 줄이는 견제",
+    "augs": [
+     "spellsplit",
+     "upgrade_stormsurge",
+     "adapt",
+     "jeweled_gauntlet",
+     "skilled_sniper",
+     "witchful_thinking",
+     "eureka",
+     "bread_and_butter",
+     "multishot",
+     "homeguard",
+     "shrink_engine",
+     "quest_wooglets",
+     "twin_fire",
+     "from_downtown"
+    ],
+    "items": [
+     "stormsurge",
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Tristana": [
+   {
+    "name": "장거리 치명 원딜",
+    "why": "패시브 사거리에 조준경을 더하고 Q 속사 공속으로 치명타 평타",
+    "augs": [
+     "dual_wield",
+     "lil_extra_help",
+     "deft",
+     "upgrade_ie",
+     "scopiest_weapons",
+     "soul_siphon",
+     "zealot",
+     "tap_dancer",
+     "critical_rhythm",
+     "upgrade_collector",
+     "scopier_weapons",
+     "blunt_force",
+     "still_here",
+     "tank_it"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "navori",
+     "botrk",
+     "ldr"
+    ]
+   },
+   {
+    "name": "근접 전환 트리",
+    "why": "검을 뽑아라로 근접 전환, W 로켓 점프로 붙어 Q 속사 평타 난사",
+    "augs": [
+     "draw_your_sword",
+     "dual_wield",
+     "tap_dancer",
+     "lil_extra_help",
+     "deft",
+     "still_here",
+     "soul_siphon",
+     "blunt_force",
+     "zealot",
+     "goredrink"
+    ],
+    "items": [
+     "botrk",
+     "infinity_edge",
+     "navori",
+     "deaths_dance",
+     "collector"
+    ]
+   }
+  ],
+  "Xerath": [
+   {
+    "name": "장거리 포격 메이지",
+    "why": "Q 비전 파동·W 파멸의 눈 초장거리 적중으로 쿨 감소·미사일 추가",
+    "augs": [
+     "eureka",
+     "magic_missile",
+     "adapt",
+     "jeweled_gauntlet",
+     "skilled_sniper",
+     "witchful_thinking",
+     "shrink_engine",
+     "twin_fire",
+     "from_downtown",
+     "homeguard",
+     "infinite_recursion",
+     "upgrade_stormsurge",
+     "hextech_soul",
+     "quest_wooglets"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "horizon",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Kayn": [
+   {
+    "name": "돌진 회전 암살자",
+    "why": "Q 살상돌격 돌진·회전을 가속하고 R 그림자의 지배로 마무리",
+    "augs": [
+     "dashing",
+     "spin_to_win",
+     "recursion",
+     "bread_and_butter",
+     "infinite_recursion",
+     "upgrade_deaths_dance",
+     "jeweled_gauntlet",
+     "from_beginning_to_end",
+     "blunt_force",
+     "weapon_of_destiny",
+     "shadow_runner",
+     "mad_scientist",
+     "biggest_snowball"
+    ],
+    "items": [
+     "hubris",
+     "axiom_arc",
+     "deaths_dance",
+     "eclipse",
+     "collector"
+    ]
+   }
+  ],
+  "LeeSin": [
+   {
+    "name": "AD 돌진 브루저",
+    "why": "Q 공명의 일격·W 방호 돌진 연계, 스킬 후 패시브 평타로 추가 피해",
+    "augs": [
+     "jeweled_gauntlet",
+     "clown_college",
+     "upgrade_deaths_dance",
+     "boom_bass",
+     "blunt_force",
+     "dashing",
+     "from_beginning_to_end",
+     "triggered_inferno",
+     "goredrink",
+     "biggest_snowball",
+     "sap_magic",
+     "shadow_runner",
+     "weapon_of_destiny",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "deaths_dance",
+     "collector",
+     "eclipse",
+     "sundered_sky"
+    ]
+   }
+  ],
+  "Volibear": [
+   {
+    "name": "평타 탱커 브루저",
+    "why": "패시브 공속 평타로 스킬 쿨을 줄이고 체력 스택, W 광란의 상처 회복",
+    "augs": [
+     "mystic_punch",
+     "tank_engine",
+     "steel_your_heart",
+     "heavy_hitter",
+     "goliath",
+     "armored_impact",
+     "zealot",
+     "still_here",
+     "titans_resolve",
+     "ethereal_weapon",
+     "flow_of_spirit",
+     "goredrink",
+     "mad_scientist",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "spirit_visage",
+     "warmogs",
+     "thornmail"
+    ]
+   },
+   {
+    "name": "AP 적중 볼리베어",
+    "why": "패시브 마법 피해·W 적중 효과에 평타 주문력 누적, 스킬로 적중 효과",
+    "augs": [
+     "master_of_duality",
+     "adapt",
+     "mystic_punch",
+     "ethereal_weapon",
+     "still_here",
+     "warlock_juicebox",
+     "zealot",
+     "bees",
+     "flow_of_spirit",
+     "goredrink",
+     "dual_wield"
+    ],
+    "items": [
+     "riftmaker",
+     "nashor",
+     "guinsoo",
+     "spirit_visage",
+     "rabadon"
+    ]
+   }
+  ],
+  "Blitzcrank": [
+   {
+    "name": "그랩 탱커",
+    "why": "Q 로켓 손을 갈라 그랩 확률을 올리고 E 강철 주먹 평타로 추가 피해",
+    "augs": [
+     "spellsplit",
+     "recursion",
+     "dive_bomber",
+     "armored_impact",
+     "tank_engine",
+     "echo_cast",
+     "purist_caster",
+     "ravenous_bind",
+     "heavy_hitter",
+     "fey_magic",
+     "shrink_engine",
+     "mind_to_matter",
+     "infinite_recursion",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "malignance",
+     "warmogs",
+     "thornmail",
+     "unending_despair"
+    ]
+   }
+  ],
+  "Draven": [
+   {
+    "name": "치명 도끼 원딜",
+    "why": "Q 회전 도끼 치명타 평타 극대화, R 죽음의 소용돌이까지 치명타",
+    "augs": [
+     "big_shot",
+     "upgrade_ie",
+     "spin_to_win",
+     "jeweled_bracelet",
+     "blunt_force",
+     "soul_siphon",
+     "dual_wield",
+     "jeweled_gauntlet",
+     "goredrink",
+     "scopier_weapons",
+     "giant_slayer",
+     "weapon_of_destiny",
+     "tank_it",
+     "flow_of_spirit"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "hubris",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Garen": [
+   {
+    "name": "치명 회전 가렌",
+    "why": "E 심판 회전 피해를 키우고 치명타 템, Q 결정타로 진입",
+    "augs": [
+     "goliath",
+     "spin_to_win",
+     "bonk",
+     "blade_waltz",
+     "armored_impact",
+     "stay_resolute",
+     "soul_siphon",
+     "blunt_force",
+     "clown_college",
+     "tank_engine",
+     "protein_shake",
+     "tank_it",
+     "triggered_inferno",
+     "leg_day"
+    ],
+    "items": [
+     "stridebreaker",
+     "phantom_dancer",
+     "infinity_edge",
+     "mortal_reminder",
+     "heartsteel"
+    ]
+   },
+   {
+    "name": "체력 탱커 가렌",
+    "why": "W 용기 보호막·패시브 재생을 키우고 체력 스택으로 E 회전 유지",
+    "augs": [
+     "goliath",
+     "protein_shake",
+     "tank_engine",
+     "spin_to_win",
+     "armored_impact",
+     "stay_resolute",
+     "heavy_hitter",
+     "first_aid_kit",
+     "celestial_body",
+     "escape_plan"
+    ],
+    "items": [
+     "stridebreaker",
+     "heartsteel",
+     "unending_despair",
+     "spirit_visage",
+     "thornmail"
+    ]
+   }
+  ],
+  "Thresh": [
+   {
+    "name": "사슬 CC 탱커",
+    "why": "Q 사형 선고·E 사슬 채찍 CC로 CC 증강을 쌓고 평타 강화",
+    "augs": [
+     "goliath",
+     "armored_impact",
+     "heavy_hitter",
+     "courage_colossus",
+     "tank_engine",
+     "slap_around",
+     "steel_your_heart",
+     "titans_resolve",
+     "ravenous_bind",
+     "soul_eater",
+     "upgrade_immolate",
+     "mad_scientist",
+     "escape_plan",
+     "lonely_warrior"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "warmogs",
+     "unending_despair",
+     "thornmail"
+    ]
+   }
+  ],
+  "Veigar": [
+   {
+    "name": "무한 스택 메이지",
+    "why": "패시브 극악무도 주문력 스택을 증폭, Q·W 적중으로 스택과 쿨 감소",
+    "augs": [
+     "eureka",
+     "phenomenal_evil",
+     "stackosaurus",
+     "jeweled_gauntlet",
+     "shrink_engine",
+     "adapt",
+     "infinite_recursion",
+     "overflow",
+     "slap_around",
+     "spellsplit",
+     "recursion",
+     "upgrade_zhonyas",
+     "quest_wooglets",
+     "homeguard"
+    ],
+    "items": [
+     "roa",
+     "ludens",
+     "rabadon",
+     "zhonya",
+     "shadowflame",
+     "void_staff"
+    ]
+   }
+  ],
+  "Seraphine": [
+   {
+    "name": "장거리 스킬 메이지",
+    "why": "Q 고음·E 비트 발사 장거리 적중, 패시브 두 번 시전으로 스킬 증강 이득",
+    "augs": [
+     "eureka",
+     "shrink_engine",
+     "slap_around",
+     "archmage",
+     "skilled_sniper",
+     "purist_caster",
+     "twin_fire",
+     "magic_missile",
+     "infinite_recursion",
+     "from_downtown",
+     "homeguard",
+     "cruelty",
+     "phenomenal_evil",
+     "recursion"
+    ],
+    "items": [
+     "rylai",
+     "liandry",
+     "shadowflame",
+     "malignance",
+     "rabadon"
+    ]
+   }
+  ],
+  "Vladimir": [
+   {
+    "name": "체력 흡혈 메이지",
+    "why": "Q 수혈 회복을 피해로 바꾸고 패시브 체력·주문력 전환으로 성장",
+    "augs": [
+     "eureka",
+     "warlock_juicebox",
+     "lich_brain",
+     "circle_of_death",
+     "tank_engine",
+     "adapt",
+     "infernal_conduit",
+     "goliath",
+     "recursion",
+     "witchful_thinking",
+     "back_to_basics",
+     "shrink_engine",
+     "bread_and_jam",
+     "stay_resolute"
+    ],
+    "items": [
+     "riftmaker",
+     "rabadon",
+     "cosmic_drive",
+     "heartsteel",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Corki": [
+   {
+    "name": "치명 스킬 원딜",
+    "why": "인광탄·발키리·미사일 폭격이 보석 건틀릿으로 치명타, 발키리 화상도 취약으로 치명",
+    "augs": [
+     "jeweled_gauntlet",
+     "draw_your_sword",
+     "big_shot",
+     "jeweled_bracelet",
+     "upgrade_ie",
+     "vulnerability",
+     "twin_fire",
+     "magic_missile",
+     "soul_siphon",
+     "blunt_force",
+     "upgrade_collector",
+     "still_here",
+     "tank_it",
+     "deft"
+    ],
+    "items": [
+     "infinity_edge",
+     "collector",
+     "ldr",
+     "bloodthirster",
+     "essence_reaver"
+    ]
+   }
+  ],
+  "Lux": [
+   {
+    "name": "장거리 폭딜 메이지",
+    "why": "빛의 속박·광휘의 특이점을 멀리서 맞혀 쿨 감소, 최후의 섬광 가속으로 난사",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "archmage",
+     "echo_cast",
+     "infinite_recursion",
+     "skilled_sniper",
+     "ethereal_weapon",
+     "magic_missile",
+     "shrink_engine",
+     "recursion",
+     "upgrade_stormsurge",
+     "ultimate_recursion",
+     "witchful_thinking",
+     "twin_fire"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "malignance",
+     "stormsurge"
+    ]
+   }
+  ],
+  "Pantheon": [
+   {
+    "name": "궁 봉인 스킬 브루저",
+    "why": "거대 유성 대신 혜성의 창·방호의 도약 피해와 가속을 키워 난타",
+    "augs": [
+     "back_to_basics",
+     "jeweled_gauntlet",
+     "clown_college",
+     "goliath",
+     "transmute_prismatic",
+     "ethereal_weapon",
+     "boom_bass",
+     "take_em_down",
+     "ravenous_bind",
+     "weapon_of_destiny",
+     "blunt_force",
+     "upgrade_deaths_dance",
+     "heavy_hitter",
+     "goredrink"
+    ],
+    "items": [
+     "hubris",
+     "eclipse",
+     "deaths_dance",
+     "collector",
+     "sundered_sky"
+    ]
+   }
+  ],
+  "Ziggs": [
+   {
+    "name": "화상 포격 메이지",
+    "why": "반동 폭탄·지뢰밭 연타로 화상 중첩, 지옥 화염 폭탄 장거리 저격",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "shrink_engine",
+     "magic_missile",
+     "twin_fire",
+     "bees",
+     "recursion",
+     "from_downtown",
+     "homeguard",
+     "purist_caster",
+     "ultimate_recursion",
+     "witchful_thinking"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "shadowflame",
+     "rabadon",
+     "ludens"
+    ]
+   }
+  ],
+  "Nautilus": [
+   {
+    "name": "CC 탱커",
+    "why": "패시브 속박·닻줄 견인·폭뢰 CC마다 보호막과 혜성, 체력 스택",
+    "augs": [
+     "goliath",
+     "courage_colossus",
+     "cruelty",
+     "titans_resolve",
+     "tank_engine",
+     "armored_impact",
+     "steel_your_heart",
+     "soul_eater",
+     "celestial_body",
+     "heavy_hitter",
+     "stay_resolute",
+     "slap_around",
+     "double_defense",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "unending_despair",
+     "thornmail",
+     "spirit_visage"
+    ]
+   },
+   {
+    "name": "화염 탱커",
+    "why": "태양불꽃·공허한 광휘를 함께 들고 역조·타이탄의 분노로 붙어 태움",
+    "augs": [
+     "void_immolation",
+     "courage_colossus",
+     "goliath",
+     "cruelty",
+     "tank_engine",
+     "armored_impact",
+     "soul_eater",
+     "steel_your_heart",
+     "upgrade_immolate",
+     "heavy_hitter",
+     "stay_resolute",
+     "slap_around"
+    ],
+    "items": [
+     "sunfire",
+     "hollow_radiance",
+     "heartsteel",
+     "thornmail",
+     "spirit_visage"
+    ]
+   }
+  ],
+  "Tryndamere": [
+   {
+    "name": "치명 평타 브루저",
+    "why": "격노 치명타 평타에 사거리·공속, 불사의 분노 재사용으로 버팀",
+    "augs": [
+     "scopiest_weapons",
+     "dual_wield",
+     "ultimate_revolution",
+     "symphony_of_war",
+     "still_here",
+     "scopier_weapons",
+     "upgrade_ie",
+     "critical_rhythm",
+     "soul_siphon",
+     "deft",
+     "flow_of_spirit",
+     "zealot",
+     "scoped_weapons",
+     "blunt_force"
+    ],
+    "items": [
+     "botrk",
+     "infinity_edge",
+     "navori",
+     "phantom_dancer",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Ahri": [
+   {
+    "name": "AP 암살 메이지",
+    "why": "현혹의 구슬·매혹 가속과 분열, 혼령 질주로 파고들어 폭딜",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "archmage",
+     "spellsplit",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "recursion",
+     "shrink_engine",
+     "upgrade_stormsurge",
+     "bees",
+     "adapt",
+     "witchful_thinking",
+     "twin_fire",
+     "no_mana"
+    ],
+    "items": [
+     "ludens",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "malignance"
+    ]
+   }
+  ],
+  "MonkeyKing": [
+   {
+    "name": "돌진 평타 브루저",
+    "why": "파쇄격 평타로 쿨 감소, 분신 전사·근두운 돌진 가속, 회전격 강화",
+    "augs": [
+     "blade_waltz",
+     "mystic_punch",
+     "clown_college",
+     "dashing",
+     "goliath",
+     "final_form",
+     "bonk",
+     "boom_bass",
+     "crimson_cobalt",
+     "weapon_of_destiny",
+     "spin_to_win",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "shadow_runner"
+    ],
+    "items": [
+     "heartsteel",
+     "sundered_sky",
+     "deaths_dance",
+     "hubris",
+     "warmogs"
+    ]
+   },
+   {
+    "name": "히드라 브루저",
+    "why": "히드라 셋을 모아 궁극의 히드라 완성, 회전격·근두운으로 광역",
+    "augs": [
+     "ultra_hydra",
+     "mystic_punch",
+     "goliath",
+     "final_form",
+     "bonk",
+     "boom_bass",
+     "still_here",
+     "weapon_of_destiny",
+     "spin_to_win",
+     "blunt_force",
+     "upgrade_deaths_dance",
+     "escape_plan"
+    ],
+    "items": [
+     "profane_hydra",
+     "titanic",
+     "ravenous_hydra",
+     "deaths_dance",
+     "sundered_sky"
+    ]
+   }
+  ],
+  "Mel": [
+   {
+    "name": "장거리 처형 메이지",
+    "why": "빛의 폭격·태양 올가미를 멀리서 맞혀 쿨 감소, 압도 중첩 후 황금 일식",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "skilled_sniper",
+     "warlock_juicebox",
+     "shrink_engine",
+     "recursion",
+     "bees",
+     "vulnerability",
+     "adapt",
+     "witchful_thinking",
+     "homeguard",
+     "no_mana",
+     "blue_barrier"
+    ],
+    "items": [
+     "shadowflame",
+     "rabadon",
+     "ludens",
+     "liandry",
+     "blackfire"
+    ]
+   }
+  ],
+  "Kayle": [
+   {
+    "name": "하이브리드 평타",
+    "why": "화염주문검·화염파 평타에 적중 효과와 사거리, 공속을 몰아줌",
+    "augs": [
+     "dual_wield",
+     "master_of_duality",
+     "scopiest_weapons",
+     "mystic_punch",
+     "tap_dancer",
+     "marksmage",
+     "scopier_weapons",
+     "ethereal_weapon",
+     "warlock_juicebox",
+     "magic_missile",
+     "zealot",
+     "deft",
+     "flow_of_spirit",
+     "scoped_weapons"
+    ],
+    "items": [
+     "guinsoo",
+     "botrk",
+     "nashor",
+     "terminus",
+     "dusk_dawn"
+    ]
+   }
+  ],
+  "Fiora": [
+   {
+    "name": "급소 결투가",
+    "why": "찌르기 돌진 가속과 평타 쿨 감소로 급소를 연달아 가격",
+    "augs": [
+     "mystic_punch",
+     "dashing",
+     "back_to_basics",
+     "boom_bass",
+     "bread_and_butter",
+     "still_here",
+     "sap_magic",
+     "ethereal_weapon",
+     "upgrade_ravenous",
+     "upgrade_deaths_dance",
+     "shadow_runner",
+     "blunt_force",
+     "swift_and_safe",
+     "goredrink"
+    ],
+    "items": [
+     "ravenous_hydra",
+     "deaths_dance",
+     "trinity",
+     "sundered_sky",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Malzahar": [
+   {
+    "name": "도트 공허충 메이지",
+    "why": "재앙의 환상 도트로 화상 중첩, 공허충은 소환술사로 강화",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "bees",
+     "shrink_engine",
+     "minionmancer",
+     "recursion",
+     "phenomenal_evil",
+     "ice_cold",
+     "erosion",
+     "ultimate_recursion",
+     "adapt",
+     "twin_fire"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Viktor": [
+   {
+    "name": "광선 스킬 메이지",
+    "why": "마법공학 광선·아케인 폭풍 가속과 치명, 화상 중첩으로 견제",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "infernal_conduit",
+     "mad_scientist",
+     "warlock_juicebox",
+     "bees",
+     "shrink_engine",
+     "recursion",
+     "phenomenal_evil",
+     "adapt",
+     "homeguard",
+     "no_mana",
+     "blue_barrier"
+    ],
+    "items": [
+     "shadowflame",
+     "rabadon",
+     "ludens",
+     "liandry",
+     "blackfire"
+    ]
+   }
+  ],
+  "Mordekaiser": [
+   {
+    "name": "보호막 근접 메이지",
+    "why": "불멸 보호막·회복 강화, 말살·암흑 탄생으로 붙어서 흡혈",
+    "augs": [
+     "protein_shake",
+     "goliath",
+     "infernal_conduit",
+     "titans_resolve",
+     "symphony_of_war",
+     "final_form",
+     "warlock_juicebox",
+     "tank_engine",
+     "steel_your_heart",
+     "ethereal_weapon",
+     "goredrink",
+     "lich_brain",
+     "zealot",
+     "heavy_hitter"
+    ],
+    "items": [
+     "riftmaker",
+     "heartsteel",
+     "spirit_visage",
+     "rylai",
+     "unending_despair"
+    ]
+   }
+  ],
+  "Syndra": [
+   {
+    "name": "구체 폭딜 메이지",
+    "why": "적군 와해 기절에 혜성, 어둠 구체 가속으로 풀려난 힘 극대화",
+    "augs": [
+     "eureka",
+     "cruelty",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "recursion",
+     "upgrade_stormsurge",
+     "warlock_juicebox",
+     "shrink_engine",
+     "bees",
+     "adapt",
+     "homeguard",
+     "witchful_thinking",
+     "no_mana",
+     "upgrade_zhonyas"
+    ],
+    "items": [
+     "shadowflame",
+     "ludens",
+     "rabadon",
+     "void_staff",
+     "stormsurge"
+    ]
+   }
+  ],
+  "Singed": [
+   {
+    "name": "독가스 탱 메이지",
+    "why": "맹독의 자취로 화상 무한 중첩, 체력 스택하며 버팀",
+    "augs": [
+     "infernal_conduit",
+     "mad_scientist",
+     "final_form",
+     "giant_slayer",
+     "tank_engine",
+     "warlock_juicebox",
+     "take_em_down",
+     "phenomenal_evil",
+     "celestial_body",
+     "ice_cold",
+     "leg_day",
+     "lich_brain",
+     "erosion",
+     "escape_plan"
+    ],
+    "items": [
+     "rylai",
+     "liandry",
+     "roa",
+     "warmogs",
+     "heartsteel"
+    ]
+   },
+   {
+    "name": "무한 이속 독주",
+    "why": "환영 무기로 맹독의 자취가 적중 효과, 탭 댄서 이속 누적",
+    "augs": [
+     "tap_dancer",
+     "infernal_conduit",
+     "ethereal_weapon",
+     "tank_engine",
+     "warlock_juicebox",
+     "take_em_down",
+     "leg_day",
+     "ice_cold",
+     "lich_brain",
+     "goredrink"
+    ],
+    "items": [
+     "rylai",
+     "liandry",
+     "roa",
+     "warmogs",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Jax": [
+   {
+    "name": "광휘 평타 브루저",
+    "why": "무기 강화·도약 공격 평타로 쿨 감소, 광휘 계열 주문 검 강화",
+    "augs": [
+     "mystic_punch",
+     "dual_wield",
+     "ultimate_awakening",
+     "clown_college",
+     "upgrade_sheen",
+     "bonk",
+     "boom_bass",
+     "still_here",
+     "ethereal_weapon",
+     "take_em_down",
+     "upgrade_deaths_dance",
+     "flow_of_spirit",
+     "zealot",
+     "deft"
+    ],
+    "items": [
+     "dusk_dawn",
+     "botrk",
+     "sundered_sky",
+     "deaths_dance",
+     "trinity"
+    ]
+   }
+  ],
+  "Aatrox": [
+   {
+    "name": "흡혈 궁 브루저",
+    "why": "세계의 종결자에 보호막·흡혈, 지옥사슬 묶기로 추가 피해·회복",
+    "augs": [
+     "final_form",
+     "goliath",
+     "mosh_monster",
+     "mad_scientist",
+     "ravenous_bind",
+     "weapon_of_destiny",
+     "sap_magic",
+     "boom_bass",
+     "tank_engine",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "goredrink",
+     "slap_around",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "deaths_dance",
+     "sundered_sky",
+     "eclipse"
+    ]
+   }
+  ],
+  "Khazix": [
+   {
+    "name": "고립 암살자",
+    "why": "공허의 습격 은신 뒤치기로 고립 대상 공포 감지 폭딜",
+    "augs": [
+     "clown_college",
+     "giant_slayer",
+     "mad_scientist",
+     "final_form",
+     "weapon_of_destiny",
+     "from_beginning_to_end",
+     "boom_bass",
+     "donation",
+     "bees",
+     "blunt_force",
+     "upgrade_collector",
+     "shadow_runner",
+     "escapade",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "serylda",
+     "edge_of_night",
+     "serpents_fang"
+    ]
+   }
+  ],
+  "Nasus": [
+   {
+    "name": "Q 스택 탱커",
+    "why": "흡수의 일격 가속·중첩 증가와 평타 쿨 감소로 스택을 빠르게",
+    "augs": [
+     "goliath",
+     "mystic_punch",
+     "scopiest_weapons",
+     "infinite_recursion",
+     "final_form",
+     "bonk",
+     "upgrade_sheen",
+     "bread_and_butter",
+     "armored_impact",
+     "recursion",
+     "stackosaurus",
+     "heavy_hitter",
+     "its_go_time",
+     "goredrink"
+    ],
+    "items": [
+     "trinity",
+     "heartsteel",
+     "spirit_visage",
+     "iceborn"
+    ]
+   }
+  ],
+  "Rengar": [
+   {
+    "name": "치명 도약 암살",
+    "why": "수풀 도약·포악함 평타 한 방, 사거리 증강으로 도약 거리도 늘림",
+    "augs": [
+     "big_shot",
+     "scopiest_weapons",
+     "clown_college",
+     "upgrade_ie",
+     "scopier_weapons",
+     "soul_siphon",
+     "blunt_force",
+     "scoped_weapons",
+     "weapon_of_destiny",
+     "nightstalking",
+     "shadow_runner",
+     "tank_it"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Talon": [
+   {
+    "name": "물리 관통 암살",
+    "why": "녹서스식 외교 치명타·그림자 공격 궁 치명타로 순간 폭딜",
+    "augs": [
+     "clown_college",
+     "jeweled_bracelet",
+     "jeweled_gauntlet",
+     "final_form",
+     "ethereal_weapon",
+     "from_beginning_to_end",
+     "weapon_of_destiny",
+     "blunt_force",
+     "boom_bass",
+     "upgrade_collector",
+     "ultimate_recursion",
+     "shadow_runner",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "axiom_arc",
+     "serylda",
+     "edge_of_night"
+    ]
+   }
+  ],
+  "Aurora": [
+   {
+    "name": "돌진 가속 메이지",
+    "why": "장막 너머로·마법의 문 이동기를 돌진 가속으로 계속 돌리며 이중 저주",
+    "augs": [
+     "eureka",
+     "dashing",
+     "ethereal_weapon",
+     "back_to_basics",
+     "jeweled_gauntlet",
+     "warlock_juicebox",
+     "upgrade_stormsurge",
+     "adapt",
+     "shadow_runner",
+     "homeguard",
+     "recursion",
+     "witchful_thinking",
+     "infinite_recursion"
+    ],
+    "items": [
+     "stormsurge",
+     "shadowflame",
+     "ludens",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Galio": [
+   {
+    "name": "체력 CC 탱커",
+    "why": "듀란드의 방패 도발·정의의 주먹 에어본 CC와 석상의 강타 평타 강화",
+    "augs": [
+     "goliath",
+     "courage_colossus",
+     "tank_engine",
+     "armored_impact",
+     "heavy_hitter",
+     "steel_your_heart",
+     "cruelty",
+     "titans_resolve",
+     "upgrade_immolate",
+     "celestial_body",
+     "lich_brain",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "hollow_radiance",
+     "unending_despair",
+     "warmogs",
+     "thornmail"
+    ]
+   }
+  ],
+  "Alistar": [
+   {
+    "name": "CC 연계 탱커",
+    "why": "분쇄·박치기 연계와 짓밟기 기절로 CC 반응 증강을 계속 발동",
+    "augs": [
+     "goliath",
+     "courage_colossus",
+     "cruelty",
+     "tank_engine",
+     "armored_impact",
+     "stay_resolute",
+     "slap_around",
+     "steel_your_heart",
+     "soul_eater",
+     "ravenous_bind",
+     "titans_resolve",
+     "heavy_hitter",
+     "celestial_body",
+     "upgrade_immolate"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "unending_despair",
+     "thornmail",
+     "hollow_radiance"
+    ]
+   }
+  ],
+  "Udyr": [
+   {
+    "name": "AP 폭풍 자세",
+    "why": "날개 돋친 폭풍 광역 피해·둔화에 스킬 치명타와 적중 효과를 얹음",
+    "augs": [
+     "jeweled_gauntlet",
+     "fey_magic",
+     "clown_college",
+     "ethereal_weapon",
+     "upgrade_stormsurge",
+     "its_killing_time",
+     "vulnerability",
+     "ice_cold",
+     "dive_bomber",
+     "adapt",
+     "marksmage",
+     "witchful_thinking",
+     "erosion",
+     "bees"
+    ],
+    "items": [
+     "liandry",
+     "malignance",
+     "stormsurge",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Velkoz": [
+   {
+    "name": "장거리 포킹 메이지",
+    "why": "플라즈마 분열·공허 균열을 멀리서 맞혀 쿨 감소, 화상·미사일 추가",
+    "augs": [
+     "eureka",
+     "skilled_sniper",
+     "infernal_conduit",
+     "magic_missile",
+     "jeweled_gauntlet",
+     "shrink_engine",
+     "twin_fire",
+     "no_mana",
+     "homeguard",
+     "infinite_recursion",
+     "phenomenal_evil",
+     "adapt",
+     "witchful_thinking"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "liandry",
+     "rabadon",
+     "blackfire"
+    ]
+   }
+  ],
+  "Pyke": [
+   {
+    "name": "처형 암살 서포터",
+    "why": "망자의 물살 돌진 가속, 추가 체력이 공격력이 되는 패시브로 거인 활용",
+    "augs": [
+     "clown_college",
+     "dashing",
+     "shrink_engine",
+     "weapon_of_destiny",
+     "shadow_runner",
+     "goliath",
+     "mad_scientist",
+     "blunt_force",
+     "from_beginning_to_end",
+     "recursion",
+     "infinite_recursion",
+     "slap_around",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "axiom_arc",
+     "collector",
+     "edge_of_night",
+     "youmuu"
+    ]
+   }
+  ],
+  "Leona": [
+   {
+    "name": "CC 화상 탱커",
+    "why": "여명의 방패·천공의 검·흑점 폭발 CC 연발, 스킬 화상 전도체",
+    "augs": [
+     "goliath",
+     "courage_colossus",
+     "infernal_conduit",
+     "armored_impact",
+     "tank_engine",
+     "heavy_hitter",
+     "stay_resolute",
+     "cruelty",
+     "steel_your_heart",
+     "soul_eater",
+     "slap_around",
+     "void_immolation",
+     "upgrade_immolate",
+     "pressure_cooker"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "warmogs",
+     "unending_despair",
+     "thornmail",
+     "jaksho"
+    ]
+   }
+  ],
+  "Sion": [
+   {
+    "name": "체력 스택 탱커",
+    "why": "강철심장 체력 스택 후 대량 학살 강타 에어본, 영광스러운 죽음 폭발",
+    "augs": [
+     "goliath",
+     "steel_your_heart",
+     "tank_engine",
+     "heavy_hitter",
+     "titans_resolve",
+     "armored_impact",
+     "dive_bomber",
+     "clown_college",
+     "celestial_body",
+     "mad_scientist",
+     "upgrade_immolate",
+     "pressure_cooker",
+     "ultimate_revolution"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "warmogs",
+     "thornmail"
+    ]
+   }
+  ],
+  "Xayah": [
+   {
+    "name": "치명 평타 원딜",
+    "why": "죽음의 깃 공속 강화 평타에 추가 화살·치명타, 깃부르미로 속박",
+    "augs": [
+     "dual_wield",
+     "upgrade_ie",
+     "deft",
+     "lil_extra_help",
+     "scopiest_weapons",
+     "critical_rhythm",
+     "soul_siphon",
+     "upgrade_collector",
+     "tap_dancer",
+     "double_tap",
+     "zealot",
+     "tank_it",
+     "scopier_weapons",
+     "blunt_force"
+    ],
+    "items": [
+     "infinity_edge",
+     "collector",
+     "navori",
+     "ldr",
+     "botrk"
+    ]
+   }
+  ],
+  "KogMaw": [
+   {
+    "name": "공속 적중 원딜",
+    "why": "생체마법 폭격 평타 체력 비례 피해, 공속·추가 화살로 적중 효과 극대화",
+    "augs": [
+     "dual_wield",
+     "giant_slayer",
+     "lil_extra_help",
+     "deft",
+     "tap_dancer",
+     "ethereal_weapon",
+     "weapon_of_destiny",
+     "bees",
+     "its_go_time",
+     "flow_of_spirit",
+     "goredrink",
+     "homeguard"
+    ],
+    "items": [
+     "botrk",
+     "guinsoo",
+     "runaan",
+     "terminus",
+     "wits_end"
+    ]
+   },
+   {
+    "name": "AP 곡사포",
+    "why": "살아있는 곡사포 장거리 연사와 부식성 침·진액 스킬 피해",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "quest_wooglets",
+     "magic_missile",
+     "twin_fire",
+     "bees",
+     "shrink_engine",
+     "adapt",
+     "witchful_thinking",
+     "no_mana"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "zhonya",
+     "void_staff"
+    ]
+   }
+  ],
+  "Irelia": [
+   {
+    "name": "평타 돌진 브루저",
+    "why": "칼날 쇄도 돌진 초기화와 평타로 쿨 감소, 패시브 공속 중첩",
+    "augs": [
+     "mystic_punch",
+     "dashing",
+     "symphony_of_war",
+     "ethereal_weapon",
+     "still_here",
+     "recursion",
+     "upgrade_deaths_dance",
+     "flow_of_spirit",
+     "boom_bass",
+     "outlaws_grit",
+     "take_em_down",
+     "triggered_inferno",
+     "shadow_runner",
+     "swift_and_safe"
+    ],
+    "items": [
+     "botrk",
+     "deaths_dance",
+     "sundered_sky",
+     "wits_end",
+     "trinity"
+    ]
+   }
+  ],
+  "Viego": [
+   {
+    "name": "치명 스킬 브루저",
+    "why": "몰락한 왕의 검 찌르기·연속 평타에 스킬 치명타와 흡혈",
+    "augs": [
+     "jeweled_gauntlet",
+     "upgrade_ie",
+     "final_form",
+     "soul_siphon",
+     "blunt_force",
+     "upgrade_collector",
+     "still_here",
+     "clown_college",
+     "dual_wield",
+     "boom_bass",
+     "vulnerability",
+     "tank_it",
+     "goredrink"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Hwei": [
+   {
+    "name": "화상 포킹 메이지",
+    "why": "기본 스킬 9종 연타로 화상 전도체 쿨 감소, 고통 주제 CC로 혜성",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "shrink_engine",
+     "magic_missile",
+     "cruelty",
+     "phenomenal_evil",
+     "ice_cold",
+     "homeguard",
+     "twin_fire",
+     "infinite_recursion",
+     "from_downtown",
+     "adapt",
+     "jeweled_gauntlet"
+    ],
+    "items": [
+     "blackfire",
+     "liandry",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Sivir": [
+   {
+    "name": "튕김 치명 원딜",
+    "why": "튕기는 부메랑 평타에 추가 화살·치명타, 부메랑 검 장거리 쿨 감소",
+    "augs": [
+     "dual_wield",
+     "upgrade_ie",
+     "deft",
+     "flow_of_spirit",
+     "soul_siphon",
+     "scopiest_weapons",
+     "critical_rhythm",
+     "lil_extra_help",
+     "skilled_sniper",
+     "tap_dancer",
+     "upgrade_collector",
+     "zealot",
+     "tank_it",
+     "blunt_force"
+    ],
+    "items": [
+     "infinity_edge",
+     "navori",
+     "collector",
+     "yuntal",
+     "botrk"
+    ]
+   }
+  ],
+  "Samira": [
+   {
+    "name": "근접 난사 원딜",
+    "why": "근접 추가 피해 패시브라 검을 뽑아라, 원형 검무·지옥불 난사 회전",
+    "augs": [
+     "draw_your_sword",
+     "blade_waltz",
+     "upgrade_ie",
+     "spin_to_win",
+     "ethereal_weapon",
+     "soul_siphon",
+     "clown_college",
+     "still_here",
+     "final_form",
+     "upgrade_collector",
+     "blunt_force",
+     "tank_it",
+     "goredrink"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "bloodthirster",
+     "ldr"
+    ]
+   }
+  ],
+  "Ambessa": [
+   {
+    "name": "연속 돌진 브루저",
+    "why": "용사냥개의 발걸음 돌진 후 강화 평타, 스킬 연타로 돌진 반응 증강",
+    "augs": [
+     "back_to_basics",
+     "boom_bass",
+     "upgrade_deaths_dance",
+     "triggered_inferno",
+     "outlaws_grit",
+     "recursion",
+     "take_em_down",
+     "shadow_runner",
+     "swift_and_safe",
+     "goredrink",
+     "blunt_force",
+     "mad_scientist"
+    ],
+    "items": [
+     "hubris",
+     "deaths_dance",
+     "eclipse",
+     "shojin"
+    ]
+   }
+  ],
+  "Nocturne": [
+   {
+    "name": "궁 돌진 암살",
+    "why": "피해망상 돌진 후 궁 치명타·최종 형태 보호막으로 진입",
+    "augs": [
+     "clown_college",
+     "final_form",
+     "jeweled_bracelet",
+     "still_here",
+     "blunt_force",
+     "upgrade_collector",
+     "ultimate_awakening",
+     "dive_bomber",
+     "boom_bass",
+     "weapon_of_destiny",
+     "deft",
+     "jeweled_gauntlet",
+     "escape_plan"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "axiom_arc",
+     "hexplate",
+     "infinity_edge"
+    ]
+   }
+  ],
+  "Shen": [
+   {
+    "name": "체력 보호 탱커",
+    "why": "기 보호막·단결된 의지 보호막 강화, 황혼 강습 평타에 체력 비례 피해",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "heavy_hitter",
+     "armored_impact",
+     "steel_your_heart",
+     "titans_resolve",
+     "protein_shake",
+     "upgrade_immolate",
+     "celestial_body",
+     "pressure_cooker",
+     "lonely_warrior",
+     "escape_plan",
+     "mad_scientist"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "warmogs",
+     "thornmail",
+     "titanic"
+    ]
+   }
+  ],
+  "Belveth": [
+   {
+    "name": "공속 평타 브루저",
+    "why": "연보랏빛 죽음 공속 성장에 평타 적중·흡혈 증강, E 소용돌이로 버팀",
+    "augs": [
+     "dual_wield",
+     "mystic_punch",
+     "still_here",
+     "take_em_down",
+     "upgrade_deaths_dance",
+     "flow_of_spirit",
+     "symphony_of_war",
+     "third_times_harm",
+     "scopiest_weapons",
+     "boom_bass",
+     "goredrink",
+     "deft",
+     "typhoon",
+     "final_form"
+    ],
+    "items": [
+     "botrk",
+     "kraken",
+     "deaths_dance",
+     "wits_end",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Gragas": [
+   {
+    "name": "AP 폭딜 술통",
+    "why": "술통 굴리기·몸통 박치기 폭딜, 술통 폭발 넉백은 연쇄 반응과 시너지",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "chain_reaction",
+     "upgrade_stormsurge",
+     "infinite_recursion",
+     "ethereal_weapon",
+     "bees",
+     "witchful_thinking",
+     "no_mana",
+     "upgrade_zhonyas",
+     "escape_plan"
+    ],
+    "items": [
+     "ludens",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "zhonya"
+    ]
+   },
+   {
+    "name": "체력 AP 브루저",
+    "why": "강철심장 체력을 리치 두뇌로 주문력 전환, 몸통 박치기 기절로 중첩",
+    "augs": [
+     "goliath",
+     "mad_scientist",
+     "chain_reaction",
+     "steel_your_heart",
+     "ravenous_bind",
+     "ethereal_weapon",
+     "lich_brain",
+     "slap_around",
+     "escape_plan",
+     "witchful_thinking"
+    ],
+    "items": [
+     "heartsteel",
+     "riftmaker",
+     "unending_despair",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Zilean": [
+   {
+    "name": "쿨감 폭탄 메이지",
+    "why": "시한 폭탄 두 번 연속 기절, 되감기와 스킬 가속 증강으로 폭탄 난사",
+    "augs": [
+     "archmage",
+     "eureka",
+     "infinite_recursion",
+     "ultimate_revolution",
+     "jeweled_gauntlet",
+     "shrink_engine",
+     "recursion",
+     "with_haste",
+     "bees",
+     "purist_caster",
+     "homeguard",
+     "adapt",
+     "mind_to_matter"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "cosmic_drive",
+     "malignance"
+    ]
+   }
+  ],
+  "Zyra": [
+   {
+    "name": "식물 화상 메이지",
+    "why": "치명적인 가시·식물이 계속 피해를 줘 화상·소환물 증강, E 속박으로 둔화 강화",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "archmage",
+     "infinite_recursion",
+     "minionmancer",
+     "ethereal_weapon",
+     "magic_missile",
+     "shrink_engine",
+     "bees",
+     "recursion",
+     "ice_cold",
+     "twin_fire",
+     "erosion",
+     "purist_caster"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Ornn": [
+   {
+    "name": "변이 대장장이 탱커",
+    "why": "대장장이 신의 부름 피해에 요정 마법 변이, 화염 돌진·불꽃 풀무질 쿨 증강",
+    "augs": [
+     "fey_magic",
+     "goliath",
+     "infinite_recursion",
+     "titans_resolve",
+     "void_immolation",
+     "tank_engine",
+     "armored_impact",
+     "shrink_engine",
+     "steel_your_heart",
+     "pressure_cooker",
+     "heavy_hitter",
+     "upgrade_immolate",
+     "lonely_warrior",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "thornmail",
+     "jaksho",
+     "warmogs"
+    ]
+   }
+  ],
+  "Locke": [
+   {
+    "name": "평타 섞는 AP 암살",
+    "why": "의식용 대못 표식을 평타로 터뜨리고 은빛 말뚝 적중 피해, 스킬 치명타",
+    "augs": [
+     "jeweled_gauntlet",
+     "eureka",
+     "quest_wooglets",
+     "clown_college",
+     "giant_slayer",
+     "mad_scientist",
+     "warlock_juicebox",
+     "upgrade_stormsurge",
+     "marksmage",
+     "boom_bass",
+     "adapt",
+     "shadow_runner",
+     "witchful_thinking",
+     "escape_plan"
+    ],
+    "items": [
+     "stormsurge",
+     "lich_bane",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Orianna": [
+   {
+    "name": "구체 쿨감 메이지",
+    "why": "명령: 공격·불협화음 연타 쿨감, 명령: 충격파 궁 가속으로 한타 장악",
+    "augs": [
+     "eureka",
+     "jeweled_gauntlet",
+     "quest_wooglets",
+     "infinite_recursion",
+     "recursion",
+     "upgrade_stormsurge",
+     "warlock_juicebox",
+     "shrink_engine",
+     "bees",
+     "ultimate_recursion",
+     "adapt",
+     "witchful_thinking",
+     "upgrade_zhonyas",
+     "no_mana"
+    ],
+    "items": [
+     "ludens",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "zhonya",
+     "void_staff"
+    ]
+   }
+  ],
+  "Aphelios": [
+   {
+    "name": "치명타 평타 원딜",
+    "why": "다섯 무기 평타가 핵심이라 치명타·공속 증강, 무한의 대검 업그레이드",
+    "augs": [
+     "dual_wield",
+     "big_shot",
+     "draw_your_sword",
+     "giant_slayer",
+     "back_to_basics",
+     "upgrade_ie",
+     "soul_siphon",
+     "critical_rhythm",
+     "still_here",
+     "scopier_weapons",
+     "deft",
+     "blunt_force",
+     "zealot",
+     "tank_it"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "runaan",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Amumu": [
+   {
+    "name": "절망 도트 탱커",
+    "why": "절망 지속 피해에 화상 증강, 슬픈 미라의 저주 메아리 시전으로 광역 기절 2번",
+    "augs": [
+     "goliath",
+     "echo_cast",
+     "infernal_conduit",
+     "void_immolation",
+     "titans_resolve",
+     "armored_impact",
+     "tank_engine",
+     "ethereal_weapon",
+     "phenomenal_evil",
+     "steel_your_heart",
+     "stay_resolute",
+     "upgrade_immolate",
+     "heavy_hitter",
+     "dive_bomber"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "thornmail",
+     "warmogs"
+    ]
+   }
+  ],
+  "Sona": [
+   {
+    "name": "회복 오라 서포터",
+    "why": "인내의 아리아 회복·보호막을 키우는 치유 증강, 파워 코드로 스킬 가속",
+    "augs": [
+     "empowered_faithful",
+     "protein_shake",
+     "windspeakers_blessing",
+     "circle_of_death",
+     "archmage",
+     "enchanting_butterflies",
+     "sonata",
+     "all_for_you",
+     "wee_woo",
+     "shrink_engine",
+     "first_aid_kit",
+     "sonic_boom",
+     "sound_barrier",
+     "purist_caster"
+    ],
+    "items": [
+     "moonstone",
+     "diadem",
+     "ardent_censer",
+     "dawncore",
+     "redemption"
+    ]
+   }
+  ],
+  "Gwen": [
+   {
+    "name": "적중 AP 브루저",
+    "why": "싹둑싹둑!이 가위 난도질 적중 효과라 평타·주문력 증강, 신성한 안개로 버팀",
+    "augs": [
+     "master_of_duality",
+     "ethereal_weapon",
+     "warlock_juicebox",
+     "back_to_basics",
+     "marksmage",
+     "final_form",
+     "ominous_pact",
+     "quest_wooglets",
+     "take_em_down",
+     "boom_bass",
+     "zealot",
+     "goredrink",
+     "flow_of_spirit",
+     "shadow_runner"
+    ],
+    "items": [
+     "dusk_dawn",
+     "riftmaker",
+     "nashor",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Fiddlesticks": [
+   {
+    "name": "까마귀 폭풍 메이지",
+    "why": "까마귀 폭풍 광역 피해에 요정 마법 변이, 풍작 채널링 흡혈로 버팀",
+    "augs": [
+     "fey_magic",
+     "blade_waltz",
+     "jeweled_gauntlet",
+     "eureka",
+     "final_form",
+     "warlock_juicebox",
+     "its_killing_time",
+     "arcane_axiom",
+     "upgrade_stormsurge",
+     "recursion",
+     "upgrade_zhonyas",
+     "dont_change_channel",
+     "no_mana",
+     "escape_plan"
+    ],
+    "items": [
+     "malignance",
+     "liandry",
+     "shadowflame",
+     "zhonya",
+     "rabadon"
+    ]
+   }
+  ],
+  "Gnar": [
+   {
+    "name": "체력 메가 나르",
+    "why": "메가 나르 쿵쾅 기절·나르! 벽꿍에 체력·방어 증강, 연쇄 반응 시너지",
+    "augs": [
+     "goliath",
+     "mad_scientist",
+     "biggest_snowball",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "chain_reaction",
+     "heavy_hitter",
+     "lonely_warrior",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "trinity",
+     "black_cleaver",
+     "sundered_sky",
+     "spirit_visage"
+    ]
+   },
+   {
+    "name": "평타 작은 나르",
+    "why": "슝슝 3타 추가 피해를 살리는 공속·평타 증강, 작은 나르로 카이팅",
+    "augs": [
+     "dual_wield",
+     "goliath",
+     "still_here",
+     "boom_bass",
+     "take_em_down",
+     "deft",
+     "upgrade_deaths_dance",
+     "heavy_hitter",
+     "blunt_force",
+     "typhoon"
+    ],
+    "items": [
+     "botrk",
+     "trinity",
+     "wits_end",
+     "deaths_dance",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Illaoi": [
+   {
+    "name": "촉수 체력 브루저",
+    "why": "촉수 강타·혹독한 가르침 스킬에 적중 효과, 강철심장 체력 증강",
+    "augs": [
+     "goliath",
+     "blade_waltz",
+     "final_form",
+     "titans_resolve",
+     "ethereal_weapon",
+     "steel_your_heart",
+     "tank_engine",
+     "armored_impact",
+     "bonk",
+     "celestial_body",
+     "heavy_hitter",
+     "goredrink",
+     "blunt_force",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "sundered_sky",
+     "spirit_visage",
+     "warmogs",
+     "overlords"
+    ]
+   }
+  ],
+  "Karma": [
+   {
+    "name": "만트라 포킹 메이지",
+    "why": "만트라 내면의 열정 포킹, 열정 응집 궁 쿨감에 스킬 가속 증강",
+    "augs": [
+     "eureka",
+     "archmage",
+     "infinite_recursion",
+     "ultimate_awakening",
+     "shrink_engine",
+     "recursion",
+     "bees",
+     "transmute_prismatic",
+     "ultimate_recursion",
+     "purist_caster",
+     "adapt",
+     "homeguard"
+    ],
+    "items": [
+     "malignance",
+     "shadowflame",
+     "ludens",
+     "rabadon",
+     "liandry"
+    ]
+   },
+   {
+    "name": "고무 보호막 서포터",
+    "why": "고무 보호막을 단체 포옹으로 전체 적용, 보호막 강화 증강",
+    "augs": [
+     "group_hug",
+     "protein_shake",
+     "archmage",
+     "enchanting_butterflies",
+     "all_for_you",
+     "shrink_engine",
+     "recursion",
+     "double_defense",
+     "first_aid_kit",
+     "ultimate_recursion",
+     "sound_barrier"
+    ],
+    "items": [
+     "moonstone",
+     "dawncore",
+     "ardent_censer",
+     "redemption",
+     "shurelya"
+    ]
+   }
+  ],
+  "Leblanc": [
+   {
+    "name": "왜곡 돌진 암살자",
+    "why": "왜곡 돌진에 돌진 증강, 악의의 인장 폭딜에 스킬 치명타",
+    "augs": [
+     "jeweled_gauntlet",
+     "eureka",
+     "tripleshot",
+     "dashing",
+     "quest_wooglets",
+     "infinite_recursion",
+     "upgrade_stormsurge",
+     "warlock_juicebox",
+     "recursion",
+     "bees",
+     "adapt",
+     "witchful_thinking",
+     "shadow_runner",
+     "swift_and_safe"
+    ],
+    "items": [
+     "stormsurge",
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Urgot": [
+   {
+    "name": "산탄 체력 브루저",
+    "why": "화염의 메아리 다리 산탄 평타에 체력·평타 증강, 경멸로 붙음",
+    "augs": [
+     "goliath",
+     "draw_your_sword",
+     "tap_dancer",
+     "blade_waltz",
+     "titans_resolve",
+     "tank_engine",
+     "steel_your_heart",
+     "take_em_down",
+     "sap_magic",
+     "heavy_hitter",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "typhoon",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "titanic",
+     "overlords",
+     "black_cleaver",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Soraka": [
+   {
+    "name": "무한 회복 힐러",
+    "why": "은하의 마력·기원 회복량을 키우는 치유 증강, 별부름 적중으로 지속",
+    "augs": [
+     "empowered_faithful",
+     "protein_shake",
+     "windspeakers_blessing",
+     "circle_of_death",
+     "empyrean_promise",
+     "infinite_recursion",
+     "enchanting_butterflies",
+     "all_for_you",
+     "critical_healing",
+     "wee_woo",
+     "sonata",
+     "first_aid_kit",
+     "sonic_boom",
+     "mind_to_matter"
+    ],
+    "items": [
+     "moonstone",
+     "diadem",
+     "warmogs",
+     "roa",
+     "ardent_censer"
+    ]
+   }
+  ],
+  "Shyvana": [
+   {
+    "name": "AP 용암 쉬바나",
+    "why": "용 형상 용암 분출 광역 피해, 궁 이후 쿨 초기화 증강",
+    "augs": [
+     "goliath",
+     "eureka",
+     "ultimate_awakening",
+     "overloaded",
+     "ethereal_weapon",
+     "warlock_juicebox",
+     "boom_bass",
+     "tank_engine",
+     "lich_brain",
+     "heavy_hitter",
+     "escape_plan"
+    ],
+    "items": [
+     "dusk_dawn",
+     "riftmaker",
+     "heartsteel",
+     "liandry",
+     "rabadon"
+    ]
+   },
+   {
+    "name": "평타 체력 쉬바나",
+    "why": "잉걸불 일격 평타·지옥불 방패 광역에 평타 쿨감, 체력 증강",
+    "augs": [
+     "mystic_punch",
+     "goliath",
+     "ultra_hydra",
+     "armored_impact",
+     "tank_engine",
+     "still_here",
+     "boom_bass",
+     "heavy_hitter",
+     "goredrink",
+     "flow_of_spirit",
+     "upgrade_immolate"
+    ],
+    "items": [
+     "heartsteel",
+     "sundered_sky",
+     "titanic",
+     "sunfire",
+     "spirit_visage"
+    ]
+   }
+  ],
+  "Rell": [
+   {
+    "name": "CC 탱커 서포터",
+    "why": "파열의 일격 기절·철마술 에어본·자기 폭풍으로 CC 발동 증강",
+    "augs": [
+     "cruelty",
+     "courage_colossus",
+     "goliath",
+     "titans_resolve",
+     "void_immolation",
+     "mad_scientist",
+     "tank_engine",
+     "armored_impact",
+     "steel_your_heart",
+     "soul_eater",
+     "ravenous_bind",
+     "heavy_hitter",
+     "slap_around",
+     "upgrade_immolate"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "thornmail",
+     "jaksho",
+     "warmogs"
+    ]
+   }
+  ],
+  "Kassadin": [
+   {
+    "name": "균열 이동 메이지",
+    "why": "균열 이동 연속 사용으로 진입, 마나·궁 가속 증강으로 R 난사와 생존 보강",
+    "augs": [
+     "final_form",
+     "cant_touch_this",
+     "fey_magic",
+     "dashing",
+     "quest_wooglets",
+     "warlock_juicebox",
+     "double_time",
+     "arcane_axiom",
+     "mind_to_matter",
+     "blue_barrier",
+     "shadow_runner",
+     "swift_and_safe",
+     "adapt",
+     "ultimate_recursion"
+    ],
+    "items": [
+     "roa",
+     "malignance",
+     "lich_bane",
+     "rabadon",
+     "zhonya",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Qiyana": [
+   {
+    "name": "돌진 AD 암살자",
+    "why": "대지창조·대담무쌍 두 돌진에 돌진 증강을 얹고 여왕의 진가로 마무리",
+    "augs": [
+     "overloaded",
+     "dashing",
+     "clown_college",
+     "jeweled_gauntlet",
+     "from_beginning_to_end",
+     "outlaws_grit",
+     "transmute_prismatic",
+     "weapon_of_destiny",
+     "blunt_force",
+     "shadow_runner",
+     "swift_and_safe",
+     "escapade",
+     "dive_bomber"
+    ],
+    "items": [
+     "hubris",
+     "axiom_arc",
+     "collector",
+     "serylda",
+     "profane_hydra"
+    ]
+   }
+  ],
+  "Zaahen": [
+   {
+    "name": "평타 흡혈 브루저",
+    "why": "다르킨의 글레이브 강화 평타와 결심 중첩, 평타 적중 증강으로 쿨·회복 확보",
+    "augs": [
+     "mystic_punch",
+     "blade_waltz",
+     "goliath",
+     "triggered_inferno",
+     "still_here",
+     "upgrade_sundered_sky",
+     "boom_bass",
+     "ethereal_weapon",
+     "sap_magic",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "goredrink",
+     "flow_of_spirit",
+     "escape_plan"
+    ],
+    "items": [
+     "sundered_sky",
+     "deaths_dance",
+     "hubris",
+     "endless_hunger",
+     "shojin"
+    ]
+   }
+  ],
+  "Heimerdinger": [
+   {
+    "name": "포탑 화상 메이지",
+    "why": "H-28G 포탑은 소환물이라 소환술사, 로켓·수류탄 다단 히트로 화상 누적",
+    "augs": [
+     "infernal_conduit",
+     "eureka",
+     "infinite_recursion",
+     "jeweled_gauntlet",
+     "minionmancer",
+     "recursion",
+     "magic_missile",
+     "shrink_engine",
+     "bees",
+     "ice_cold",
+     "twin_fire",
+     "witchful_thinking",
+     "adapt"
+    ],
+    "items": [
+     "liandry",
+     "blackfire",
+     "rylai",
+     "rabadon",
+     "shadowflame"
+    ]
+   }
+  ],
+  "Poppy": [
+   {
+    "name": "벽꿍 넉백 탱커",
+    "why": "용감한 돌진·수호자의 심판 넉백에 연쇄 반응, 굳건한 태세 방어력으로 장갑 충격",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "courage_colossus",
+     "void_immolation",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "chain_reaction",
+     "celestial_body",
+     "heavy_hitter",
+     "upgrade_immolate",
+     "lonely_warrior",
+     "slap_around",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "thornmail",
+     "warmogs"
+    ]
+   }
+  ],
+  "Akali": [
+   {
+    "name": "돌진 AP 암살자",
+    "why": "표창곡예·무결처형 돌진과 오연투척검 폭딜, 폭풍 쇄도 업그레이드로 마무리",
+    "augs": [
+     "jeweled_gauntlet",
+     "dashing",
+     "final_form",
+     "clown_college",
+     "warlock_juicebox",
+     "upgrade_stormsurge",
+     "marksmage",
+     "boom_bass",
+     "adapt",
+     "witchful_thinking",
+     "shadow_runner",
+     "escape_plan",
+     "upgrade_zhonyas",
+     "goredrink"
+    ],
+    "items": [
+     "stormsurge",
+     "gunblade",
+     "shadowflame",
+     "rabadon",
+     "zhonya"
+    ]
+   }
+  ],
+  "Vi": [
+   {
+    "name": "치명 돌진 브루저",
+    "why": "금고 부수기·정지 명령으로 진입 후 찌그러뜨리기 평타, 치명 아이템으로 폭딜",
+    "augs": [
+     "clown_college",
+     "blade_waltz",
+     "mystic_punch",
+     "jeweled_gauntlet",
+     "boom_bass",
+     "still_here",
+     "ethereal_weapon",
+     "transmute_prismatic",
+     "weapon_of_destiny",
+     "blunt_force",
+     "upgrade_deaths_dance",
+     "escape_plan",
+     "dive_bomber",
+     "flow_of_spirit"
+    ],
+    "items": [
+     "hubris",
+     "collector",
+     "deaths_dance",
+     "eclipse",
+     "infinity_edge"
+    ]
+   }
+  ],
+  "Diana": [
+   {
+    "name": "거인 AP 브루저",
+    "why": "월광 쇄도로 붙어 패시브 3타 평타, 체력 아이템과 은빛 가호 보호막으로 버팀",
+    "augs": [
+     "goliath",
+     "mad_scientist",
+     "final_form",
+     "warlock_juicebox",
+     "critical_healing",
+     "ethereal_weapon",
+     "marksmage",
+     "boom_bass",
+     "lich_brain",
+     "adapt",
+     "zealot",
+     "goredrink",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "stormsurge",
+     "shadowflame",
+     "dusk_dawn",
+     "rabadon"
+    ]
+   },
+   {
+    "name": "AP 폭딜 진입",
+    "why": "초승달 검기 후 월광 쇄도 2연타, 달빛 낙하 광역 피해로 한 번에 폭딜",
+    "augs": [
+     "clown_college",
+     "triggered_inferno",
+     "quest_wooglets",
+     "final_form",
+     "warlock_juicebox",
+     "marksmage",
+     "ethereal_weapon",
+     "boom_bass",
+     "adapt",
+     "zealot",
+     "witchful_thinking",
+     "dive_bomber",
+     "upgrade_zhonyas"
+    ],
+    "items": [
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "zhonya",
+     "dusk_dawn"
+    ]
+   }
+  ],
+  "Sejuani": [
+   {
+    "name": "기절 탱커",
+    "why": "혹한의 맹습·만년 서리·빙하 감옥 CC가 많아 CC 발동 증강과 탱 스택",
+    "augs": [
+     "goliath",
+     "courage_colossus",
+     "titans_resolve",
+     "void_immolation",
+     "tank_engine",
+     "armored_impact",
+     "steel_your_heart",
+     "celestial_body",
+     "ravenous_bind",
+     "heavy_hitter",
+     "upgrade_immolate",
+     "slap_around",
+     "lonely_warrior",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "hollow_radiance",
+     "sunfire",
+     "unending_despair",
+     "warmogs"
+    ]
+   }
+  ],
+  "Naafiri": [
+   {
+    "name": "무리 AD 암살자",
+    "why": "늘어나는 무리는 소환물이라 소환술사, 다르킨 단검 출혈로 화상 연계",
+    "augs": [
+     "jeweled_gauntlet",
+     "infernal_conduit",
+     "clown_college",
+     "final_form",
+     "minionmancer",
+     "ethereal_weapon",
+     "weapon_of_destiny",
+     "recursion",
+     "from_beginning_to_end",
+     "upgrade_deaths_dance",
+     "blunt_force",
+     "shadow_runner",
+     "escape_plan",
+     "dive_bomber"
+    ],
+    "items": [
+     "hubris",
+     "axiom_arc",
+     "collector",
+     "serylda",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Kindred": [
+   {
+    "name": "치명 평타 원딜",
+    "why": "표식 사냥 중첩으로 사거리 성장, 평타 추가 화살·치명 증강으로 지속 딜",
+    "augs": [
+     "dual_wield",
+     "scopiest_weapons",
+     "giant_slayer",
+     "back_to_basics",
+     "tap_dancer",
+     "upgrade_ie",
+     "scopier_weapons",
+     "soul_siphon",
+     "critical_rhythm",
+     "deft",
+     "stackosaurus",
+     "flow_of_spirit",
+     "upgrade_collector",
+     "blunt_force"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "botrk",
+     "runaan",
+     "ldr"
+    ]
+   }
+  ],
+  "Renekton": [
+   {
+    "name": "분노 회전 브루저",
+    "why": "양떼 도륙 회전 피해·회복에 회전 증강, 강신 후 궁 증강으로 기본기 연타",
+    "augs": [
+     "goliath",
+     "final_form",
+     "ultimate_awakening",
+     "triggered_inferno",
+     "mystic_punch",
+     "crimson_cobalt",
+     "still_here",
+     "recursion",
+     "boom_bass",
+     "spin_to_win",
+     "upgrade_deaths_dance",
+     "stay_resolute",
+     "blunt_force",
+     "escape_plan"
+    ],
+    "items": [
+     "sundered_sky",
+     "deaths_dance",
+     "heartsteel",
+     "eclipse",
+     "shojin"
+    ]
+   },
+   {
+    "name": "히드라 브루저",
+    "why": "양떼 도륙 광역 회복에 히드라 쪼개기를 더해 궁극의 히드라 퀘스트 완성",
+    "augs": [
+     "ultra_hydra",
+     "goliath",
+     "ultimate_awakening",
+     "upgrade_ravenous",
+     "crimson_cobalt",
+     "still_here",
+     "recursion",
+     "spin_to_win",
+     "goredrink",
+     "blunt_force",
+     "upgrade_deaths_dance"
+    ],
+    "items": [
+     "ravenous_hydra",
+     "profane_hydra",
+     "titanic",
+     "deaths_dance",
+     "sundered_sky"
+    ]
+   }
+  ],
+  "Riven": [
+   {
+    "name": "돌진 콤보 브루저",
+    "why": "부러진 날개 3단·용맹 돌진에 돌진 가속, 룬 검 평타로 스킬 사이 딜",
+    "augs": [
+     "dashing",
+     "overloaded",
+     "clown_college",
+     "final_form",
+     "infinite_recursion",
+     "boom_bass",
+     "outlaws_grit",
+     "recursion",
+     "take_em_down",
+     "upgrade_deaths_dance",
+     "shadow_runner",
+     "swift_and_safe",
+     "blunt_force",
+     "goredrink"
+    ],
+    "items": [
+     "hubris",
+     "deaths_dance",
+     "sundered_sky",
+     "eclipse",
+     "shojin"
+    ]
+   }
+  ],
+  "Camille": [
+   {
+    "name": "히드라 광휘 브루저",
+    "why": "정확성 프로토콜 강화 평타에 삼위일체 광휘, 히드라 셋으로 궁극의 히드라",
+    "augs": [
+     "ultra_hydra",
+     "clown_college",
+     "back_to_basics",
+     "goliath",
+     "boom_bass",
+     "upgrade_sheen",
+     "still_here",
+     "upgrade_ravenous",
+     "take_em_down",
+     "upgrade_deaths_dance",
+     "siphon",
+     "blunt_force",
+     "goredrink",
+     "escape_plan"
+    ],
+    "items": [
+     "trinity",
+     "ravenous_hydra",
+     "profane_hydra",
+     "titanic",
+     "deaths_dance"
+    ]
+   }
+  ],
+  "Yuumi": [
+   {
+    "name": "부착 힐 서포터",
+    "why": "슈우우웅 보호막·대단원 회복을 단짝에게, 회복·보호막 증폭 증강과 위우 세트",
+    "augs": [
+     "empowered_faithful",
+     "group_hug",
+     "windspeakers_blessing",
+     "protein_shake",
+     "circle_of_death",
+     "enchanting_butterflies",
+     "all_for_you",
+     "sonata",
+     "critical_healing",
+     "divine_intervention",
+     "first_aid_kit",
+     "sonic_boom",
+     "double_defense",
+     "sound_barrier"
+    ],
+    "items": [
+     "moonstone",
+     "diadem",
+     "ardent_censer",
+     "mikael",
+     "dawncore"
+    ]
+   }
+  ],
+  "Akshan": [
+   {
+    "name": "치명 2연발 원딜",
+    "why": "비열한 싸움 2연발 평타에 치명 증강, 인과응보도 보석 팔찌로 치명",
+    "augs": [
+     "dual_wield",
+     "big_shot",
+     "giant_slayer",
+     "draw_your_sword",
+     "jeweled_bracelet",
+     "upgrade_ie",
+     "soul_siphon",
+     "scopier_weapons",
+     "weapon_of_destiny",
+     "critical_rhythm",
+     "blunt_force",
+     "typhoon",
+     "tank_it",
+     "zealot"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "botrk",
+     "ldr",
+     "statikk"
+    ]
+   }
+  ],
+  "KSante": [
+   {
+    "name": "돌진 탱커",
+    "why": "길을 여는 자·발놀림 돌진과 엔토포 타격 후 평타, 방어력 비례 증강",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "dashing",
+     "final_form",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "celestial_body",
+     "sap_magic",
+     "outlaws_grit",
+     "heavy_hitter",
+     "adaptive_ward",
+     "lonely_warrior",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "iceborn",
+     "jaksho",
+     "thornmail"
+    ]
+   }
+  ],
+  "Kennen": [
+   {
+    "name": "궁 폭풍 메이지",
+    "why": "날카로운 소용돌이 광역 궁이 핵심, 궁 증강과 폭풍의 표식 기절로 한타",
+    "augs": [
+     "fey_magic",
+     "echo_cast",
+     "ultimate_revolution",
+     "jeweled_gauntlet",
+     "eureka",
+     "upgrade_stormsurge",
+     "its_killing_time",
+     "arcane_axiom",
+     "recursion",
+     "warlock_juicebox",
+     "ultimate_recursion",
+     "upgrade_zhonyas",
+     "adapt",
+     "witchful_thinking"
+    ],
+    "items": [
+     "stormsurge",
+     "rocketbelt",
+     "zhonya",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Lissandra": [
+   {
+    "name": "CC 얼음 메이지",
+    "why": "서릿발 속박·얼음 무덤 기절로 CC 발동 증강, 존야와 궁 자가시전으로 버팀",
+    "augs": [
+     "eureka",
+     "cruelty",
+     "ultimate_revolution",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "recursion",
+     "upgrade_stormsurge",
+     "phenomenal_evil",
+     "warlock_juicebox",
+     "upgrade_zhonyas",
+     "dont_blink",
+     "slap_around",
+     "adapt",
+     "witchful_thinking"
+    ],
+    "items": [
+     "malignance",
+     "stormsurge",
+     "zhonya",
+     "shadowflame",
+     "rabadon"
+    ]
+   }
+  ],
+  "Briar": [
+   {
+    "name": "광분 흡혈 브루저",
+    "why": "핏빛 광분 연속 평타로 신비한 주먹, 잃은 체력 비례 회복에 죽지 않아",
+    "augs": [
+     "mystic_punch",
+     "dashing",
+     "back_to_basics",
+     "clown_college",
+     "still_here",
+     "upgrade_deaths_dance",
+     "soul_siphon",
+     "take_em_down",
+     "boom_bass",
+     "blunt_force",
+     "goredrink",
+     "flow_of_spirit",
+     "upgrade_collector"
+    ],
+    "items": [
+     "hubris",
+     "deaths_dance",
+     "collector",
+     "sundered_sky",
+     "infinity_edge"
+    ]
+   }
+  ],
+  "Taliyah": [
+   {
+    "name": "Q 연타 메이지",
+    "why": "궁 벽은 보조라 기본으로 돌아가기로 Q 파편 난사·E 지뢰 쿨을 극대화",
+    "augs": [
+     "back_to_basics",
+     "eureka",
+     "warlock_juicebox",
+     "adapt",
+     "infinite_recursion",
+     "bread_and_butter",
+     "jeweled_gauntlet",
+     "bees",
+     "phenomenal_evil",
+     "witchful_thinking",
+     "no_mana",
+     "erosion"
+    ],
+    "items": [
+     "ludens",
+     "shadowflame",
+     "liandry",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Vex": [
+   {
+    "name": "폭딜 메이지",
+    "why": "Q 안개 화살·W 거리 두기 광역 피해에 폭풍 쇄도·폭죽 추가 피해",
+    "augs": [
+     "eureka",
+     "bees",
+     "adapt",
+     "jeweled_gauntlet",
+     "upgrade_stormsurge",
+     "witchful_thinking",
+     "infinite_recursion",
+     "warlock_juicebox",
+     "magic_missile",
+     "twin_fire",
+     "quest_wooglets",
+     "upgrade_zhonyas"
+    ],
+    "items": [
+     "stormsurge",
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "zhonya",
+     "void_staff"
+    ]
+   }
+  ],
+  "Kalista": [
+   {
+    "name": "온힛 깡총 원딜",
+    "why": "돌진은 칼리스타에게 공속 125%, 평타 추가 화살로 E 뽑아 찢기 창을 빨리 쌓음",
+    "augs": [
+     "dashing",
+     "dual_wield",
+     "still_here",
+     "deft",
+     "tap_dancer",
+     "scopier_weapons",
+     "shadow_runner",
+     "outlaws_grit",
+     "scopiest_weapons",
+     "swift_and_safe",
+     "take_em_down",
+     "light_em_up",
+     "blunt_force"
+    ],
+    "items": [
+     "botrk",
+     "guinsoo",
+     "runaan",
+     "terminus",
+     "collector"
+    ]
+   }
+  ],
+  "Annie": [
+   {
+    "name": "티버 폭딜 메이지",
+    "why": "소환술사로 R 티버를 강화하고 궁 가속·처형 시간으로 궁 폭딜 반복",
+    "augs": [
+     "eureka",
+     "minionmancer",
+     "ultimate_recursion",
+     "adapt",
+     "infinite_recursion",
+     "upgrade_stormsurge",
+     "its_killing_time",
+     "witchful_thinking",
+     "bees",
+     "tripleshot",
+     "recursion",
+     "no_mana",
+     "twin_fire"
+    ],
+    "items": [
+     "malignance",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "liandry"
+    ]
+   }
+  ],
+  "Anivia": [
+   {
+    "name": "얼음 폭풍 메이지",
+    "why": "W 결정화 벽에 지형 생성 피해, R 얼음 폭풍 도트로 변이·냉기 둔화 강화",
+    "augs": [
+     "fey_magic",
+     "terraind",
+     "ice_cold",
+     "eureka",
+     "warlock_juicebox",
+     "no_mana",
+     "jeweled_gauntlet",
+     "phenomenal_evil",
+     "magic_missile",
+     "bees",
+     "blue_barrier",
+     "cant_touch_this"
+    ],
+    "items": [
+     "liandry",
+     "roa",
+     "malignance",
+     "rabadon",
+     "rylai"
+    ]
+   }
+  ],
+  "Nunu": [
+   {
+    "name": "AP 폭딜 누누",
+    "why": "R 절대 영도 정신 집중 중 보호막, 폭풍 쇄도·보석 건틀릿으로 W·R 폭딜",
+    "augs": [
+     "jeweled_gauntlet",
+     "dont_change_channel",
+     "upgrade_stormsurge",
+     "adapt",
+     "eureka",
+     "circle_of_death",
+     "witchful_thinking",
+     "bees",
+     "biggest_snowball",
+     "snowday",
+     "quest_wooglets",
+     "dive_bomber"
+    ],
+    "items": [
+     "stormsurge",
+     "ludens",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   },
+   {
+    "name": "AP 탱커 누누",
+    "why": "Q 잡아먹기 회복을 죽음의 순환 피해로, 체력 스택 증강으로 단단하게",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "dont_change_channel",
+     "circle_of_death",
+     "steel_your_heart",
+     "lich_brain",
+     "weapon_of_destiny",
+     "escape_plan",
+     "dive_bomber",
+     "celestial_body"
+    ],
+    "items": [
+     "heartsteel",
+     "liandry",
+     "riftmaker",
+     "spirit_visage",
+     "jaksho"
+    ]
+   }
+  ],
+  "Zoe": [
+   {
+    "name": "눈덩이 저격 메이지",
+    "why": "W 주문도둑과 표식 세트가 맞고, Q 통통별 장거리 적중으로 쿨 감소",
+    "augs": [
+     "biggest_snowball",
+     "eureka",
+     "upgrade_stormsurge",
+     "snowday",
+     "adapt",
+     "pinball",
+     "skilled_sniper",
+     "witchful_thinking",
+     "bees",
+     "holy_snowball",
+     "quest_wooglets",
+     "shrink_engine",
+     "escape_plan"
+    ],
+    "items": [
+     "ludens",
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "void_staff"
+    ]
+   }
+  ],
+  "Warwick": [
+   {
+    "name": "흡혈 온힛 브루저",
+    "why": "P 끝없는 허기·Q 송곳니 회복을 피해로 바꾸고 평타로 스킬 쿨 감소",
+    "augs": [
+     "circle_of_death",
+     "mystic_punch",
+     "still_here",
+     "goredrink",
+     "upgrade_deaths_dance",
+     "dual_wield",
+     "boom_bass",
+     "flow_of_spirit",
+     "take_em_down",
+     "upgrade_sundered_sky",
+     "heavy_hitter",
+     "lonely_warrior",
+     "escape_plan"
+    ],
+    "items": [
+     "botrk",
+     "sundered_sky",
+     "deaths_dance",
+     "spirit_visage",
+     "heartsteel"
+    ]
+   }
+  ],
+  "Rammus": [
+   {
+    "name": "방어력 가시 탱커",
+    "why": "P 가시박힌 껍질 방어력 공격력에 장갑 충격, E 도발로 CC 증강 발동",
+    "augs": [
+     "goliath",
+     "armored_impact",
+     "heavy_hitter",
+     "void_immolation",
+     "tank_engine",
+     "upgrade_immolate",
+     "courage_colossus",
+     "steel_your_heart",
+     "pressure_cooker",
+     "lonely_warrior",
+     "porcupine",
+     "escape_plan",
+     "leg_day"
+    ],
+    "items": [
+     "sunfire",
+     "heartsteel",
+     "thornmail",
+     "unending_despair",
+     "jaksho"
+    ]
+   }
+  ],
+  "Zac": [
+   {
+    "name": "회복 체력 탱커",
+    "why": "P 세포 분열 덩어리 회복을 죽음의 순환으로, W 최대 체력 피해에 체력 스택",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "stay_resolute",
+     "circle_of_death",
+     "steel_your_heart",
+     "siphon",
+     "courage_colossus",
+     "armored_impact",
+     "celestial_body",
+     "titans_resolve",
+     "dive_bomber",
+     "upgrade_immolate",
+     "heavy_hitter"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "spirit_visage",
+     "unending_despair",
+     "warmogs"
+    ]
+   }
+  ],
+  "Cassiopeia": [
+   {
+    "name": "E 연타 독 메이지",
+    "why": "E 쌍독니 연타로 3연발·흡수·화상 중첩, 전능 흡혈로 지속 교전",
+    "augs": [
+     "tripleshot",
+     "warlock_juicebox",
+     "siphon",
+     "infernal_conduit",
+     "eureka",
+     "bees",
+     "jeweled_gauntlet",
+     "goredrink",
+     "phenomenal_evil",
+     "magic_missile",
+     "twin_fire",
+     "cruelty",
+     "infinite_recursion",
+     "leg_day"
+    ],
+    "items": [
+     "liandry",
+     "roa",
+     "rylai",
+     "rabadon",
+     "blackfire"
+    ]
+   }
+  ],
+  "Neeko": [
+   {
+    "name": "궁 진입 메이지",
+    "why": "R 만개 기절·E 올가미 속박으로 CC 증강 발동, 메아리 시전으로 궁 두 번",
+    "augs": [
+     "eureka",
+     "echo_cast",
+     "ultimate_recursion",
+     "upgrade_stormsurge",
+     "recursion",
+     "cruelty",
+     "upgrade_zhonyas",
+     "adapt",
+     "jeweled_gauntlet",
+     "witchful_thinking",
+     "bees",
+     "slap_around",
+     "no_mana"
+    ],
+    "items": [
+     "stormsurge",
+     "malignance",
+     "shadowflame",
+     "rabadon",
+     "zhonya"
+    ]
+   }
+  ],
+  "Zeri": [
+   {
+    "name": "치명타 카이팅 원딜",
+    "why": "Q 집중 사격 연사에 치명타 증강, E 스파크 돌진·R 이속으로 거인 학살",
+    "augs": [
+     "giant_slayer",
+     "upgrade_ie",
+     "deft",
+     "tap_dancer",
+     "soul_siphon",
+     "blunt_force",
+     "scopiest_weapons",
+     "critical_rhythm",
+     "vulnerability",
+     "final_form",
+     "zealot",
+     "still_here",
+     "escape_plan"
+    ],
+    "items": [
+     "infinity_edge",
+     "runaan",
+     "statikk",
+     "yuntal",
+     "ldr"
+    ]
+   }
+  ],
+  "Janna": [
+   {
+    "name": "보호막 서포터",
+    "why": "E 폭풍의 눈 보호막을 단체 포옹으로 전원에, 회복·보호막 증폭 세트",
+    "augs": [
+     "group_hug",
+     "enchanting_butterflies",
+     "first_aid_kit",
+     "empowered_faithful",
+     "all_for_you",
+     "double_defense",
+     "windspeakers_blessing",
+     "sonic_boom",
+     "sonata",
+     "recursion",
+     "protein_shake",
+     "skilled_sniper",
+     "sound_barrier"
+    ],
+    "items": [
+     "moonstone",
+     "diadem",
+     "ardent_censer",
+     "imperial_mandate",
+     "staff_of_flowing_water"
+    ]
+   }
+  ],
+  "Quinn": [
+   {
+    "name": "치명타 원딜",
+    "why": "P 매사냥 평타 원딜, 추가 화살·무한의 대검 강화, E 공중제비로 방어 중첩",
+    "augs": [
+     "dual_wield",
+     "upgrade_ie",
+     "blunt_force",
+     "soul_siphon",
+     "giant_slayer",
+     "deft",
+     "critical_rhythm",
+     "outlaws_grit",
+     "tap_dancer",
+     "zealot",
+     "scopier_weapons",
+     "tank_it",
+     "vulnerability"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "statikk",
+     "botrk"
+    ]
+   }
+  ],
+  "Azir": [
+   {
+    "name": "병사 평타 메이지",
+    "why": "W 병사 공격에 마법 명사수·결투의 대가, 적응형으로 공격력을 주문력화",
+    "augs": [
+     "master_of_duality",
+     "marksmage",
+     "zealot",
+     "jeweled_gauntlet",
+     "magic_missile",
+     "flow_of_spirit",
+     "adapt",
+     "phenomenal_evil",
+     "giant_slayer",
+     "deft",
+     "twin_fire",
+     "boom_bass",
+     "warlock_juicebox"
+    ],
+    "items": [
+     "nashor",
+     "shadowflame",
+     "liandry",
+     "rabadon",
+     "rylai"
+    ]
+   }
+  ],
+  "Milio": [
+   {
+    "name": "회복 서포터",
+    "why": "W 모닥불 회복·E 따스한 포옹 보호막으로 축복·나비, 회복 증폭 세트",
+    "augs": [
+     "empowered_faithful",
+     "enchanting_butterflies",
+     "first_aid_kit",
+     "protein_shake",
+     "all_for_you",
+     "double_defense",
+     "windspeakers_blessing",
+     "sonic_boom",
+     "sonata",
+     "group_hug",
+     "recursion",
+     "purist_caster"
+    ],
+    "items": [
+     "moonstone",
+     "ardent_censer",
+     "diadem",
+     "staff_of_flowing_water",
+     "redemption"
+    ]
+   }
+  ],
+  "Lulu": [
+   {
+    "name": "보호막 서포터",
+    "why": "E 픽스 보호막을 단체 포옹으로 전원에, 회복·보호막 증폭과 R 궁 가속",
+    "augs": [
+     "group_hug",
+     "enchanting_butterflies",
+     "first_aid_kit",
+     "empowered_faithful",
+     "all_for_you",
+     "double_defense",
+     "windspeakers_blessing",
+     "sonic_boom",
+     "sonata",
+     "wee_woo",
+     "protein_shake",
+     "ultimate_recursion"
+    ],
+    "items": [
+     "moonstone",
+     "ardent_censer",
+     "diadem",
+     "redemption",
+     "mikael"
+    ]
+   }
+  ],
+  "Olaf": [
+   {
+    "name": "흡혈 광전사",
+    "why": "P 광전사의 분노에 죽지 않아 중첩, R 라그나로크와 최종 형태로 돌격",
+    "augs": [
+     "final_form",
+     "still_here",
+     "upgrade_deaths_dance",
+     "goredrink",
+     "mosh_monster",
+     "boom_bass",
+     "blunt_force",
+     "lil_extra_help",
+     "titans_resolve",
+     "flow_of_spirit",
+     "get_excited",
+     "its_go_time",
+     "escape_plan"
+    ],
+    "items": [
+     "hexplate",
+     "deaths_dance",
+     "stridebreaker",
+     "heartsteel",
+     "botrk"
+    ]
+   }
+  ],
+  "Braum": [
+   {
+    "name": "체력 탱커 서포터",
+    "why": "P 뇌진탕 펀치 평타에 강타자·장갑 충격, 체력 스택으로 E 불굴 버티기",
+    "augs": [
+     "goliath",
+     "tank_engine",
+     "heavy_hitter",
+     "armored_impact",
+     "steel_your_heart",
+     "titans_resolve",
+     "courage_colossus",
+     "celestial_body",
+     "upgrade_immolate",
+     "pressure_cooker",
+     "lonely_warrior",
+     "escape_plan",
+     "dive_bomber"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "warmogs",
+     "unending_despair",
+     "kaenic"
+    ]
+   }
+  ],
+  "Renata": [
+   {
+    "name": "궁 순환 유틸 메이지",
+    "why": "적대적 인수 궁 쿨 초기화, 악수 속박으로 잔혹 행위·우당탕탕 발동",
+    "augs": [
+     "ultimate_revolution",
+     "cruelty",
+     "archmage",
+     "eureka",
+     "ultimate_awakening",
+     "infinite_recursion",
+     "enchanting_butterflies",
+     "recursion",
+     "arcane_axiom",
+     "sonata",
+     "ultimate_recursion",
+     "slap_around",
+     "double_defense",
+     "first_aid_kit"
+    ],
+    "items": [
+     "malignance",
+     "imperial_mandate",
+     "redemption",
+     "shurelya",
+     "diadem"
+    ]
+   }
+  ],
+  "Nami": [
+   {
+    "name": "위우 위우 힐러",
+    "why": "밀물 썰물 회복·E 강화를 증폭, 위우 위우 세트와 나비로 지원",
+    "augs": [
+     "empowered_faithful",
+     "windspeakers_blessing",
+     "archmage",
+     "eureka",
+     "enchanting_butterflies",
+     "all_for_you",
+     "sonata",
+     "wee_woo",
+     "recursion",
+     "first_aid_kit",
+     "sonic_boom",
+     "purist_caster",
+     "fruitify",
+     "infinite_recursion"
+    ],
+    "items": [
+     "moonstone",
+     "ardent_censer",
+     "imperial_mandate",
+     "diadem",
+     "redemption"
+    ]
+   }
+  ],
+  "Skarner": [
+   {
+    "name": "체력 탱커",
+    "why": "전율 최대 체력 비례 피해, 이쉬탈의 격돌 기절·꿰뚫기 제압으로 CC 증강",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "mad_scientist",
+     "courage_colossus",
+     "void_immolation",
+     "biggest_snowball",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "soul_eater",
+     "celestial_body",
+     "heavy_hitter",
+     "upgrade_immolate",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "sunfire",
+     "unending_despair",
+     "warmogs",
+     "thornmail"
+    ]
+   }
+  ],
+  "Rakan": [
+   {
+    "name": "돌진 탱커 서포터",
+    "why": "화려한 등장·전쟁무도 돌진에 가속, 에어본·매혹으로 CC 증강 발동",
+    "augs": [
+     "goliath",
+     "dashing",
+     "courage_colossus",
+     "cruelty",
+     "protein_shake",
+     "biggest_snowball",
+     "tank_engine",
+     "armored_impact",
+     "celestial_body",
+     "ravenous_bind",
+     "outlaws_grit",
+     "heavy_hitter",
+     "swift_and_safe",
+     "shadow_runner"
+    ],
+    "items": [
+     "heartsteel",
+     "warmogs",
+     "unending_despair",
+     "fimbulwinter",
+     "thornmail"
+    ]
+   }
+  ],
+  "Bard": [
+   {
+    "name": "정령 평타 하이브리드",
+    "why": "정령이 평타에 마법 피해 추가, 적중 효과·공속 증강과 하이브리드템",
+    "augs": [
+     "dual_wield",
+     "master_of_duality",
+     "tap_dancer",
+     "giant_slayer",
+     "marksmage",
+     "boom_bass",
+     "bees",
+     "mercys_strike",
+     "warlock_juicebox",
+     "zealot",
+     "flow_of_spirit",
+     "typhoon",
+     "adapt",
+     "witchful_thinking"
+    ],
+    "items": [
+     "statikk",
+     "nashor",
+     "botrk",
+     "guinsoo",
+     "rfc"
+    ]
+   }
+  ],
+  "Kled": [
+   {
+    "name": "히드라 브루저",
+    "why": "버럭버럭 평타 연타와 스칼 체력 활용, 거대한 히드라·강철심장 스택",
+    "augs": [
+     "goliath",
+     "ultra_hydra",
+     "titans_resolve",
+     "triggered_inferno",
+     "mad_scientist",
+     "still_here",
+     "tank_engine",
+     "steel_your_heart",
+     "sap_magic",
+     "upgrade_sundered_sky",
+     "boom_bass",
+     "heavy_hitter",
+     "blunt_force",
+     "lonely_warrior"
+    ],
+    "items": [
+     "titanic",
+     "heartsteel",
+     "overlords",
+     "sundered_sky",
+     "warmogs"
+    ]
+   }
+  ],
+  "Taric": [
+   {
+    "name": "탱커 힐 서포터",
+    "why": "담대함 평타에 장갑 충격, 별빛 손길 회복·황홀한 강타 기절 증폭",
+    "augs": [
+     "protein_shake",
+     "goliath",
+     "circle_of_death",
+     "windspeakers_blessing",
+     "courage_colossus",
+     "mad_scientist",
+     "armored_impact",
+     "tank_engine",
+     "steel_your_heart",
+     "enchanting_butterflies",
+     "celestial_body",
+     "heavy_hitter",
+     "sonic_boom",
+     "first_aid_kit"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "warmogs",
+     "fimbulwinter",
+     "spirit_visage"
+    ]
+   }
+  ],
+  "Yorick": [
+   {
+    "name": "망령 소환 브루저",
+    "why": "안개 망령·마녀 강화에 소환술사, 최후의 의식 평타에 광휘 계열",
+    "augs": [
+     "goliath",
+     "mad_scientist",
+     "titans_resolve",
+     "infinite_recursion",
+     "ultra_hydra",
+     "minionmancer",
+     "ethereal_weapon",
+     "tank_engine",
+     "steel_your_heart",
+     "upgrade_sheen",
+     "still_here",
+     "heavy_hitter",
+     "siphon",
+     "escape_plan"
+    ],
+    "items": [
+     "heartsteel",
+     "iceborn",
+     "sundered_sky",
+     "spirit_visage",
+     "thornmail"
+    ]
+   }
+  ],
+  "Evelynn": [
+   {
+    "name": "AP 폭딜 암살자",
+    "why": "증오의 가시 연사와 최후의 포옹 처형, 폭풍 쇄도·치명 스킬 폭딜",
+    "augs": [
+     "jeweled_gauntlet",
+     "eureka",
+     "giant_slayer",
+     "quest_wooglets",
+     "clown_college",
+     "upgrade_stormsurge",
+     "bread_and_butter",
+     "warlock_juicebox",
+     "arcane_axiom",
+     "nightstalking",
+     "phenomenal_evil",
+     "adapt",
+     "witchful_thinking",
+     "ultimate_recursion"
+    ],
+    "items": [
+     "stormsurge",
+     "shadowflame",
+     "rabadon",
+     "lich_bane",
+     "void_staff"
+    ]
+   }
+  ],
+  "Elise": [
+   {
+    "name": "AP 거미 암살자",
+    "why": "고치 기절 후 신경독·독이빨 폭딜, 거미 평타와 새끼 거미 강화",
+    "augs": [
+     "jeweled_gauntlet",
+     "eureka",
+     "dashing",
+     "quest_wooglets",
+     "clown_college",
+     "cruelty",
+     "warlock_juicebox",
+     "marksmage",
+     "minionmancer",
+     "phenomenal_evil",
+     "tooth_fairy",
+     "adapt",
+     "witchful_thinking",
+     "goredrink"
+    ],
+    "items": [
+     "shadowflame",
+     "ludens",
+     "rabadon",
+     "stormsurge",
+     "void_staff"
+    ]
+   }
+  ],
+  "Nilah": [
+   {
+    "name": "치명타 근접 원딜",
+    "why": "무형의 검과 평타 치명타 극대화, 환희 궁 치명타와 흡혈로 유지",
+    "augs": [
+     "big_shot",
+     "dual_wield",
+     "jeweled_gauntlet",
+     "double_tap",
+     "symphony_of_war",
+     "soul_siphon",
+     "upgrade_ie",
+     "critical_rhythm",
+     "still_here",
+     "jeweled_bracelet",
+     "upgrade_collector",
+     "flow_of_spirit",
+     "blunt_force",
+     "tank_it"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "ldr",
+     "navori",
+     "bloodthirster"
+    ]
+   }
+  ],
+  "Ivern": [
+   {
+    "name": "보호막 서포터",
+    "why": "보호의 씨앗 보호막을 단체 포옹으로 전체 적용, 위우 위우 세트",
+    "augs": [
+     "group_hug",
+     "empowered_faithful",
+     "protein_shake",
+     "windspeakers_blessing",
+     "archmage",
+     "infinite_recursion",
+     "enchanting_butterflies",
+     "all_for_you",
+     "sonata",
+     "wee_woo",
+     "double_defense",
+     "first_aid_kit",
+     "sonic_boom",
+     "sound_barrier"
+    ],
+    "items": [
+     "moonstone",
+     "ardent_censer",
+     "diadem",
+     "redemption",
+     "malignance"
+    ]
+   }
+  ],
+  "RekSai": [
+   {
+    "name": "체력 브루저",
+    "why": "여왕의 진노 연타·돌출 에어본, 거대한 히드라와 강철심장 스택",
+    "augs": [
+     "goliath",
+     "ultra_hydra",
+     "mad_scientist",
+     "titans_resolve",
+     "courage_colossus",
+     "tank_engine",
+     "steel_your_heart",
+     "sap_magic",
+     "upgrade_sundered_sky",
+     "celestial_body",
+     "boom_bass",
+     "heavy_hitter",
+     "escape_plan",
+     "lonely_warrior"
+    ],
+    "items": [
+     "titanic",
+     "heartsteel",
+     "unending_despair",
+     "sundered_sky",
+     "hubris"
+    ]
+   }
+  ]
+ }
+}

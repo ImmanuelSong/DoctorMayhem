@@ -1,0 +1,9 @@
+/target/
+/.tools/
+*:Zone.Identifier
+# 유튜브 캡처(남의 화면·채팅 닉네임)라 공개 저장소에 올리지 않는다. tests/run_frames.sh 는 로컬에서만.
+/tests/screens/
+/tests/frames/
+# 분석 중간 파일(data/analysis/prepare.py 로 다시 만든다). 결과는 data/builds.json 에 들어 있다.
+/data/analysis/work/
+/mayhem_augment_data_v8.zip
