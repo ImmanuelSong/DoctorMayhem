@@ -87,7 +87,8 @@ const $ = id => document.getElementById(id);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 const clone = x => JSON.parse(JSON.stringify(x));
 const dirty = k => JSON.stringify(builds[k]) !== JSON.stringify(saved[k]);
-const keys = () => Object.keys(D.champs).sort((a, b) => D.champs[a].ko.localeCompare(D.champs[b].ko, "ko"));
+const GENERAL = "_general", maxBuilds = k => k === GENERAL ? 12 : 3;
+const keys = () => Object.keys(D.champs).sort((a, b) => (b === GENERAL) - (a === GENERAL) || D.champs[a].ko.localeCompare(D.champs[b].ko, "ko"));
 
 fetch("/data").then(r => r.json()).then(d => {
   D = d; builds = clone(d.builds); saved = clone(d.builds); reviewed = new Set(d.reviewed);
@@ -106,7 +107,7 @@ function listChamps() {
     row.onclick = () => open(k);
     box.append(row);
   }
-  const n = Object.keys(D.champs).length, nd = Object.keys(D.champs).filter(dirty).length;
+  const n = Object.keys(D.champs).length - 1, nd = Object.keys(D.champs).filter(dirty).length;
   $("progress").textContent = `확인 ${reviewed.size}/${n}` + (nd ? ` · 저장 안 한 챔피언 ${nd}` : "");
 }
 
@@ -119,7 +120,8 @@ function render() {
   $("style").textContent = c.style;
   $("reviewed").className = reviewed.has(cur) ? "on" : "";
   $("reviewed").textContent = reviewed.has(cur) ? "✔ 확인됨" : "확인";
-  $("addBuild").disabled = bs.length >= 3;
+  $("addBuild").disabled = bs.length >= maxBuilds(cur);
+  $("reviewed").style.display = cur === GENERAL ? "none" : "";
   const stats = $("stats"); stats.replaceChildren();
   for (const r of Object.keys(RAR))
     for (const [a, [g, short]] of Object.entries(c.stats)) {
@@ -133,7 +135,7 @@ function render() {
     const card = el("div", "build" + (i === active ? " active" : ""));
     card.onmousedown = () => { active = i; for (const c of box.children) c.classList.toggle("active", c === card); fillList(); };
     const head = el("div", "head");
-    head.append(el("b", null, i === 0 ? "주력" : `#${i + 1}`));
+    head.append(el("b", null, cur === GENERAL ? `#${i + 1}` : i === 0 ? "주력" : `#${i + 1}`));
     const name = el("input", "name"); name.value = b.name; name.maxLength = 14; name.placeholder = "빌드 이름";
     name.oninput = () => { b.name = name.value; listChamps(); };
     const why = el("input", "why"); why.value = b.why; why.maxLength = 60; why.placeholder = "한 줄 이유";
@@ -228,7 +230,7 @@ $("prev").onclick = () => step(-1); $("next").onclick = () => step(1);
 
 async function save() {
   const m = $("msg"); m.className = ""; m.textContent = "저장 중…";
-  for (const k of Object.keys(builds)) if (dirty(k)) reviewed.add(k);
+  for (const k of Object.keys(builds)) if (dirty(k) && k !== GENERAL) reviewed.add(k);
   const r = await (await fetch("/save", { method: "POST", body: JSON.stringify({ builds, reviewed: [...reviewed] }) })).json();
   m.className = r.ok ? "ok" : "err"; m.textContent = r.msg;
   if (r.ok) { saved = clone(builds); reviewed = new Set(r.reviewed); render(); }

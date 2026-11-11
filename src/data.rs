@@ -94,6 +94,8 @@ const AUG_SIZE: usize = 16;
 const CHAMP_SIZE: usize = 16;
 const ENTRY_SIZE: usize = 28;
 const BUILD_SIZE: usize = 16;
+/// 일반 빌드의 챔피언 해시 자리 값. build_data.py 의 GENERAL 과 같아야 함.
+const GENERAL: u32 = 0;
 
 fn u16_at(o: usize) -> u16 {
     let b = blob();
@@ -181,19 +183,35 @@ pub struct Build {
     pub why: u32,
     pub augs: Vec<u16>,
     pub items: Vec<u16>,
+    /// 챔피언과 상관없는 일반 빌드
+    pub general: bool,
 }
 
 /// 챔피언의 빌드들, 주력부터.
 pub fn builds(champ: &Champ) -> Vec<Build> {
+    builds_by(champ.hash)
+}
+
+fn builds_by(hash: u32) -> Vec<Build> {
     (0..hdr(15))
         .map(|i| hdr(16) + i * BUILD_SIZE)
-        .filter(|&o| u32_at(o) == champ.hash)
+        .filter(|&o| u32_at(o) == hash)
         .map(|o| {
             let (list, na, ni) = (hdr(17) + u16_at(o + 12) as usize * 2, blob()[o + 14] as usize, blob()[o + 15] as usize);
             let ids: Vec<u16> = (0..na + ni).map(|i| u16_at(list + i * 2)).collect();
-            Build { name: u32_at(o + 4), why: u32_at(o + 8), augs: ids[..na].to_vec(), items: ids[na..].to_vec() }
+            let (augs, items) = (ids[..na].to_vec(), ids[na..].to_vec());
+            Build { name: u32_at(o + 4), why: u32_at(o + 8), augs, items, general: hash == GENERAL }
         })
         .collect()
+}
+
+/// 고른 증강 중 챔피언 빌드 어디에도 없는 게 있으면(예: AD 챔피언에 AP 증강) 일반 빌드를 뒤에 붙인다.
+/// 그러면 그 증강이 든 일반 빌드가 고른 수만큼 점수를 받아 BEST·다음 증강·아이템이 그쪽을 따라간다.
+pub fn with_general(mut builds: Vec<Build>, picked: &[u16]) -> Vec<Build> {
+    if picked.iter().any(|p| !builds.iter().any(|b| b.augs.contains(p))) {
+        builds.extend(builds_by(GENERAL));
+    }
+    builds
 }
 
 /// 증강이 속한 세트(같은 세트를 모으면 보너스) 비트마스크.
@@ -340,6 +358,18 @@ mod tests {
         assert_eq!(best_card(&ashe, &[], &cards), Some(0));
         assert_eq!(best_card(&ashe, &[aug("주문 분산")], &cards), Some(1));
         assert_eq!(build_for(&ashe, &[aug("주문 분산")], aug("축소 엔진")), Some(&ashe[1])); // 두 빌드 모두에 있음
+        // 사미라(AD)에 보석 건틀릿: 챔피언 빌드에 없으니 일반 빌드가 붙고, BEST·아이템이 AP 쪽으로 간다
+        let samira = builds_of("Samira");
+        let gauntlet = [aug("보석 건틀릿")];
+        assert_eq!(with_general(samira.clone(), &[]), samira);
+        assert_eq!(with_general(samira.clone(), &[samira[0].augs[0]]), samira);
+        let mixed = with_general(samira.clone(), &gauntlet);
+        assert!(mixed.len() > samira.len() && mixed[samira.len()].general);
+        let cards = [Some(samira[0].augs[3]), Some(aug("극악무도")), None];
+        assert_eq!(best_card(&samira, &gauntlet, &cards), Some(0));
+        assert_eq!(best_card(&mixed, &gauntlet, &cards), Some(1));
+        let ap = build_for(&mixed, &gauntlet, aug("극악무도")).unwrap();
+        assert!(ap.general && s(item_name(ap.items[0])) == "루덴의 메아리");
         // 세트: 폭죽 세트(마법 미사일·쌍둥이 불꽃)
         assert_ne!(sets(aug("마법 미사일")) & sets(aug("쌍둥이 불꽃")), 0);
     }

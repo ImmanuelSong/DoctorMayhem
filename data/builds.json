@@ -6351,5 +6351,206 @@
   "Zilean",
   "Zoe",
   "Zyra"
+ ],
+ "general": [
+  {
+   "name": "AP 스킬 폭딜",
+   "why": "주문력으로 스킬 피해를 키움. 적응형 능력치로 공격력을 주문력으로 바꿈",
+   "augs": [
+    "jeweled_gauntlet",
+    "infinite_recursion",
+    "eureka",
+    "archmage",
+    "phenomenal_evil",
+    "magic_missile",
+    "recursion",
+    "bees",
+    "twin_fire",
+    "adapt",
+    "witchful_thinking",
+    "lich_brain",
+    "no_mana"
+   ],
+   "items": [
+    "ludens",
+    "shadowflame",
+    "rabadon",
+    "void_staff",
+    "zhonya"
+   ]
+  },
+  {
+   "name": "지속 피해 메이지",
+   "why": "화상·도트를 겹치고 취약으로 지속 피해에 치명타를 붙임",
+   "augs": [
+    "infernal_conduit",
+    "vulnerability",
+    "eureka",
+    "infinite_recursion",
+    "magic_missile",
+    "firebrand",
+    "recursion",
+    "forged_by_the_master",
+    "erosion",
+    "witchful_thinking",
+    "adapt"
+   ],
+   "items": [
+    "liandry",
+    "blackfire",
+    "rylai",
+    "morellonomicon"
+   ]
+  },
+  {
+   "name": "치명타 원딜",
+   "why": "치명타 확률을 채우고 치명타 피해를 키우는 평타 딜",
+   "augs": [
+    "big_shot",
+    "double_tap",
+    "its_critical",
+    "critical_rhythm",
+    "upgrade_ie",
+    "soul_siphon",
+    "zealot",
+    "deft",
+    "blunt_force",
+    "scoped_weapons",
+    "typhoon"
+   ],
+   "items": [
+    "yuntal",
+    "infinity_edge",
+    "navori",
+    "ldr",
+    "bloodthirster"
+   ]
+  },
+  {
+   "name": "온힛 공속",
+   "why": "공격 속도와 적중 시 효과를 겹치는 평타 딜",
+   "augs": [
+    "dual_wield",
+    "tap_dancer",
+    "master_of_duality",
+    "firebrand",
+    "boom_bass",
+    "tickle_monster",
+    "still_here",
+    "juiced",
+    "deft",
+    "typhoon",
+    "light_em_up",
+    "heavy_hitter"
+   ],
+   "items": [
+    "botrk",
+    "guinsoo",
+    "kraken",
+    "terminus",
+    "wits_end"
+   ]
+  },
+  {
+   "name": "AD 스킬 브루저",
+   "why": "공격력과 스킬 가속으로 스킬을 자주 돌림. 마법사(물리)로 주문력을 공격력으로",
+   "augs": [
+    "eureka",
+    "infinite_recursion",
+    "archmage",
+    "thread_the_needle",
+    "recursion",
+    "ethereal_weapon",
+    "gift_of_the_drowned",
+    "escapade",
+    "blunt_force",
+    "jeweled_gauntlet"
+   ],
+   "items": [
+    "hubris",
+    "serylda",
+    "shojin",
+    "axiom_arc",
+    "black_cleaver"
+   ]
+  },
+  {
+   "name": "탱커",
+   "why": "체력을 크게 쌓고 군중 제어로 보호막·피해를 얻음",
+   "augs": [
+    "goliath",
+    "titans_resolve",
+    "courage_colossus",
+    "cruelty",
+    "tank_engine",
+    "celestial_body",
+    "steel_your_heart",
+    "soul_eater",
+    "protein_shake",
+    "armored_impact",
+    "impassable",
+    "slap_around",
+    "mind_to_matter",
+    "lonely_warrior",
+    "escape_plan"
+   ],
+   "items": [
+    "heartsteel",
+    "sunfire",
+    "unending_despair",
+    "warmogs",
+    "thornmail"
+   ]
+  },
+  {
+   "name": "지속 싸움 브루저",
+   "why": "피해 흡혈과 회복으로 오래 싸우며 중첩을 쌓음",
+   "augs": [
+    "titans_resolve",
+    "hellbent",
+    "symphony_of_war",
+    "goliath",
+    "take_em_down",
+    "upgrade_sundered_sky",
+    "warlock_juicebox",
+    "dawnbringers_resolve",
+    "still_here",
+    "goredrink",
+    "upgrade_sheen",
+    "lonely_warrior"
+   ],
+   "items": [
+    "sundered_sky",
+    "black_cleaver",
+    "steraks_gage",
+    "deaths_dance",
+    "spirit_visage"
+   ]
+  },
+  {
+   "name": "힐러·보호막",
+   "why": "아군 회복·보호막을 키우고 그 효과로 적에게 피해",
+   "augs": [
+    "empowered_faithful",
+    "windspeakers_blessing",
+    "spirit_bomb",
+    "empyrean_promise",
+    "all_for_you",
+    "critical_healing",
+    "wee_woo",
+    "sonata",
+    "enchanting_butterflies",
+    "first_aid_kit",
+    "sonic_boom",
+    "sound_barrier"
+   ],
+   "items": [
+    "moonstone",
+    "ardent_censer",
+    "redemption",
+    "shurelya",
+    "dawncore"
+   ]
+  }
  ]
 }

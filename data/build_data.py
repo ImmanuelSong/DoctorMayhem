@@ -13,7 +13,7 @@
                 pairs[3] u16, items[3] u16   (없으면 0xFFFF)
   items     4B: name_off u32
   names     8B: norm_off u32, aug_idx u32   (정규화 이름 오름차순. aug_idx 0xFFFFFFFF = 어디에도 없는 증강)
-  builds   16B: champ_hash u32, name_off u32, why_off u32, list_off u16 (lists 안 u16 단위), n_aug u8, n_item u8
+  builds   16B: champ_hash u32 (0 = 일반 빌드), name_off u32, why_off u32, list_off u16 (lists 안 u16 단위), n_aug u8, n_item u8
                 (챔피언별로 주력 빌드부터)
   lists    u16 배열: 빌드마다 증강 번호들 뒤에 아이템 번호들
 
@@ -47,6 +47,9 @@ BUILD = struct.Struct("<IIIHBB")
 AUG = struct.Struct("<IIIBBH")
 CHAMP = struct.Struct("<IIIHH")
 ENTRY = struct.Struct("<HBBIII3H3H")
+
+
+GENERAL = 0  # 빌드 섹션에서 챔피언 해시 대신 쓰는 값: 챔피언과 상관없는 일반 빌드(builds.json 의 general)
 
 
 def norm_key(s):
@@ -144,11 +147,12 @@ def build(d, official=(), b=None, revision=0):
     names = b"".join(struct.pack("<II", pool.add(n), i) for n, i in sorted(norm.items()))
 
     builds, lists = [], []
-    for ck, bs in b["champions"].items():
-        assert ck in d["champions"], ck
+    assert GENERAL not in hashes
+    for ck, bs in [*b["champions"].items(), (None, b.get("general", []))]:
+        assert ck is None or ck in d["champions"], ck
         for x in bs:
-            builds.append(BUILD.pack(fnv1a(norm_key(ck)), pool.add(x["name"]), pool.add(x["why"]), len(lists),
-                                     len(x["augs"]), len(x["items"])))
+            builds.append(BUILD.pack(GENERAL if ck is None else fnv1a(norm_key(ck)), pool.add(x["name"]), pool.add(x["why"]),
+                                     len(lists), len(x["augs"]), len(x["items"])))
             lists += [aug_idx[a] for a in x["augs"]] + [item_idx[i] for i in x["items"]]
     assert len(lists) < 0xFFFF
 
@@ -214,7 +218,8 @@ def check(d, blob, b):
         ids = struct.unpack_from(f"<{na + ni}H", blob, off_list + lo * 2)
         got.setdefault(h, []).append({"name": s(name), "why": s(why), "augs": [all_keys[a] for a in ids[:na]],
                                       "items": [all_items[x] for x in ids[na:]]})
-    assert got == {fnv1a(norm_key(k)): v for k, v in b["champions"].items()}
+    want = {fnv1a(norm_key(k)): v for k, v in b["champions"].items()}
+    assert got == (want | {GENERAL: b["general"]} if b.get("general") else want)
     return n_aug, n_champ, n_entry, n_item, n_name, n_build
 
 

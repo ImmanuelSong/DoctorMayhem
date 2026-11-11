@@ -15,6 +15,7 @@ sys.path.insert(0, str(DATA))
 from build_data import ALIASES, norm_name  # noqa: E402
 
 PORT = 8765
+GENERAL = "_general"  # 화면에서 일반 빌드를 챔피언 하나처럼 다루는 키
 
 
 def read(p):
@@ -42,7 +43,10 @@ def load():
     champs = {k: {"ko": c["ko"], "style": c.get("style", ""),
                   "stats": {e["aug"]: [e["grade"], e.get("short", "")] for r in ("prismatic", "gold", "silver") for e in c.get(r, [])}}
               for k, c in d["champions"].items()}
-    return d, b, {"augs": augs, "items": items, "champs": champs, "builds": b["champions"], "reviewed": b.get("reviewed", [])}
+    champs[GENERAL] = {"ko": "★ 일반 빌드", "style": "고른 증강이 챔피언 빌드 어디에도 없을 때(예: AD 챔피언에 AP 증강) 따라가는 빌드. 챔피언과 상관없음.",
+                       "stats": {}}
+    builds = {GENERAL: b.get("general", []), **b["champions"]}
+    return d, b, {"augs": augs, "items": items, "champs": champs, "builds": builds, "reviewed": b.get("reviewed", [])}
 
 
 def errors(payload, view):
@@ -51,8 +55,9 @@ def errors(payload, view):
     errs += [f"{k}: 빠졌음" for k in view["champs"] if k not in builds]
     errs += [f"{k}: 없는 챔피언" for k in builds if k not in view["champs"]]
     for k, bs in builds.items():
-        if not 1 <= len(bs) <= 3:
-            errs.append(f"{k}: 빌드 {len(bs)}개 (1~3)")
+        most = 12 if k == GENERAL else 3
+        if not 1 <= len(bs) <= most:
+            errs.append(f"{k}: 빌드 {len(bs)}개 (1~{most})")
         for i, x in enumerate(bs, 1):
             where = f"{view['champs'].get(k, {}).get('ko', k)} 빌드 {i}"
             if set(x) != {"name", "why", "augs", "items"} or not x["name"].strip():
@@ -75,8 +80,9 @@ def save(payload):
         return {"ok": False, "msg": "\n".join(errs)}
     changed = [k for k in b["champions"] if payload["builds"][k] != b["champions"][k]]
     b["champions"] = {k: payload["builds"][k] for k in b["champions"]}
+    b["general"] = payload["builds"][GENERAL]
     b["reviewed"] = sorted(set(payload.get("reviewed", [])) & set(b["champions"]) | set(changed))
-    used = {i for bs in b["champions"].values() for x in bs for i in x["items"]}
+    used = {i for bs in [*b["champions"].values(), b["general"]] for x in bs for i in x["items"]}
     order = [*b["items_extra"], *sorted(used - set(b["items_extra"]))]
     b["items_extra"] = {k: {"ko": view["items"][k]["ko"]} for k in order if k in used and k not in d["items"]}
     (DATA / "builds.json").write_text(json.dumps(b, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -112,8 +118,8 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     if "--check" in sys.argv:
         _, b, view = load()
-        assert errors({"builds": b["champions"]}, view) == []
-        bad = json.loads(json.dumps(b["champions"]))
+        assert errors({"builds": view["builds"]}, view) == []
+        bad = json.loads(json.dumps(view["builds"]))
         bad["Ashe"][0]["augs"] += ["no_such_aug", bad["Ashe"][0]["augs"][0]]
         bad["Annie"] = []
         assert len(errors({"builds": bad}, view)) == 3, errors({"builds": bad}, view)

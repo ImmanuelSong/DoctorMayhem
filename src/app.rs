@@ -296,7 +296,7 @@ impl App {
             };
             (self.layout.card(i, w, h), card)
         });
-        let builds = self.champion.as_ref().map(data::builds).unwrap_or_default();
+        let builds = data::with_general(self.champion.as_ref().map(data::builds).unwrap_or_default(), &self.picks.list);
         let augs = slots.map(|s| match s.seen {
             Seen::Aug(aug) => Some(aug),
             _ => None,

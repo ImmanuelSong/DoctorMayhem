@@ -393,7 +393,7 @@ impl Painter<'_> {
         }
         if let Some(b) = &panel.build {
             flow.y += 8.0 * u;
-            let mut label = utf16("빌드 · ");
+            let mut label = utf16(if b.general { "일반 빌드 · " } else { "빌드 · " });
             label.extend(data::text(b.name));
             flow.paragraph(&label, 14.0, BEST)?;
             flow.paragraph(&data::text(b.why), 16.0, WHITE)?;
