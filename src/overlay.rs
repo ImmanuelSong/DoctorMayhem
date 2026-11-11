@@ -474,6 +474,9 @@ impl Flow<'_> {
     }
 
     fn paragraph(&mut self, s: &[u16], size: f32, color: D2D1_COLOR_F) -> Result<()> {
+        if s.is_empty() {
+            return Ok(());
+        }
         let (layout, m) = self.measure(s, size, DWRITE_FONT_WEIGHT_NORMAL, self.width)?;
         self.texts.push((layout, self.left, self.y, color));
         self.y += m.height + 4.0 * self.p.unit;

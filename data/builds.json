@@ -355,6 +355,12 @@
   },
   "steraks_gage": {
    "ko": "스테락의 도전"
+  },
+  "abyssal_mask": {
+   "ko": "심연의 가면"
+  },
+  "morellonomicon": {
+   "ko": "모렐로노미콘"
   }
  },
  "sets": [
@@ -528,6 +534,32 @@
      "rabadon",
      "zhonya",
      "shadowflame"
+    ]
+   },
+   {
+    "name": "AD 원딜",
+    "why": "묵직한 한방으로 평타 딜",
+    "augs": [
+     "big_shot",
+     "weapon_of_destiny",
+     "dual_wield",
+     "tap_dancer",
+     "double_tap",
+     "upgrade_ie",
+     "thread_the_needle",
+     "get_excited",
+     "homeguard",
+     "deft",
+     "upgrade_collector",
+     "scoped_weapons",
+     "blunt_force",
+     "scopiest_weapons",
+     "scopier_weapons"
+    ],
+    "items": [
+     "collector",
+     "infinity_edge",
+     "bloodthirster"
     ]
    }
   ],
@@ -1303,10 +1335,10 @@
     "why": "Q 회오리 베기 연타를 평타·궁 쿨감으로 돌리고 E·R 돌진으로 진입",
     "augs": [
      "mystic_punch",
+     "ethereal_weapon",
      "ultimate_awakening",
      "triggered_inferno",
      "infinite_recursion",
-     "ethereal_weapon",
      "bread_and_butter",
      "take_em_down",
      "boom_bass",
@@ -1517,6 +1549,30 @@
      "titanic",
      "deaths_dance"
     ]
+   },
+   {
+    "name": "지형생성",
+    "why": "지형생성 + 지옥전도체 극 AP 딜 빌드",
+    "augs": [
+     "terraind",
+     "archmage",
+     "infinite_recursion",
+     "eureka",
+     "infernal_conduit",
+     "phenomenal_evil",
+     "warlock_juicebox",
+     "bees",
+     "vulnerability",
+     "zealot",
+     "purist_caster",
+     "forged_by_the_master"
+    ],
+    "items": [
+     "blackfire",
+     "liandry",
+     "lich_bane",
+     "morellonomicon"
+    ]
    }
   ],
   "Senna": [
@@ -1685,6 +1741,32 @@
      "shadowflame",
      "rabadon",
      "void_staff"
+    ]
+   },
+   {
+    "name": "극탱",
+    "why": "강심 / 절망 등 탱탬으로 오래 버티는 피즈",
+    "augs": [
+     "goliath",
+     "titans_resolve",
+     "dashing",
+     "recursion",
+     "steel_your_heart",
+     "armored_impact",
+     "tank_engine",
+     "escape_plan",
+     "shadow_runner",
+     "heavy_hitter",
+     "stackosaurus",
+     "forged_by_the_master",
+     "leg_day",
+     "lich_brain",
+     "purist_caster"
+    ],
+    "items": [
+     "heartsteel",
+     "unending_despair",
+     "warmogs"
     ]
    }
   ],
@@ -2523,6 +2605,25 @@
      "heartsteel",
      "shadowflame"
     ]
+   },
+   {
+    "name": "무한 웅덩이",
+    "why": "무한 웅덩이로 지속 딜",
+    "augs": [
+     "infinite_recursion",
+     "eureka",
+     "jeweled_gauntlet",
+     "shrink_engine",
+     "recursion",
+     "warlock_juicebox",
+     "witchful_thinking",
+     "lich_brain",
+     "adapt",
+     "leg_day"
+    ],
+    "items": [
+     "riftmaker"
+    ]
    }
   ],
   "Corki": [
@@ -3280,6 +3381,7 @@
     "items": [
      "heartsteel",
      "hollow_radiance",
+     "sunfire",
      "unending_despair",
      "warmogs",
      "thornmail"
@@ -3791,6 +3893,30 @@
   ],
   "Gragas": [
    {
+    "name": "체력 AP 브루저",
+    "why": "강철심장 체력을 리치 두뇌로 주문력 전환, 몸통 박치기 기절로 중첩",
+    "augs": [
+     "goliath",
+     "mad_scientist",
+     "chain_reaction",
+     "steel_your_heart",
+     "ravenous_bind",
+     "ethereal_weapon",
+     "lich_brain",
+     "slap_around",
+     "escape_plan",
+     "witchful_thinking",
+     "bees"
+    ],
+    "items": [
+     "heartsteel",
+     "riftmaker",
+     "unending_despair",
+     "shadowflame",
+     "rabadon"
+    ]
+   },
+   {
     "name": "AP 폭딜 술통",
     "why": "술통 굴리기·몸통 박치기 폭딜, 술통 폭발 넉백은 연쇄 반응과 시너지",
     "augs": [
@@ -3815,26 +3941,23 @@
     ]
    },
    {
-    "name": "체력 AP 브루저",
-    "why": "강철심장 체력을 리치 두뇌로 주문력 전환, 몸통 박치기 기절로 중첩",
+    "name": "무한 배치기",
+    "why": "신주/환영무기로 무한 배치기",
     "augs": [
-     "goliath",
-     "mad_scientist",
-     "chain_reaction",
-     "steel_your_heart",
-     "ravenous_bind",
+     "infinite_recursion",
+     "jeweled_gauntlet",
      "ethereal_weapon",
+     "eureka",
+     "chain_reaction",
+     "mystic_punch",
+     "purist_caster",
+     "witchful_thinking",
      "lich_brain",
-     "slap_around",
-     "escape_plan",
-     "witchful_thinking"
+     "courage_colossus",
+     "cruelty"
     ],
     "items": [
-     "heartsteel",
-     "riftmaker",
-     "unending_despair",
-     "shadowflame",
-     "rabadon"
+     "heartsteel"
     ]
    }
   ],
@@ -4174,6 +4297,27 @@
      "wits_end",
      "deaths_dance",
      "heartsteel"
+    ]
+   },
+   {
+    "name": "벌이다 AP 빌드",
+    "why": "Q로 벌이다를 발동하며 W 패시브를 터뜨리는 빌드",
+    "augs": [
+     "bees",
+     "jeweled_gauntlet",
+     "infinite_recursion",
+     "eureka",
+     "phenomenal_evil",
+     "upgrade_stormsurge",
+     "forged_by_the_master",
+     "purist_caster",
+     "witchful_thinking",
+     "quest_wooglets"
+    ],
+    "items": [
+     "blackfire",
+     "liandry",
+     "ludens"
     ]
    }
   ],
@@ -5686,6 +5830,32 @@
      "diadem",
      "redemption"
     ]
+   },
+   {
+    "name": "AP 극딜",
+    "why": "",
+    "augs": [
+     "archmage",
+     "infinite_recursion",
+     "eureka",
+     "jeweled_gauntlet",
+     "multishot",
+     "bees",
+     "transmute_prismatic",
+     "upgrade_stormsurge",
+     "forged_by_the_master",
+     "witchful_thinking",
+     "purist_caster"
+    ],
+    "items": [
+     "blackfire",
+     "malignance",
+     "stormsurge",
+     "abyssal_mask",
+     "lich_bane",
+     "shadowflame",
+     "void_staff"
+    ]
    }
   ],
   "Skarner": [
@@ -6007,5 +6177,179 @@
     ]
    }
   ]
- }
+ },
+ "reviewed": [
+  "Aatrox",
+  "Ahri",
+  "Akali",
+  "Akshan",
+  "Alistar",
+  "Ambessa",
+  "Amumu",
+  "Anivia",
+  "Annie",
+  "Aphelios",
+  "Ashe",
+  "AurelionSol",
+  "Aurora",
+  "Azir",
+  "Bard",
+  "Belveth",
+  "Blitzcrank",
+  "Brand",
+  "Braum",
+  "Briar",
+  "Caitlyn",
+  "Camille",
+  "Cassiopeia",
+  "Chogath",
+  "Corki",
+  "Darius",
+  "Diana",
+  "DrMundo",
+  "Draven",
+  "Ekko",
+  "Elise",
+  "Evelynn",
+  "Ezreal",
+  "Fiddlesticks",
+  "Fiora",
+  "Fizz",
+  "Galio",
+  "Gangplank",
+  "Gnar",
+  "Gragas",
+  "Graves",
+  "Gwen",
+  "Hecarim",
+  "Heimerdinger",
+  "Hwei",
+  "Illaoi",
+  "Irelia",
+  "Ivern",
+  "Janna",
+  "JarvanIV",
+  "Jax",
+  "Jayce",
+  "Jhin",
+  "Jinx",
+  "KSante",
+  "Kaisa",
+  "Kalista",
+  "Karma",
+  "Karthus",
+  "Kassadin",
+  "Katarina",
+  "Kayle",
+  "Kayn",
+  "Kennen",
+  "Khazix",
+  "Kindred",
+  "Kled",
+  "KogMaw",
+  "Leblanc",
+  "LeeSin",
+  "Leona",
+  "Lillia",
+  "Lissandra",
+  "Locke",
+  "Lucian",
+  "Lulu",
+  "Lux",
+  "Malphite",
+  "Malzahar",
+  "Maokai",
+  "MasterYi",
+  "Mel",
+  "Milio",
+  "MissFortune",
+  "MonkeyKing",
+  "Mordekaiser",
+  "Morgana",
+  "Naafiri",
+  "Nami",
+  "Nasus",
+  "Nautilus",
+  "Neeko",
+  "Nidalee",
+  "Nilah",
+  "Nocturne",
+  "Nunu",
+  "Olaf",
+  "Orianna",
+  "Ornn",
+  "Pantheon",
+  "Poppy",
+  "Pyke",
+  "Qiyana",
+  "Quinn",
+  "Rakan",
+  "Rammus",
+  "RekSai",
+  "Rell",
+  "Renata",
+  "Renekton",
+  "Rengar",
+  "Riven",
+  "Rumble",
+  "Ryze",
+  "Samira",
+  "Sejuani",
+  "Senna",
+  "Seraphine",
+  "Sett",
+  "Shaco",
+  "Shen",
+  "Shyvana",
+  "Singed",
+  "Sion",
+  "Sivir",
+  "Skarner",
+  "Smolder",
+  "Sona",
+  "Soraka",
+  "Swain",
+  "Sylas",
+  "Syndra",
+  "TahmKench",
+  "Taliyah",
+  "Talon",
+  "Taric",
+  "Teemo",
+  "Thresh",
+  "Tristana",
+  "Trundle",
+  "Tryndamere",
+  "TwistedFate",
+  "Twitch",
+  "Udyr",
+  "Urgot",
+  "Varus",
+  "Vayne",
+  "Veigar",
+  "Velkoz",
+  "Vex",
+  "Vi",
+  "Viego",
+  "Viktor",
+  "Vladimir",
+  "Volibear",
+  "Warwick",
+  "Xayah",
+  "Xerath",
+  "XinZhao",
+  "Yasuo",
+  "Yone",
+  "Yorick",
+  "Yunara",
+  "Yuumi",
+  "Zaahen",
+  "Zac",
+  "Zed",
+  "Zeri",
+  "Ziggs",
+  "Zilean",
+  "Zoe",
+  "Zyra"
+ ]
 }

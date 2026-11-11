@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>증바람 빌드 검토</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.4 "Malgun Gothic", sans-serif; background: #15171c; color: #e6e6e6; display: grid;
+         grid-template-columns: 220px 1fr 340px; height: 100vh; }
+  aside, main, section { overflow-y: auto; padding: 10px; }
+  aside { background: #1c1f26; border-right: 1px solid #2b2f38; }
+  section { background: #1c1f26; border-left: 1px solid #2b2f38; display: flex; flex-direction: column; gap: 8px; }
+  input, button { font: inherit; color: inherit; background: #262a33; border: 1px solid #3a3f4b; border-radius: 4px; padding: 4px 8px; }
+  button { cursor: pointer; } button:hover { background: #313643; }
+  button.on { background: #1fb85a; border-color: #1fb85a; color: #000; }
+  .champ { padding: 4px 6px; border-radius: 4px; cursor: pointer; display: flex; justify-content: space-between; }
+  .champ:hover { background: #262a33; } .champ.sel { background: #2f4a7a; }
+  .champ .mk { color: #1fb85a; } .champ .dirty { color: #f0b429; }
+  .top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  h1 { font-size: 20px; margin: 0; }
+  .muted { color: #9aa0ab; font-size: 12px; }
+  .build { border: 1px solid #2b2f38; border-radius: 6px; padding: 8px; margin: 10px 0; background: #1a1d23; }
+  .build.active { border-color: #4f86f7; box-shadow: 0 0 0 1px #4f86f7; }
+  .build .head { display: flex; gap: 6px; align-items: center; }
+  .build .head input.name { width: 170px; font-weight: bold; } .build .head input.why { flex: 1; }
+  .label { font-size: 12px; color: #9aa0ab; margin: 8px 0 4px; }
+  .row { display: flex; flex-wrap: wrap; gap: 4px; min-height: 30px; }
+  .chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 6px 3px 8px; border-radius: 12px; cursor: grab;
+          border: 1px solid transparent; user-select: none; }
+  .chip.prismatic { background: #4b2d6b; } .chip.gold { background: #6b5320; } .chip.silver { background: #474c56; } .chip.item { background: #23465c; }
+  .chip.picked { border-color: #fff; }
+  .chip .x { opacity: .6; padding: 0 3px; cursor: pointer; } .chip .x:hover { opacity: 1; color: #ff6b6b; }
+  .chip .n { font-size: 11px; opacity: .7; }
+  .g { font-size: 11px; font-weight: bold; padding: 0 4px; border-radius: 3px; background: #000a; }
+  .g.S { color: #ff5a8a; } .g.A { color: #ffb84d; }
+  .chip.over { outline: 2px dashed #4f86f7; }
+  .stats .chip { cursor: pointer; }
+  .detail { background: #262a33; border-radius: 6px; padding: 8px; min-height: 90px; white-space: pre-wrap; }
+  .tabs button { flex: 1; } .tabs { display: flex; gap: 4px; }
+  .list { flex: 1; overflow-y: auto; }
+  .opt { padding: 4px 6px; border-radius: 4px; cursor: pointer; display: flex; gap: 6px; align-items: center; }
+  .opt:hover { background: #313643; } .opt.in { opacity: .35; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .dot.prismatic { background: #b57cf0; } .dot.gold { background: #e8b84a; } .dot.silver { background: #aab; } .dot.item { background: #5bb4e5; }
+  #msg { white-space: pre-wrap; font-size: 12px; } #msg.err { color: #ff6b6b; } #msg.ok { color: #1fb85a; }
+</style>
+</head>
+<body>
+<aside>
+  <input id="q" placeholder="챔피언 검색" style="width:100%">
+  <label class="muted" style="display:block;margin:6px 0"><input type="checkbox" id="todo"> 확인 안 한 챔피언만</label>
+  <div id="progress" class="muted"></div>
+  <div id="champs"></div>
+</aside>
+<main>
+  <div class="top">
+    <h1 id="title"></h1>
+    <button id="reviewed" title="이 챔피언 빌드가 맞다고 확인 (다음 패치 분석이 덮어쓰지 않음)">확인</button>
+    <button id="addBuild">+ 빌드 추가</button>
+    <button id="revert">되돌리기</button>
+    <span style="flex:1"></span>
+    <button id="prev">◀ 이전</button><button id="next">다음 ▶</button>
+    <button id="save">저장 (Ctrl+S)</button>
+  </div>
+  <div id="style" class="muted"></div>
+  <div class="label">통계 S/A 증강 (누르면 선택한 빌드에 추가)</div>
+  <div id="stats" class="row stats"></div>
+  <div id="builds"></div>
+  <div id="msg"></div>
+</main>
+<section>
+  <div id="detail" class="detail muted">증강이나 아이템을 누르면 설명이 여기 나온다.
+드래그로 순서 바꾸기, × 로 빼기.
+첫 빌드가 주력: 아직 고른 증강이 없을 때 BEST 기준.
+증강은 앞에 있을수록 먼저 BEST, 아이템은 사는 순서.</div>
+  <div class="tabs"><button id="tabAug" class="on">증강 추가</button><button id="tabItem">아이템 추가</button></div>
+  <div class="tabs" id="rar">
+    <button data-r="" class="on">전체</button><button data-r="prismatic">프리즘</button><button data-r="gold">골드</button><button data-r="silver">실버</button>
+  </div>
+  <input id="find" placeholder="이름 검색">
+  <div id="list" class="list"></div>
+</section>
+<script>
+const RAR = { prismatic: "프리즘", gold: "골드", silver: "실버" };
+let D, builds, saved, reviewed, cur, active = 0, tab = "augs", rar = "", picked = null;
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const clone = x => JSON.parse(JSON.stringify(x));
+const dirty = k => JSON.stringify(builds[k]) !== JSON.stringify(saved[k]);
+const keys = () => Object.keys(D.champs).sort((a, b) => D.champs[a].ko.localeCompare(D.champs[b].ko, "ko"));
+
+fetch("/data").then(r => r.json()).then(d => {
+  D = d; builds = clone(d.builds); saved = clone(d.builds); reviewed = new Set(d.reviewed);
+  open(keys()[0]);
+});
+
+function listChamps() {
+  const q = $("q").value.trim().toLowerCase(), box = $("champs");
+  box.replaceChildren();
+  for (const k of keys()) {
+    const c = D.champs[k];
+    if (q && !c.ko.includes(q) && !k.toLowerCase().includes(q)) continue;
+    if ($("todo").checked && reviewed.has(k) && k !== cur) continue;
+    const row = el("div", "champ" + (k === cur ? " sel" : ""));
+    row.append(el("span", null, c.ko), el("span", dirty(k) ? "dirty" : "mk", dirty(k) ? "●" : reviewed.has(k) ? "✔" : ""));
+    row.onclick = () => open(k);
+    box.append(row);
+  }
+  const n = Object.keys(D.champs).length, nd = Object.keys(D.champs).filter(dirty).length;
+  $("progress").textContent = `확인 ${reviewed.size}/${n}` + (nd ? ` · 저장 안 한 챔피언 ${nd}` : "");
+}
+
+function open(k) { cur = k; active = 0; picked = null; render(); }
+
+function render() {
+  const c = D.champs[cur], bs = builds[cur];
+  active = Math.min(active, bs.length - 1);
+  $("title").textContent = `${c.ko} (${cur})`;
+  $("style").textContent = c.style;
+  $("reviewed").className = reviewed.has(cur) ? "on" : "";
+  $("reviewed").textContent = reviewed.has(cur) ? "✔ 확인됨" : "확인";
+  $("addBuild").disabled = bs.length >= 3;
+  const stats = $("stats"); stats.replaceChildren();
+  for (const r of Object.keys(RAR))
+    for (const [a, [g, short]] of Object.entries(c.stats)) {
+      if (D.augs[a]?.rarity !== r) continue;
+      const ch = augChip(a, null);
+      ch.title = short; ch.onclick = () => { add("augs", a); show("augs", a); };
+      stats.append(ch);
+    }
+  const box = $("builds"); box.replaceChildren();
+  bs.forEach((b, i) => {
+    const card = el("div", "build" + (i === active ? " active" : ""));
+    card.onmousedown = () => { active = i; for (const c of box.children) c.classList.toggle("active", c === card); fillList(); };
+    const head = el("div", "head");
+    head.append(el("b", null, i === 0 ? "주력" : `#${i + 1}`));
+    const name = el("input", "name"); name.value = b.name; name.maxLength = 14; name.placeholder = "빌드 이름";
+    name.oninput = () => { b.name = name.value; listChamps(); };
+    const why = el("input", "why"); why.value = b.why; why.maxLength = 60; why.placeholder = "한 줄 이유";
+    why.oninput = () => { b.why = why.value; listChamps(); };
+    head.append(name, why);
+    if (i > 0) head.append(btn("▲ 위로", () => { bs.splice(i - 1, 0, bs.splice(i, 1)[0]); active = i - 1; render(); }));
+    if (bs.length > 1) head.append(btn("삭제", () => { if (confirm(`'${b.name}' 빌드를 지울까?`)) { bs.splice(i, 1); render(); } }));
+    card.append(head, el("div", "label", "증강 (앞일수록 먼저 BEST)"), row(b, "augs"), el("div", "label", "아이템 (사는 순서)"), row(b, "items"));
+    box.append(card);
+  });
+  listChamps(); fillList();
+}
+
+function btn(text, fn) { const b = el("button", null, text); b.onclick = e => { e.stopPropagation(); fn(); }; return b; }
+
+function augChip(a, n) {
+  const x = D.augs[a], ch = el("span", "chip " + x.rarity);
+  if (n != null) ch.append(el("span", "n", n));
+  ch.append(el("span", null, x.ko));
+  const g = D.champs[cur].stats[a];
+  if (g) ch.append(el("span", "g " + g[0], g[0]));
+  return ch;
+}
+
+function row(b, field) {
+  const r = el("div", "row");
+  b[field].forEach((k, i) => {
+    const ch = field === "augs" ? augChip(k, i + 1) : el("span", "chip item", `${i + 1} ${D.items[k].ko}`);
+    if (picked && picked[0] === field && picked[1] === k) ch.classList.add("picked");
+    ch.onclick = () => show(field, k);
+    const x = el("span", "x", "×");
+    x.onclick = e => { e.stopPropagation(); b[field].splice(i, 1); render(); };
+    ch.append(x);
+    ch.draggable = true;
+    ch.ondragstart = e => e.dataTransfer.setData("text", JSON.stringify([builds[cur].indexOf(b), field, i]));
+    ch.ondragover = e => { e.preventDefault(); ch.classList.add("over"); };
+    ch.ondragleave = () => ch.classList.remove("over");
+    ch.ondrop = e => {
+      e.preventDefault();
+      const [bi, f, from] = JSON.parse(e.dataTransfer.getData("text"));
+      if (f !== field || builds[cur][bi] !== b) return;
+      b[field].splice(i, 0, b[field].splice(from, 1)[0]); render();
+    };
+    r.append(ch);
+  });
+  return r;
+}
+
+function show(field, k) {
+  picked = [field, k];
+  const d = $("detail"); d.className = "detail";
+  if (field === "augs") {
+    const x = D.augs[k], g = D.champs[cur].stats[k];
+    d.textContent = `${x.ko} · ${RAR[x.rarity]}` + (x.sets.length ? ` · 세트 ${x.sets.join(", ")}` : "") +
+      (g ? `\n${D.champs[cur].ko} 통계 ${g[0]}: ${g[1]}` : "") + `\n\n${x.desc || "설명 없음"}`;
+  } else d.textContent = `${D.items[k].ko}\n\n${D.items[k].desc || ""}`;
+  render();
+}
+
+function add(field, k) {
+  const b = builds[cur][active];
+  if (!b[field].includes(k)) { b[field].push(k); render(); }
+}
+
+
+function fillList() {
+  const q = $("find").value.trim(), box = $("list"), b = builds[cur][active], stats = D.champs[cur].stats;
+  box.replaceChildren();
+  const src = tab === "augs" ? D.augs : D.items;
+  const ks = Object.keys(src).filter(k => (!q || src[k].ko.includes(q)) && (tab !== "augs" || !rar || src[k].rarity === rar));
+  if (tab === "augs") ks.sort((a, b) => (stats[a] ? stats[a][0] : "Z").localeCompare(stats[b] ? stats[b][0] : "Z") || src[a].ko.localeCompare(src[b].ko, "ko"));
+  else ks.sort((a, b) => src[a].ko.localeCompare(src[b].ko, "ko"));
+  for (const k of ks) {
+    const o = el("div", "opt" + (b[tab].includes(k) ? " in" : ""));
+    o.append(el("span", "dot " + (tab === "augs" ? src[k].rarity : "item")), el("span", null, src[k].ko));
+    if (tab === "augs" && stats[k]) o.append(el("span", "g " + stats[k][0], stats[k][0]));
+    o.title = "눌러서 선택한 빌드에 추가";
+    o.onclick = () => { add(tab, k); show(tab, k); };
+    box.append(o);
+  }
+}
+
+$("q").oninput = listChamps; $("todo").onchange = listChamps; $("find").oninput = fillList;
+$("tabAug").onclick = () => { tab = "augs"; $("tabAug").className = "on"; $("tabItem").className = ""; $("rar").style.display = ""; fillList(); };
+$("tabItem").onclick = () => { tab = "items"; $("tabItem").className = "on"; $("tabAug").className = ""; $("rar").style.display = "none"; fillList(); };
+for (const b of $("rar").children) b.onclick = () => { rar = b.dataset.r; for (const x of $("rar").children) x.className = x === b ? "on" : ""; fillList(); };
+$("reviewed").onclick = () => { reviewed.has(cur) ? reviewed.delete(cur) : reviewed.add(cur); render(); };
+$("addBuild").onclick = () => { builds[cur].push({ name: "새 빌드", why: "", augs: [], items: [] }); active = builds[cur].length - 1; render(); };
+$("revert").onclick = () => { builds[cur] = clone(saved[cur]); render(); };
+const step = d => { const ks = keys(), i = ks.indexOf(cur); open(ks[(i + d + ks.length) % ks.length]); };
+$("prev").onclick = () => step(-1); $("next").onclick = () => step(1);
+
+async function save() {
+  const m = $("msg"); m.className = ""; m.textContent = "저장 중…";
+  for (const k of Object.keys(builds)) if (dirty(k)) reviewed.add(k);
+  const r = await (await fetch("/save", { method: "POST", body: JSON.stringify({ builds, reviewed: [...reviewed] }) })).json();
+  m.className = r.ok ? "ok" : "err"; m.textContent = r.msg;
+  if (r.ok) { saved = clone(builds); reviewed = new Set(r.reviewed); render(); }
+}
+$("save").onclick = save;
+document.addEventListener("keydown", e => {
+  if (e.ctrlKey && e.key === "s") { e.preventDefault(); save(); }
+  if (e.target.tagName !== "INPUT" && e.key === "ArrowDown") { e.preventDefault(); step(1); }
+  if (e.target.tagName !== "INPUT" && e.key === "ArrowUp") { e.preventDefault(); step(-1); }
+});
+window.onbeforeunload = e => { if (Object.keys(builds).some(dirty)) e.preventDefault(); };
+</script>
+</body>
+</html>

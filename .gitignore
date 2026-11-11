@@ -7,3 +7,4 @@
 # 분석 중간 파일(data/analysis/prepare.py 로 다시 만든다). 결과는 data/builds.json 에 들어 있다.
 /data/analysis/work/
 /mayhem_augment_data_v8.zip
+__pycache__/
